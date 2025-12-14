@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
 @theme {
   /* PRIMARY (BLUE) - From UI Kit */
   --color-primary-050: #e9eefb;
@@ -25,6 +27,7 @@
   --color-neutral-900: #2e2e2e;
 
   /* Add font here later */
+  --font-inter: "Inter", sans-serif;
 }
 
 body {
