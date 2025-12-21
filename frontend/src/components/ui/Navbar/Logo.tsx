@@ -9,9 +9,8 @@ function Logo({ href = "/" }: LogoProps) {
     <a
       href={href}
       className="flex items-center justify-center w-14 h-13 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-2 focus-visible:ring-offset-primary-950 rounded"
-      aria-label="Go to homepage"
     >
-      <img src={logo} alt="Company logo" className="w-14 h-13" />
+      <img src={logo} alt="Company logo, go to homepage" className="w-14 h-13" />
     </a>
   );
 }
