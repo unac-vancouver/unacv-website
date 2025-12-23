@@ -26,7 +26,7 @@ function Navbar() {
 
   return (
     <nav
-      className="fixed top-0 left-0 z-50 w-full h-16 bg-primary-950"
+      className="fixed top-0 left-0 z-50 w-full h-16 bg-primary-950 md:h-26"
       role="navigation"
       aria-label="Main navigation"
     >

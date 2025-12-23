@@ -1,10 +1,5 @@
 import { useState } from "react";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 
 import aboutPreview from "@/assets/images/navigation/about-preview.jpg";
 
@@ -74,13 +69,11 @@ function OverlayMenu({ isOpen }: OverlayMenuProps) {
       id="overlay-menu"
       aria-hidden={!isOpen}
       className={`
-      fixed top-16 left-0 -z-10 w-full max-h-[calc(100vh-4rem)] px-2 py-4 overflow-y-auto no-scrollbar font-inter bg-white shadow-lg
-      transition-all duration-300 ease-in-out
-        ${
-          isOpen
-            ? "opacity-100 translate-y-0 visible"
-            : "opacity-0 -translate-y-50 invisible"
-        }
+        fixed left-0 top-16 -z-10 h-auto max-h-[calc(100vh-4rem)] w-full overflow-y-auto 
+        bg-white px-2 py-4 shadow-lg font-inter no-scrollbar 
+        transition-all duration-300 ease-in-out
+        md:top-[104px] md:px-5 md:py-5
+        ${isOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-50 opacity-0"}
       `}
     >
       <ul className="overflow-hidden rounded-lg border border-gray-300">
@@ -95,9 +88,10 @@ function OverlayMenu({ isOpen }: OverlayMenuProps) {
                 <a
                   href={item.href}
                   className={`
-                  flex h-[60px] items-center w-full px-7 text-base font-semibold text-gray-900 
-                  hover:bg-gray-50 transition-colors
-                  ${borderClass}
+                    flex h-16 w-full items-center px-7 text-base font-semibold text-gray-900 
+                    transition-colors hover:bg-gray-50 
+                    ${borderClass}
+                    md:h-16 md:justify-center md:text-2xl
                   `}
                 >
                   {item.title}
@@ -109,15 +103,16 @@ function OverlayMenu({ isOpen }: OverlayMenuProps) {
           // SCENARIO B: It is a Dropdown (Accordion)
           return (
             <li key={item.id}>
-              <Accordion
-                type="single"
-                collapsible
-                value={openItem}
-                onValueChange={setOpenItem}
-                className={borderClass}
-              >
+              <Accordion type="single" collapsible value={openItem} onValueChange={setOpenItem} className={borderClass}>
                 <AccordionItem value={item.id} className="border-b-0">
-                  <AccordionTrigger className="flex h-[60px] items-center justify-between px-7 py-0 text-base font-semibold text-gray-900 hover:bg-gray-50 hover:no-underline">
+                  <AccordionTrigger
+                    className="
+                      flex h-16 w-full items-center justify-between px-7 py-0 
+                      text-base font-semibold text-gray-900 
+                      hover:bg-gray-50 hover:no-underline 
+                      md:h-16 md:justify-center md:gap-3 md:text-2xl md:[&>svg]:size-8
+                    "
+                  >
                     {item.title}
                   </AccordionTrigger>
                   <AccordionContent className="bg-white p-0 pb-6">
@@ -128,13 +123,11 @@ function OverlayMenu({ isOpen }: OverlayMenuProps) {
                           <a
                             href={sub.href}
                             className="
-                          group relative flex w-full h-[60px] items-center py-4 px-9 pr-4 font-normal text-gray-600
-                          transition-all duration-200
-                          
-                          active:bg-blue-50 
-                          active:text-blue-900 
-                          active:font-medium
-                          "
+                              group relative flex h-15 w-full items-center px-9 py-4 pr-4 
+                              font-normal text-gray-600 transition-all duration-200
+                              active:bg-blue-50 active:font-medium active:text-blue-900
+                              md:px-4 md:justify-center md:text-center md:text-lg
+                            "
                           >
                             {/* 
                           The Blue Bar:
@@ -151,13 +144,8 @@ function OverlayMenu({ isOpen }: OverlayMenuProps) {
 
                     {/* The Image (Rendered only if it exists) */}
                     {item.image && (
-                      <div className="mt-5 px-5">
-                        <img
-                          src={item.image}
-                          alt={item.imageAlt ?? ""}
-                          aria-hidden="true"
-                          className="w-full rounded-md object-cover shadow-sm"
-                        />
+                      <div className="mt-5 px-5 md:px-39">
+                        <img src={item.image} alt={item.imageAlt ?? ""} aria-hidden="true" className="w-full rounded-md object-cover shadow-sm" />
                       </div>
                     )}
                   </AccordionContent>
