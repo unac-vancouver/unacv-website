@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import Logo from "./Logo";
 import HamburgerButton from "./HamburgerButton";
-import MobileMenu from "./MobileMenu";
+import OverlayMenu from "./OverlayMenu";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +10,7 @@ function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  // Close mobile menu with escape button
+  // Close overlay menu with escape button
   useEffect(() => {
     if (!isMenuOpen) return;
 
@@ -34,7 +34,7 @@ function Navbar() {
         <Logo />
         <HamburgerButton isOpen={isMenuOpen} onClick={toggleMenu} />
       </div>
-      <MobileMenu isOpen={isMenuOpen} />
+      <OverlayMenu isOpen={isMenuOpen} />
     </nav>
   );
 }

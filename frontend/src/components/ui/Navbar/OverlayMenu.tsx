@@ -8,7 +8,7 @@ import {
 
 import aboutPreview from "@/assets/images/navigation/about-preview.jpg";
 
-interface MobileMenuProps {
+interface OverlayMenuProps {
   isOpen: boolean;
 }
 
@@ -66,12 +66,12 @@ const MENU_ITEMS: MenuItem[] = [
   { id: "item-7", title: "Contact", href: "/contact" },
 ];
 
-function MobileMenu({ isOpen }: MobileMenuProps) {
+function OverlayMenu({ isOpen }: OverlayMenuProps) {
   const [openItem, setOpenItem] = useState<string>("");
 
   return (
     <div
-      id="mobile-menu"
+      id="overlay-menu"
       aria-hidden={!isOpen}
       className={`
       fixed top-16 left-0 -z-10 w-full max-h-[calc(100vh-4rem)] px-2 py-4 overflow-y-auto no-scrollbar font-inter bg-white shadow-lg
@@ -171,4 +171,4 @@ function MobileMenu({ isOpen }: MobileMenuProps) {
   );
 }
 
-export default MobileMenu;
+export default OverlayMenu;
