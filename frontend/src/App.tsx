@@ -1,6 +1,7 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 
 import './App.css'
+import HomePage from '@/components/HomePage'
 
 function App() {
 
@@ -8,7 +9,7 @@ function App() {
     <div className="min-h-screen bg-background"> 
       <Router>
         <Routes>
-          <Route path="/" element={<div>Homepage</div>} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
       </Router>
     </div>

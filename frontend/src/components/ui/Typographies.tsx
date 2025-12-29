@@ -7,7 +7,7 @@ interface TypographyProps {
 }
 
 // Hero / Display - For large hero sections
-export function Hero({ children, className }: TypographyProps) {
+export function Display({ children, className }: TypographyProps) {
   return (
     <h1
       className={cn(
