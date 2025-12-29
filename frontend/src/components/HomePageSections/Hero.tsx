@@ -32,7 +32,7 @@ export default function Hero() {
     return (
         <section 
             id="hero" 
-            className="relative w-full h-[610px] flex flex-col items-center pt-[120px] pb-[58px] px-[150px]"
+            className="relative w-full h-[500px] md:h-[610px] flex flex-col items-center pt-[80px] md:pt-[120px] pb-[40px] md:pb-[58px] px-[24px] md:px-[75px] lg:px-[150px]"
         >
             {/* Background Image and Overlay */}
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -52,7 +52,7 @@ export default function Hero() {
             {/* Content Container */}
             <div className="relative z-10 flex flex-col gap-[50px] items-center justify-center w-full pt-[10px] pb-[34px] flex-1">
                 {/* Heading */}
-                <div className="w-full flex items-center justify-center h-[200px]">
+                <div className="flex items-center justify-center h-[200px]">
                     <Display className="text-white text-center">
                         {SLIDE_CONTENT[activeSlide]}
                     </Display>
