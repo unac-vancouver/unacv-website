@@ -1,4 +1,5 @@
 import ArrowRight from '@/assets/arrow-right-blue-link.svg'
+import { H2, BodyLarge } from '@/components/ui/Typographies'
 
 export default function AboutSnapshot() {
     return (
@@ -10,10 +11,10 @@ export default function AboutSnapshot() {
                 {/* Who We Are Column */}
                 <div className="flex-1 flex flex-col gap-[20px] items-start justify-center w-full">
                     <div className="flex flex-col gap-[20px] items-start w-full flex-1">
-                        <h2 className="font-bold text-[32px] text-[#0c193d] tracking-[-0.3125px] leading-normal w-full">
+                        <H2 className="text-[#0c193d] w-full">
                             Who We Are
-                        </h2>
-                        <p className="font-normal text-[24px] text-[#2e2e2e] tracking-[-0.3125px] leading-[30px] w-full">
+                        </H2>
+                        <BodyLarge className="text-[#2e2e2e] w-full">
                             UNAC Vancouver is a branch of the{' '}
                             <a 
                                 href="https://unac.org" 
@@ -24,7 +25,7 @@ export default function AboutSnapshot() {
                                 United Nations Association in Canada
                             </a>
                             , dedicated to advancing the UN's mission at the local level.
-                        </p>
+                        </BodyLarge>
                     </div>
                     <a 
                         href="/about" 
@@ -40,10 +41,10 @@ export default function AboutSnapshot() {
                 {/* What We Focus On Column */}
                 <div className="flex-1 flex flex-col gap-[40px] items-start justify-center w-full">
                     <div className="flex flex-col gap-[20px] items-start w-full">
-                        <h2 className="font-bold text-[32px] text-[#0c193d] tracking-[-0.3125px] leading-normal w-full">
+                        <H2 className="text-[#0c193d] w-full">
                             What We Focus On
-                        </h2>
-                        <p className="font-normal text-[24px] text-[#2e2e2e] tracking-[-0.3125px] leading-[30px] w-full">
+                        </H2>
+                        <BodyLarge className="text-[#2e2e2e] w-full">
                             We focus on community engagement, education, and advancing the{' '}
                             <a 
                                 href="https://sdgs.un.org/goals" 
@@ -54,7 +55,7 @@ export default function AboutSnapshot() {
                                 United Nations Sustainable Development Goals
                             </a>
                             {' '}through meaningful events, partnerships, and awareness initiatives.
-                        </p>
+                        </BodyLarge>
                     </div>
                     <a 
                         href="/mission" 
