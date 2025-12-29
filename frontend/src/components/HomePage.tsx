@@ -1,4 +1,3 @@
-import React from "react";
 import Hero from "@/components/HomePageSections/Hero";
 import AboutSnapshot from "./HomePageSections/AboutSnapshot";
 import GlobalGoals from "./HomePageSections/GlobalGoals";
