@@ -39,7 +39,7 @@ export default function Hero() {
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
                 <img 
                     alt="" 
-                    className="absolute inset-0 w-full h-full object-center cover" 
+                    className="absolute inset-0 w-full h-full object-cover" 
                     src={HeroImage} 
                 />
                 <div 
