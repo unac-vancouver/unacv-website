@@ -43,10 +43,10 @@ const INVOLVEMENT_OPTIONS: InvolvementCard[] = [
 
 export default function GetInvolved() {
   return (
-    <section className="bg-[var(--color-primary-blue-1)] px-[24px] md:px-[75px] py-[60px] md:py-[80px]">
-      <div className="max-w-[1290px] mx-auto">
+    <section className="bg-[var(--color-primary-blue-1)] px-6 md:px-20 py-16 md:py-20">
+      <div className="max-w-screen-xl mx-auto">
         {/* Header */}
-        <div className="flex flex-col items-center gap-[16px] mb-[40px] md:mb-[50px]">
+        <div className="flex flex-col items-center gap-4 mb-10 md:mb-12">
           <H2 className="text-center text-[var(--color-primary-blue-10)]">Get Involved</H2>
           <Body className="text-center text-[var(--color-neutral-9)] max-w-[663px]">
             Your time and support help us strengthen our local impact.
@@ -54,40 +54,40 @@ export default function GetInvolved() {
         </div>
 
         {/* Cards Grid */}
-        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-[24px] md:gap-[30px]">
+        <div className="flex flex-col lg:grid lg:grid-cols-3 gap-6 md:gap-8">
           {INVOLVEMENT_OPTIONS.map((option) => (
             <div
               key={option.id}
-              className="bg-[var(--color-neutral-0)] border border-[var(--color-primary-blue-05)] rounded-[10px] p-[20px] flex flex-col gap-[10px]"
+              className="bg-[var(--color-neutral-0)] border border-[var(--color-primary-blue-05)] rounded-xl p-5 flex flex-col gap-2.5"
             >
               {/* Card Header */}
-              <div className="flex items-center gap-[10px]">
-                <div className="w-[45px] h-[45px] flex items-center justify-center">
+              <div className="flex items-center gap-2.5">
+                <div className="w-11 h-11 flex items-center justify-center">
                   <img
                     src={option.icon}
                     alt={option.title}
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-[16px] md:text-[18px] font-medium text-[var(--color-primary-blue-10)] leading-[16px]">
+                <h3 className="text-base md:text-lg font-medium text-[var(--color-primary-blue-10)] leading-tight">
                   {option.title}
                 </h3>
               </div>
 
               {/* Card Content */}
-              <div className="flex flex-col gap-[21px]">
+              <div className="flex flex-col gap-5">
                 <Body className="text-[var(--color-neutral-9)] text-[14px] md:text-[16px]">{option.description}</Body>
 
                 {/* Button */}
                 <a
                   href={option.buttonLink}
-                  className="bg-[var(--color-primary-blue-8)] hover:bg-[var(--color-primary-blue-9)] transition-colors rounded-[8px] px-[16px] md:px-[20px] py-[10px] flex items-center justify-center gap-[16px] text-[var(--color-neutral-0)] text-[16px] md:text-[18px] font-medium"
+                  className="bg-[var(--color-primary-blue-8)] hover:bg-[var(--color-primary-blue-9)] transition-colors rounded-lg px-4 md:px-5 py-2.5 flex items-center justify-center gap-4 text-[var(--color-neutral-0)] text-base md:text-lg font-medium"
                 >
                   <span>{option.buttonText}</span>
                   <img
                     src={ArrowRightWhite}
                     alt=""
-                    className="w-[18px] h-[18px]"
+                    className="w-4 h-4"
                   />
                 </a>
               </div>

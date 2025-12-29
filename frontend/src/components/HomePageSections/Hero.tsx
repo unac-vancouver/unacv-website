@@ -32,7 +32,7 @@ export default function Hero() {
     return (
         <section 
             id="hero" 
-            className="relative w-full h-[500px] md:h-[610px] flex flex-col items-center pt-[80px] md:pt-[120px] pb-[40px] md:pb-[58px] px-[24px] md:px-[75px] lg:px-[150px]"
+            className="relative w-full h-[500px] md:h-[610px] flex flex-col items-center pt-20 md:pt-32 pb-10 md:pb-14 px-6 md:px-20 lg:px-40"
         >
             {/* Background Image and Overlay */}
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -50,20 +50,20 @@ export default function Hero() {
             </div>
 
             {/* Content Container */}
-            <div className="relative z-10 flex flex-col gap-[50px] items-center justify-center w-full pt-[10px] pb-[34px] flex-1">
+            <div className="relative z-10 flex flex-col gap-12 items-center justify-center w-full pt-2.5 pb-8 flex-1">
                 {/* Heading */}
-                <div className="flex items-center justify-center h-[200px]">
+                <div className="flex items-center justify-center h-52">
                     <Display className="text-white text-center">
                         {SLIDE_CONTENT[activeSlide]}
                     </Display>
                 </div>
 
                 {/* Buttons Container */}
-                <div className="flex gap-[24px] items-center">
+                <div className="flex gap-6 items-center">
                     <CTAButton 
                         variant="solid" 
                         size="lg"
-                        className="px-[20px] py-[16px] text-[18px]"
+                        className="px-5 py-4 text-lg"
                     >
                         Get Involved
                     </CTAButton>
@@ -71,7 +71,7 @@ export default function Hero() {
                     <CTAButton 
                         variant="light" 
                         size="lg"
-                        className="px-[20px] py-[16px] text-[18px]"
+                        className="px-5 py-4 text-lg"
                     >
                         See Events
                     </CTAButton>
@@ -79,7 +79,7 @@ export default function Hero() {
             </div>
 
             {/* Progress Indicator */}
-            <div className="relative flex gap-[8px] h-[3px] items-center mb-[-3px]">
+            <div className="relative flex gap-2 h-1 items-center -mb-1">
                 {Array.from({ length: TOTAL_SLIDES }).map((_, index) => (
                     <button
                         key={index}
@@ -87,7 +87,7 @@ export default function Hero() {
                             setActiveSlide(index);
                             setKey((prev) => prev + 1);
                         }}
-                        className={`h-full w-[40px] transition-colors duration-300 cursor-pointer relative overflow-hidden ${
+                        className={`h-full w-10 transition-colors duration-300 cursor-pointer relative overflow-hidden ${
                             index === activeSlide ? 'bg-white/30' : 'bg-[#B7B7B7]/74 hover:bg-[#B7B7B7]/90'
                         }`}
                         aria-label={`Go to slide ${index + 1}`}
