@@ -42,20 +42,20 @@ export default function GlobalGoals() {
             </div>
 
             {/* Goals Grid */}
-            <div className="flex flex-col md:flex-row gap-[30px] md:gap-[36px] items-stretch justify-center w-full max-w-[1100px]">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-[20px] md:gap-[36px] items-stretch justify-center w-full max-w-[1100px]">
                 {GOALS.map((goal) => (
                     <div 
                         key={goal.number}
-                        className="bg-[#f6f8fd] flex flex-col gap-[16px] items-start p-[24px] rounded-[10px] flex-1"
+                        className="bg-[#f6f8fd] flex flex-col gap-[8px] md:gap-[12px] items-start p-[12px] md:p-[20px] rounded-[10px]"
                     >
-                        <div className="w-[180px] h-[180px] rounded-[5px] overflow-hidden">
+                        <div className="w-full aspect-square rounded-[5px] overflow-hidden">
                             <img 
                                 src={goal.image} 
                                 alt={`SDG Goal ${goal.number}`}
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="flex flex-col gap-[4px] items-center w-full">
+                        <div className="flex flex-col gap-[2px] items-center w-full">
                             <BodySmall className="text-[#0f1f4c] text-center">
                                 Goal {goal.number}
                             </BodySmall>
