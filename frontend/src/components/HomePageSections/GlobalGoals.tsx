@@ -1,7 +1,7 @@
-import Goal3 from '@/assets/sdgGoal3.jpg'
-import Goal4 from '@/assets/sdgGoal4.jpg'
-import Goal11 from '@/assets/sdgGoal11.jpg'
-import Goal17 from '@/assets/sdgGoal17.jpg'
+import Goal3 from '@/assets/sdgGoal3.webp'
+import Goal4 from '@/assets/sdgGoal4.webp'
+import Goal11 from '@/assets/sdgGoal11.webp'
+import Goal17 from '@/assets/sdgGoal17.webp'
 import ArrowRightWhite from '@/assets/arrow-right-white.svg'
 import { BodyLarge, BodySmall, H4 } from '@/components/ui/Typographies'
 

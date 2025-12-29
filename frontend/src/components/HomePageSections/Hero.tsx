@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import HeroImage from '@/assets/heroImage.jpg'
+import HeroImage from '@/assets/heroImage.webp'
 import { Display } from '@/components/ui/Typographies'
 import { CTAButton } from '@/components/ui/cta-button'
 
