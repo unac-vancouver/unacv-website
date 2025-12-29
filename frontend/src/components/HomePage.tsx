@@ -1,6 +1,7 @@
 import Hero from "@/components/HomePageSections/Hero";
 import AboutSnapshot from "./HomePageSections/AboutSnapshot";
 import GlobalGoals from "./HomePageSections/GlobalGoals";
+import EventsPreview from "./HomePageSections/EventsPreview";
 
 export type HomePageProps = {
     className?: string;
@@ -12,6 +13,7 @@ export default function HomePage(){
             <Hero />
             <AboutSnapshot />
             <GlobalGoals />
+            <EventsPreview />
         </main>
     );
 }
