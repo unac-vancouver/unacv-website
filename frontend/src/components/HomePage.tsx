@@ -1,6 +1,7 @@
 import React from "react";
 import Hero from "@/components/HomePageSections/Hero";
 import AboutSnapshot from "./HomePageSections/AboutSnapshot";
+import GlobalGoals from "./HomePageSections/GlobalGoals";
 
 export type HomePageProps = {
     className?: string;
@@ -11,6 +12,7 @@ export default function HomePage(){
         <main aria-labelledby="home-title">
             <Hero />
             <AboutSnapshot />
+            <GlobalGoals />
         </main>
     );
 }
