@@ -1,5 +1,5 @@
 import ArrowRight from '@/assets/arrow-right-blue-link.svg'
-import { H2, BodyLarge } from '@/components/ui/Typographies'
+import { BodyLarge, H2 } from '@/components/ui/Typographies'
 
 export default function AboutSnapshot() {
     return (

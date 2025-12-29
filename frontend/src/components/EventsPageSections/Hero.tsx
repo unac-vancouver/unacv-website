@@ -1,5 +1,5 @@
 import EventsHeroImage from '@/assets/EventsPages/EventsHeroBg.webp'
-import { H1, BodyLarge } from '@/components/ui/Typographies'
+import { BodyLarge, H1 } from '@/components/ui/Typographies'
 
 export default function Hero() {
     return (

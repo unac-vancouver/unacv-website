@@ -2,8 +2,7 @@ import HeartHandIcon from '@/assets/heart-hand-icon.svg';
 import DonateIcon from '@/assets/donate-icon.webp';
 import UserPlusIcon from '@/assets/user-plus-icon.svg';
 import ArrowRightWhite from '@/assets/arrow-right-white.svg';
-import { H2 } from '@/components/ui/Typographies';
-import { Body } from '@/components/ui/Typographies';
+import { Body, H2 } from '@/components/ui/Typographies';
 
 interface InvolvementCard {
   id: number;

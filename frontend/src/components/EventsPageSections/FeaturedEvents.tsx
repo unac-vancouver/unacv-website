@@ -5,7 +5,7 @@ import CalendarIcon from '@/assets/calendar-icon.svg'
 import ClockIcon from '@/assets/clock-icon.svg'
 import LocationIcon from '@/assets/location-icon.svg'
 import ArrowRightBlue from '@/assets/arrow-right-blue.svg'
-import { H2, Body, BodySmall } from '@/components/ui/Typographies'
+import { Body, BodySmall, H2 } from '@/components/ui/Typographies'
 
 interface FeaturedEvent {
     id: number

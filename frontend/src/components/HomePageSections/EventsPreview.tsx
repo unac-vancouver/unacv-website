@@ -3,7 +3,7 @@ import CalendarIcon from '@/assets/calendar-icon.svg'
 import ClockIcon from '@/assets/clock-icon.svg'
 import LocationIcon from '@/assets/location-icon.svg'
 import ArrowRightDark from '@/assets/arrow-right-dark.svg'
-import { H3, Body, BodySmall } from '@/components/ui/Typographies'
+import { Body, BodySmall, H3 } from '@/components/ui/Typographies'
 
 interface Event {
     id: number

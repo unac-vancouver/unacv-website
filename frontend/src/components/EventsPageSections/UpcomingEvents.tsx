@@ -7,7 +7,7 @@ import CalendarIcon from '@/assets/calendar-icon.svg'
 import ClockIcon from '@/assets/clock-icon.svg'
 import LocationIcon from '@/assets/location-icon.svg'
 import ArrowRightBlue from '@/assets/arrow-right-blue-events.svg'
-import { H2, H3, Body } from '@/components/ui/Typographies'
+import { Body, H2, H3 } from '@/components/ui/Typographies'
 import { CTAButton } from '@/components/ui/cta-button'
 import { Link } from 'react-router-dom'
 
