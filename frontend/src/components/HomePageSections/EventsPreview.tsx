@@ -1,4 +1,4 @@
-import EventPlaceholder from '@/assets/event-placeholder.webp'
+import EventPlaceholder from '@/assets/HomePage/EventPlaceholder.webp'
 import CalendarIcon from '@/assets/calendar-icon.svg'
 import ClockIcon from '@/assets/clock-icon.svg'
 import LocationIcon from '@/assets/location-icon.svg'

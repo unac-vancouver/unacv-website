@@ -1,4 +1,4 @@
-import EventsHeroImage from '@/assets/events-hero-bg.webp'
+import EventsHeroImage from '@/assets/EventsPages/EventsHeroBg.webp'
 import { H1, BodyLarge } from '@/components/ui/Typographies'
 
 export default function Hero() {

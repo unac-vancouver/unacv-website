@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import HeroImage from '@/assets/heroImage.webp'
+import HeroImage from '@/assets/HomePage/HeroImage.webp'
 import { Display } from '@/components/ui/Typographies'
 import { CTAButton } from '@/components/ui/cta-button'
 
