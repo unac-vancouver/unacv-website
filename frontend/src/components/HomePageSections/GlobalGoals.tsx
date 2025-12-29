@@ -32,11 +32,11 @@ export default function GlobalGoals() {
     return (
         <section 
             id="global-goals" 
-            className="bg-[#12265d] w-full flex flex-col gap-[50px] items-center p-[24px] md:p-[50px] lg:p-[75px]"
+            className="bg-[var(--color-primary-blue-9)] w-full flex flex-col gap-[50px] items-center p-[24px] md:p-[50px] lg:p-[75px]"
         >
             {/* Header Text */}
             <div className="flex flex-col items-center w-full max-w-[624px]">
-                <BodyLarge className="text-white text-center">
+                <BodyLarge className="text-[var(--color-neutral-0)] text-center">
                     Our work aligns with the United Nations' 17 Sustainable Development Goals — a blueprint for peace and prosperity for people and the planet, now and into the future.
                 </BodyLarge>
             </div>
@@ -46,7 +46,7 @@ export default function GlobalGoals() {
                 {GOALS.map((goal) => (
                     <div 
                         key={goal.number}
-                        className="bg-[#f6f8fd] flex flex-col gap-[8px] md:gap-[12px] items-start p-[12px] md:p-[20px] rounded-[10px]"
+                        className="bg-[var(--color-primary-blue-05)] flex flex-col gap-[8px] md:gap-[12px] items-start p-[12px] md:p-[20px] rounded-[10px]"
                     >
                         <div className="w-full aspect-square rounded-[5px] overflow-hidden">
                             <img 
@@ -56,10 +56,10 @@ export default function GlobalGoals() {
                             />
                         </div>
                         <div className="flex flex-col gap-[2px] items-center w-full">
-                            <BodySmall className="text-[#0f1f4c] text-center">
+                            <BodySmall className="text-[var(--color-primary-blue-10)] text-center">
                                 Goal {goal.number}
                             </BodySmall>
-                            <H4 className="text-[#0f1f4c] text-center">
+                            <H4 className="text-[var(--color-primary-blue-10)] text-center">
                                 {goal.title}
                             </H4>
                         </div>
@@ -74,7 +74,7 @@ export default function GlobalGoals() {
                 rel="noopener noreferrer"
                 className="flex gap-[8px] items-center justify-center rounded-[8px] hover:opacity-80 transition-opacity"
             >
-                <span className="font-bold text-[18px] text-white tracking-[-0.1504px] leading-[20px] underline decoration-solid">
+                <span className="font-bold text-[18px] text-[var(--color-neutral-0)] tracking-[-0.1504px] leading-[20px] underline decoration-solid">
                     Explore the Global Goals
                 </span>
                 <img src={ArrowRightWhite} alt="" className="w-[20px] h-[20px]" />
