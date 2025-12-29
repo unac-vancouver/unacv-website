@@ -8,6 +8,8 @@ import ClockIcon from '@/assets/clock-icon.svg'
 import LocationIcon from '@/assets/location-icon.svg'
 import ArrowRightBlue from '@/assets/arrow-right-blue-events.svg'
 import { H2, H3, Body } from '@/components/ui/Typographies'
+import { CTAButton } from '@/components/ui/cta-button'
+import { Link } from 'react-router-dom'
 
 interface Event {
     id: number
@@ -19,6 +21,7 @@ interface Event {
     location: string
     image: string
     sdgGoals: string[]
+    registrationLink: string
 }
 
 const UPCOMING_EVENTS: Event[] = [
@@ -31,7 +34,8 @@ const UPCOMING_EVENTS: Event[] = [
         time: '6:00 PM - 8:00 PM',
         location: 'UNAC Vancouver Office',
         image: UpcomingEvent1,
-        sdgGoals: [SdgGoal3, SdgGoal4, SdgGoal11]
+        sdgGoals: [SdgGoal3, SdgGoal4, SdgGoal11],
+        registrationLink: '/events/1/register'//Backup link in case needed
     },
     {
         id: 2,
@@ -42,9 +46,13 @@ const UPCOMING_EVENTS: Event[] = [
         time: '6:00 PM - 8:00 PM',
         location: 'UNAC Vancouver Office',
         image: UpcomingEvent2,
-        sdgGoals: [SdgGoal3, SdgGoal4, SdgGoal11]
+        sdgGoals: [SdgGoal3, SdgGoal4, SdgGoal11],
+        registrationLink: '/events/2/register'//Backup link in case needed
     }
-];
+].map(event => ({
+    ...event,
+    registrationLink: `/events/${event.id}/register`
+}));
 
 export default function UpcomingEvents() {
     return (
@@ -65,11 +73,11 @@ export default function UpcomingEvents() {
                     {UPCOMING_EVENTS.map((event, index) => (
                         <div 
                             key={event.id}
-                            className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-start w-full`}
+                            className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-12 items-stretch w-full`}
                         >
                             {/* Event Image */}
-                            <div className="flex-1 min-w-0">
-                                <div className="w-full h-96 lg:h-full min-h-96 rounded-xl overflow-hidden">
+                            <div className="w-full md:flex-1 md:max-w-md lg:max-w-lg">
+                                <div className="w-full h-64 md:h-full md:min-h-96 rounded-xl overflow-hidden">
                                     <img 
                                         src={event.image} 
                                         alt={event.title}
@@ -79,7 +87,7 @@ export default function UpcomingEvents() {
                             </div>
 
                             {/* Event Details */}
-                            <div className="flex flex-col gap-5 w-full lg:w-96 flex-shrink-0">
+                            <div className="flex flex-col gap-5 w-full md:flex-1">
                                 {/* Category Badge */}
                                 <div className="bg-[var(--color-neutral-0)] px-3 py-1 rounded-md w-fit">
                                     <span className="text-xs font-medium text-[var(--color-primary-blue-10)] leading-4">
@@ -120,7 +128,7 @@ export default function UpcomingEvents() {
                                 </div>
 
                                 {/* SDG Goals */}
-                                <div className="bg-[var(--color-neutral-0)] border border-[var(--color-primary-blue-1)] rounded-xl flex gap-5 items-center px-6 py-3 h-28">
+                                <div className="bg-[var(--color-neutral-0)] border border-[var(--color-primary-blue-1)] rounded-xl flex gap-5 items-center px-6 py-3 h-28 w-fit">
                                     {event.sdgGoals.map((goal, idx) => (
                                         <div key={idx} className="w-20 h-20 rounded-md overflow-hidden flex-shrink-0">
                                             <img 
@@ -133,9 +141,14 @@ export default function UpcomingEvents() {
                                 </div>
 
                                 {/* Register Button */}
-                                <button className="bg-[var(--color-primary-blue-8)] hover:bg-[var(--color-primary-blue-9)] text-[var(--color-neutral-0)] font-medium text-lg px-6 py-3 rounded-lg h-14 transition-colors w-fit">
-                                    Register for Event
-                                </button>
+                                <Link to={event.registrationLink} className="w-fit">
+                                    <CTAButton 
+                                        variant="solid" 
+                                        size="lg"
+                                    >
+                                        Register for Event
+                                    </CTAButton>
+                                </Link>
                             </div>
                         </div>
                     ))}
