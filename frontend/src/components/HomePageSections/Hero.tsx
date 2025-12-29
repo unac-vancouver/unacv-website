@@ -5,7 +5,7 @@ import { Display } from '@/components/ui/Typographies'
 import { CTAButton } from '@/components/ui/cta-button'
 
 const TOTAL_SLIDES = 7;
-const SLIDE_DURATION = 8000; // 8 seconds\
+const SLIDE_DURATION = 8000; // 8 seconds
 //Changing SLIDE_DURATION will also require changing index.css to match the animation duration
 
 const SLIDE_CONTENT = [
