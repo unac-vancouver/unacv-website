@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import HeroImage from '@/assets/heroImage.webp'
 import { Display } from '@/components/ui/Typographies'
 import { CTAButton } from '@/components/ui/cta-button'
@@ -60,21 +61,25 @@ export default function Hero() {
 
                 {/* Buttons Container */}
                 <div className="flex gap-6 items-center">
-                    <CTAButton 
-                        variant="solid" 
-                        size="lg"
-                        className="px-5 py-4 text-lg"
-                    >
-                        Get Involved
-                    </CTAButton>
+                    <Link to="/get-involved">
+                        <CTAButton 
+                            variant="solid" 
+                            size="lg"
+                            className="px-5 py-4 text-lg"
+                        >
+                            Get Involved
+                        </CTAButton>
+                    </Link>
 
-                    <CTAButton 
-                        variant="light" 
-                        size="lg"
-                        className="px-5 py-4 text-lg"
-                    >
-                        See Events
-                    </CTAButton>
+                    <Link to="/events">
+                        <CTAButton 
+                            variant="light" 
+                            size="lg"
+                            className="px-5 py-4 text-lg"
+                        >
+                            See Events
+                        </CTAButton>
+                    </Link>
                 </div>
             </div>
 
