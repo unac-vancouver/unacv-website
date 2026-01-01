@@ -3,22 +3,19 @@ import { BodyLarge, H1 } from '@/components/ui/Typographies'
 
 export default function Hero() {
     return (
-        <section 
-            id="events-hero" 
+        <section
+            id="events-hero"
             className="relative w-full flex flex-col items-center pt-32 pb-14 px-6 md:px-20 lg:px-40"
         >
             {/* Background Image and Overlay */}
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-                <img 
-                    alt="" 
-                    className="absolute inset-0 w-full h-full object-center object-cover" 
-                    src={EventsHeroImage} 
+                <img
+                    alt=""
+                    className="absolute inset-0 w-full h-full object-center object-cover"
+                    src={EventsHeroImage}
                 />
-                <div 
-                    className="absolute inset-0 mix-blend-hard-light" 
-                    style={{ 
-                        backgroundImage: "linear-gradient(0deg, rgba(0, 0, 0, 0.172) 0%, rgba(0, 0, 0, 0.2021) 17.457%, rgba(0, 0, 0, 0.2451) 39.818%, rgba(0, 0, 0, 0.2967) 55.342%, rgba(0, 0, 0, 0.3655) 73.823%, rgba(0, 0, 0, 0.3784) 88.422%, rgba(0, 0, 0, 0.43) 100%)" 
-                    }} 
+                <div
+                    className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/40"
                 />
             </div>
 
