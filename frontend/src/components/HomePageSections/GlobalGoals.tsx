@@ -46,7 +46,7 @@ export default function GlobalGoals() {
                 {GOALS.map((goal) => (
                     <div 
                         key={goal.number}
-                        className="bg-[var(--color-primary-blue-05)] flex flex-col gap-2 md:gap-3 items-start p-3 md:p-5 rounded-xl w-[calc(50%-0.5rem)] md:w-[calc(50%-0.75rem)] lg:w-48 xl:w-56"
+                        className="bg-[var(--color-primary-blue-05)] flex flex-col gap-2 md:gap-3 items-start p-3 md:p-5 rounded-xl w-[calc(50%-0.5rem)] md:w-[calc(50%-0.75rem)] lg:w-48 xl:w-60"
                     >
                         <div className="w-full aspect-square rounded-md overflow-hidden">
                             <img 
