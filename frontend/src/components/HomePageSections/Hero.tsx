@@ -33,27 +33,24 @@ export default function Hero() {
     return (
         <section 
             id="hero" 
-            className="relative w-full h-[500px] md:h-[610px] flex flex-col items-center pt-20 md:pt-32 pb-10 md:pb-14 px-6 md:px-20 lg:px-40"
+            className="relative w-full h-[30rem] flex flex-col items-center "
         >
             {/* Background Image and Overlay */}
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
                 <img 
-                    alt="" 
+                    alt="Hero Image" 
                     className="absolute inset-0 w-full h-full object-cover" 
                     src={HeroImage} 
                 />
                 <div 
-                    className="absolute inset-0 mix-blend-hard-light" 
-                    style={{ 
-                        backgroundImage: "linear-gradient(0deg, rgba(0, 0, 0, 0.172) 0%, rgba(0, 0, 0, 0.2021) 17.457%, rgba(0, 0, 0, 0.2451) 39.818%, rgba(0, 0, 0, 0.2967) 55.342%, rgba(0, 0, 0, 0.3655) 73.823%, rgba(0, 0, 0, 0.3784) 88.422%, rgba(0, 0, 0, 0.43) 100%)" 
-                    }} 
+                    className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60"                 
                 />
             </div>
 
             {/* Content Container */}
-            <div className="relative z-10 flex flex-col gap-12 items-center justify-center w-full pt-2.5 pb-8 flex-1">
+            <div className="relative z-10 flex flex-col gap-y-10 items-center justify-center w-full pt-2.5 flex-1">
                 {/* Heading */}
-                <div className="flex items-center justify-center h-52">
+                <div className="flex items-center justify-center h-52 w-3/4">
                     <Display className="text-white text-center">
                         {SLIDE_CONTENT[activeSlide]}
                     </Display>
@@ -65,7 +62,7 @@ export default function Hero() {
                         <CTAButton 
                             variant="solid" 
                             size="lg"
-                            className="px-5 py-4 text-lg"
+                            className="px-5 py-5 text-lg"
                         >
                             Get Involved
                         </CTAButton>
@@ -75,7 +72,7 @@ export default function Hero() {
                         <CTAButton 
                             variant="light" 
                             size="lg"
-                            className="px-5 py-4 text-lg"
+                            className="px-5 py-5 text-lg"
                         >
                             See Events
                         </CTAButton>
@@ -84,7 +81,7 @@ export default function Hero() {
             </div>
 
             {/* Progress Indicator */}
-            <div className="relative flex gap-2 h-1 items-center -mb-1">
+            <div className="relative flex gap-2 h-1 items-center mb-10">
                 {Array.from({ length: TOTAL_SLIDES }).map((_, index) => (
                     <button
                         key={index}
@@ -92,7 +89,7 @@ export default function Hero() {
                             setActiveSlide(index);
                             setKey((prev) => prev + 1);
                         }}
-                        className={`h-full w-10 transition-colors duration-300 cursor-pointer relative overflow-hidden ${
+                        className={`h-full w-8 sm:w-10 transition-colors duration-300 cursor-pointer relative overflow-hidden ${
                             index === activeSlide ? 'bg-white/30' : 'bg-[#B7B7B7]/74 hover:bg-[#B7B7B7]/90'
                         }`}
                         aria-label={`Go to slide ${index + 1}`}
