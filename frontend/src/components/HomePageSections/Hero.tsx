@@ -62,7 +62,7 @@ export default function Hero() {
                         <CTAButton 
                             variant="solid" 
                             size="lg"
-                            className="px-5 py-5 text-lg"
+                            className="p-5 sm:p-6 text-lg"
                         >
                             Get Involved
                         </CTAButton>
@@ -72,7 +72,7 @@ export default function Hero() {
                         <CTAButton 
                             variant="light" 
                             size="lg"
-                            className="px-5 py-5 text-lg"
+                            className="p-5 sm:p-6 text-lg"
                         >
                             See Events
                         </CTAButton>
