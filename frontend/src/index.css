@@ -3,4 +3,40 @@
 
 @theme {
   --font-roboto: "Roboto", sans-serif;
+  
+  /* Primary Blue Colors */
+  --color-primary-blue-05: #e9eefb;
+  --color-primary-blue-1: #dce4f8;
+  --color-primary-blue-2: #c3d0f3;
+  --color-primary-blue-3: #a9bbee;
+  --color-primary-blue-4: #90a7e9;
+  --color-primary-blue-5: #7693e4;
+  --color-primary-blue-6: #617cc6;
+  --color-primary-blue-7: #4d65a7;
+  --color-primary-blue-8: #384d89;
+  --color-primary-blue-9: #24366a;
+  --color-primary-blue-10: #0f1f4c;
+  
+  /* Neutral Colors */
+  --color-neutral-0: #ffffff;
+  --color-neutral-1: #f7f7f7;
+  --color-neutral-3: #e8e8e8;
+  --color-neutral-4: #d9d9d9;
+  --color-neutral-5: #b3b3b3;
+  --color-neutral-6: #8c8c8c;
+  --color-neutral-7: #5a5a5a;
+  --color-neutral-8: #404040;
+  --color-neutral-9: #2e2e2e;
+  --color-neutral-10: #000000;
+  
+  --animate-fillBar: fillBar 8s linear forwards;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
 }

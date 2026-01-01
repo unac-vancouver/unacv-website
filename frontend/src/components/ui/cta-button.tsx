@@ -38,7 +38,7 @@ export function CTAButton({
       {showArrow && (
         <ArrowRight 
           className={cn(
-            "transition-transform duration-300",
+            "transition-transform duration-300 ",
             size === "lg" ? "w-6 h-6" : "w-5 h-5"
           )} 
         />

@@ -7,15 +7,15 @@ interface TypographyProps {
 }
 
 // Hero / Display - For large hero sections
-export function Hero({ children, className }: TypographyProps) {
+export function Display({ children, className }: TypographyProps) {
   return (
     <h1
       className={cn(
         "font-roboto font-bold text-foreground",
-        "text-4xl leading-tight tracking-tight", // Mobile
-        "md:text-5xl md:leading-tight", // Tablet
-        "lg:text-6xl lg:leading-[1.1]", // Desktop
-        "xl:text-7xl xl:leading-[1.1]", // Large displays
+        "text-3xl leading-tight tracking-tight", // Mobile
+        "md:text-4xl md:leading-tight", // Tablet
+        "lg:text-5xl lg:leading-[1.1]", // Desktop
+        "xl:text-6xl xl:leading-[1.1]", // Large displays
         className
       )}
     >
@@ -99,7 +99,7 @@ export function BodyLarge({ children, className }: TypographyProps) {
       className={cn(
         "font-roboto font-normal text-foreground",
         "text-base leading-relaxed tracking-normal", // Mobile
-        "md:text-lg md:leading-relaxed", // Tablet
+        "md:text-xl md:leading-relaxed", // Tablet
         className
       )}
     >
