@@ -5,12 +5,12 @@ export default function Hero() {
     return (
         <section
             id="events-hero"
-            className="relative w-full flex flex-col items-center pt-32 pb-14 px-6 md:px-20 lg:px-40"
+            className="relative w-full flex flex-col items-center py-14 pb-14 px-6 md:px-20 lg:px-40"
         >
             {/* Background Image and Overlay */}
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
                 <img
-                    alt=""
+                    alt="Events background image"
                     className="absolute inset-0 w-full h-full object-center object-cover"
                     src={EventsHeroImage}
                 />
