@@ -1,8 +1,8 @@
-import HeartHandIcon from '@/assets/heart-hand-icon.svg';
-import DonateIcon from '@/assets/donate-icon.webp';
-import UserPlusIcon from '@/assets/user-plus-icon.svg';
-import ArrowRightWhite from '@/assets/arrow-right-white.svg';
-import { Body, H2 } from '@/components/ui/Typographies';
+import AddPerson from '@/assets/HomePage/AddPerson.svg'
+import HandHeart from '@/assets/HomePage/HandHeart.svg'
+import MoneySignCircle from '@/assets/HomePage/MoneySignCircle.svg'
+import { ArrowRight } from 'lucide-react';
+import { Body, H2, BodyLarge, H4 } from '@/components/ui/Typographies';
 
 interface InvolvementCard {
   id: number;
@@ -16,7 +16,7 @@ interface InvolvementCard {
 const INVOLVEMENT_OPTIONS: InvolvementCard[] = [
   {
     id: 1,
-    icon: HeartHandIcon,
+    icon: HandHeart,
     title: 'Volunteer',
     description: 'Join our team and contribute your time and skills to support our events, programs, and community initiatives.',
     buttonText: 'Start Volunteering',
@@ -24,7 +24,7 @@ const INVOLVEMENT_OPTIONS: InvolvementCard[] = [
   },
   {
     id: 2,
-    icon: DonateIcon,
+    icon: MoneySignCircle,
     title: 'Donate',
     description: 'Your financial support enables us to expand our reach and create meaningful impact in our local community.',
     buttonText: 'Make a Donation',
@@ -32,7 +32,7 @@ const INVOLVEMENT_OPTIONS: InvolvementCard[] = [
   },
   {
     id: 3,
-    icon: UserPlusIcon,
+    icon: AddPerson,
     title: 'Become a Member',
     description: "Join a network of passionate individuals committed to advancing the UN's mission and the Global Goals.",
     buttonText: 'Join as Member',
@@ -47,9 +47,9 @@ export default function GetInvolved() {
         {/* Header */}
         <div className="flex flex-col items-center gap-4 mb-10 md:mb-12">
           <H2 className="text-center text-[var(--color-primary-blue-10)]">Get Involved</H2>
-          <Body className="text-center text-[var(--color-neutral-9)] max-w-[663px]">
-            Your time and support help us strengthen our local impact.
-          </Body>
+          <BodyLarge className="text-center text-[var(--color-neutral-9)] max-w-[663px]">
+            Your support can strengthen our local impact. 
+          </BodyLarge>
         </div>
 
         {/* Cards Grid */}
@@ -61,33 +61,29 @@ export default function GetInvolved() {
             >
               {/* Card Header */}
               <div className="flex items-center gap-2.5">
-                <div className="w-11 h-11 flex items-center justify-center">
+                <div className="w-8 h-8 flex items-center justify-center">
                   <img
                     src={option.icon}
                     alt={option.title}
                     className="w-full h-full object-contain"
                   />
                 </div>
-                <h3 className="text-base md:text-lg font-medium text-[var(--color-primary-blue-10)] leading-tight">
+                <H4 className='text-primary'>
                   {option.title}
-                </h3>
+                </H4>
               </div>
 
               {/* Card Content */}
               <div className="flex flex-col gap-5">
-                <Body className="text-[var(--color-neutral-9)] text-[14px] md:text-[16px]">{option.description}</Body>
+                <Body >{option.description}</Body>
 
                 {/* Button */}
                 <a
                   href={option.buttonLink}
-                  className="bg-[var(--color-primary-blue-8)] hover:bg-[var(--color-primary-blue-9)] transition-colors rounded-lg px-4 md:px-5 py-2.5 flex items-center justify-center gap-4 text-[var(--color-neutral-0)] text-base md:text-lg font-medium"
+                  className="bg-[var(--color-primary-blue-9)] hover:bg-[var(--color-primary-blue-10)] transition-colors rounded-lg px-4 md:px-5 py-2.5 flex items-center justify-center gap-4 text-[var(--color-neutral-0)] text-base md:text-lg font-medium"
                 >
                   <span>{option.buttonText}</span>
-                  <img
-                    src={ArrowRightWhite}
-                    alt=""
-                    className="w-4 h-4"
-                  />
+                  <ArrowRight className="w-5 h-5" />
                 </a>
               </div>
             </div>
