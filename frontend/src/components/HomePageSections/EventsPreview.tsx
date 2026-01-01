@@ -2,8 +2,9 @@ import EventPlaceholder from '@/assets/HomePage/EventPlaceholder.webp'
 import CalendarIcon from '@/assets/calendar-icon.svg'
 import ClockIcon from '@/assets/clock-icon.svg'
 import LocationIcon from '@/assets/location-icon.svg'
-import ArrowRightDark from '@/assets/arrow-right-dark.svg'
-import { Body, BodySmall, H3 } from '@/components/ui/Typographies'
+import { ArrowRight } from 'lucide-react'
+import { BodyLarge, Body ,BodySmall, H2 } from '@/components/ui/Typographies'
+import { Link } from 'react-router-dom'
 
 interface Event {
     id: number
@@ -58,27 +59,27 @@ export default function EventsPreview() {
             <div className="flex flex-col gap-12 items-center w-full">
                 {/* Header */}
                 <div className="flex flex-col gap-5 items-center w-full">
-                    <H3 className="text-[var(--color-primary-blue-10)] text-center">
+                    <H2 className="text-[var(--color-primary-blue-10)] text-center">
                         Upcoming Events
-                    </H3>
+                    </H2>
                     <div className="text-center px-2">
-                        <Body className="text-[var(--color-neutral-9)]">
+                        <BodyLarge className="text-[var(--color-neutral-9)]">
                             Connect with your community and take action.
                             <br />
                             Join us at our upcoming events and make a difference in Vancouver.
-                        </Body>
+                        </BodyLarge>
                     </div>
                 </div>
 
                 {/* Events Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 w-full">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 w-full max-w-6xl">
                     {EVENTS.map((event) => (
                         <div 
                             key={event.id}
-                            className="border border-[var(--color-primary-blue-1)] rounded-xl flex flex-col overflow-hidden hover:shadow-lg transition-shadow"
+                            className="border border-[var(--color-primary-blue-1)] rounded-xl flex flex-col overflow-hidden hover:shadow-lg transition-shadow max-w-sm mx-auto w-full"
                         >
                             {/* Event Image */}
-                            <div className="h-44 w-full overflow-hidden">
+                            <div className="h-36 w-full overflow-hidden">
                                 <img 
                                     src={event.image} 
                                     alt={event.title}
@@ -87,9 +88,9 @@ export default function EventsPreview() {
                             </div>
 
                             {/* Event Content */}
-                            <div className="flex flex-col gap-3 p-4">
+                            <div className="flex flex-col gap-2.5 p-3">
                                 {/* Category Badge and Title */}
-                                <div className="flex flex-col gap-4">
+                                <div className="flex flex-col gap-3">
                                     <span className="bg-[var(--color-primary-blue-05)] px-2 py-0.5 rounded-md text-xs font-medium text-[var(--color-primary-blue-10)] leading-tight w-fit">
                                         {event.category}
                                     </span>
@@ -99,7 +100,7 @@ export default function EventsPreview() {
                                 </div>
 
                                 {/* Event Details */}
-                                <div className="flex flex-col gap-4">
+                                <div className="flex flex-col gap-3">
                                     <div className="flex flex-col gap-1">
                                         {/* Date */}
                                         <div className="flex gap-2 items-center h-6">
@@ -129,11 +130,11 @@ export default function EventsPreview() {
                                         <Body className="text-[var(--color-neutral-9)]">
                                             {event.description}
                                         </Body>
-                                        <a 
-                                            href={`/events/${event.id}`}
+                                        <Link
+                                            to={`/events/${event.id}`}
                                             className="text-xs font-medium text-[var(--color-primary-blue-9)] underline decoration-solid leading-5 tracking-tight hover:opacity-80 transition-opacity">
                                             Learn More
-                                        </a>
+                                        </Link>
                                     </div>
                                 </div>
                             </div>
@@ -142,15 +143,15 @@ export default function EventsPreview() {
                 </div>
 
                 {/* See All Events Link */}
-                <a 
-                    href="/events" 
+                <Link 
+                    to="/events" 
                     className="flex gap-2 items-center justify-center rounded-lg hover:opacity-80 transition-opacity"
                 >
-                    <span className="font-bold text-lg text-[var(--color-primary-blue-10)] tracking-tight leading-5 underline decoration-solid">
+                    <span className="font-bold text-lg text-primary tracking-tight leading-5 underline decoration-solid">
                         See All Events
                     </span>
-                    <img src={ArrowRightDark} alt="" className="w-5 h-5" />
-                </a>
+                    <ArrowRight className="w-5 h-5  text-primary" />
+                </Link>
             </div>
         </section>
     )
