@@ -7,7 +7,7 @@ import EventsPage from '@/components/Events'
 function App() {
 
   return (
-    <div className="min-h-screen bg-background"> 
+    <div className="min-h-screen bg-blue-800 max-w-[1920px] mx-auto"> 
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
