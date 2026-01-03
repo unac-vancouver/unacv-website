@@ -23,14 +23,14 @@ export default function Hero() {
             <div className="relative z-10 flex flex-col gap-6 items-center justify-center w-full pt-2.5 pb-8">
                 {/* Heading */}
                 <div className="flex items-center justify-center w-full">
-                    <H1 className="text-[var(--color-neutral-0)] text-center">
+                    <H1 className="text-white text-center">
                         UNAC Vancouver Events
                     </H1>
                 </div>
 
                 {/* Description */}
                 <div className="flex items-center justify-center px-7 max-w-4xl">
-                    <BodyLarge className="text-[var(--color-neutral-0)] text-center">
+                    <BodyLarge className="text-white text-center">
                         Connect with your community and take action. Join us at our events and make a difference in Vancouver.
                     </BodyLarge>
                 </div>
