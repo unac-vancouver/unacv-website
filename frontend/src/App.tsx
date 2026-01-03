@@ -4,6 +4,7 @@ import './App.css'
 import HomePage from '@/components/HomePage'
 import EventsPage from '@/components/Events'
 import GetInvolvedPage from '@/components/GetInvolved'
+import AboutPage from '@/components/About'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/events" element={<EventsPage />} />
           <Route path="/get-involved" element={<GetInvolvedPage />} />
+          <Route path="/about" element={<AboutPage />} />
         </Routes>
       </Router>
     </div>
