@@ -4,7 +4,7 @@ import DonationBenefits from "@/components/GetInvoledSections/DonationBenefits";
 
 export default function GetInvolvedPage(){
     return (
-        <main aria-labelledby="home-title">
+        <main aria-labelledby="get-involved-title">
             <Hero />
             <WhyBecomeMember />
             <DonationBenefits />
