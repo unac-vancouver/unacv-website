@@ -7,7 +7,7 @@ export default function Hero() {
 
     return (
         <section
-            id="events-hero"
+            id="Get involved hero"
             className="relative w-full flex flex-col items-center py-14 px-6 md:px-20 lg:px-40"
         >
             {/* Background Image and Overlay */}
@@ -26,14 +26,14 @@ export default function Hero() {
             <div className="relative z-10 flex flex-col gap-6 items-center justify-center w-full pt-2.5 pb-8">
                 {/* Heading */}
                 <div className="flex items-center justify-center w-full">
-                    <H1 className="text-[var(--color-neutral-0)] text-center">
+                    <H1 className="text-white text-center">
                         Become a Member of UNAC-V
                     </H1>
                 </div>
 
                 {/* Description */}
                 <div className="flex items-center justify-center px-7 max-w-4xl">
-                    <BodyLarge className="text-[var(--color-neutral-0)] text-center">
+                    <BodyLarge className="text-white text-center">
                         By becoming a member of UNAC-V, you are helping to mobilize Canadians.
                     </BodyLarge>
                 </div>
