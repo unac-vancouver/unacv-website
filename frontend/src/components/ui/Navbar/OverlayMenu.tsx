@@ -72,7 +72,7 @@ function OverlayMenu({ isOpen }: OverlayMenuProps) {
         fixed left-0 top-16 -z-10 h-auto max-h-[calc(100vh-4rem)] w-full overflow-y-auto 
         bg-white px-2 py-4 shadow-lg font-inter no-scrollbar 
         transition-all duration-300 ease-in-out
-        md:top-[104px] md:px-5 md:py-5
+        md:top-26 md:px-5 md:py-5
         ${isOpen ? "visible translate-y-0 opacity-100" : "invisible -translate-y-50 opacity-0"}
       `}
     >
