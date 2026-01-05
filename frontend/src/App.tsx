@@ -6,6 +6,7 @@ import EventsPage from '@/components/Events'
 import GetInvolvedPage from '@/components/GetInvolved'
 import AboutPage from '@/components/About'
 import Contact from '@/components/Contact'
+import ResourcesPage from '@/components/Resources'
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/get-involved" element={<GetInvolvedPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path='/resources' element={<ResourcesPage />} />
         </Routes>
       </Router>
     </div>
