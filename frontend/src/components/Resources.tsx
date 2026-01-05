@@ -1,6 +1,7 @@
 import Hero from '@/components/ResourcesPageSections/Hero';
 import GlobalLearningResources from '@/components/ResourcesPageSections/GlobalLearningResources';
 import NationalOffice from '@/components/ResourcesPageSections/NationalOffice';
+import CallToAction from '@/components/ResourcesPageSections/CallToAction';
 
 export default function ResourcesPage(){
     return(
@@ -8,6 +9,7 @@ export default function ResourcesPage(){
             <Hero />
             <GlobalLearningResources />
             <NationalOffice />
+            <CallToAction />
         </main>
     );
 }
