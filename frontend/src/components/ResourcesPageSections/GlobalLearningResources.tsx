@@ -88,7 +88,7 @@ export default function GlobalLearningResources() {
             </div>
 
             {/* Bottom Link */}
-            <Link
+            <a
                 to="https://www.un.org/en/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -96,7 +96,7 @@ export default function GlobalLearningResources() {
             >
                 <span className="text-[15px] font-normal">Explore All Global Resources</span>
                 <ArrowRight className="w-4 h-4" />
-            </Link>
+            </a>
         </section>
     );
 }
