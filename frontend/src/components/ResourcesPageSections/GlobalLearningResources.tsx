@@ -48,18 +48,18 @@ export default function GlobalLearningResources() {
             </div>
 
             {/* Resource Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-7xl mb-8">
+            <div className="flex flex-col lg:flex-row justify-center gap-6 lg:gap-8 w-full max-w-7xl mb-8">
                 {RESOURCES.map((resource, index) => (
                     <a
                         key={index}
                         href={resource.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="bg-white rounded-xl shadow-[0px_3px_5px_-1px_rgba(0,0,0,0.1),0px_2px_3px_-2px_rgba(0,0,0,0.1)] overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col"
+                        className="bg-white rounded-xl shadow-[0px_4px_6px_-1px_rgba(0,0,0,0.1),0px_2px_4px_-2px_rgba(0,0,0,0.1)] overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col lg:flex-1 lg:max-w-[300px]"
                     >
                         {/* Image Container */}
                         <div
-                            className="h-28 w-full overflow-hidden flex items-center justify-center"
+                            className="h-[192px] lg:h-[120px] w-full flex items-center justify-center overflow-hidden"
                             style={{ backgroundColor: resource.bgColor }}
                         >
                             <img
@@ -70,16 +70,16 @@ export default function GlobalLearningResources() {
                         </div>
 
                         {/* Content */}
-                        <div className="flex flex-col gap-4 p-6 flex-1">
-                            <H3 className="text-[var(--color-primary-blue-10)] text-xl font-medium">
+                        <div className="flex flex-col gap-3 lg:gap-4 p-6 lg:p-[27px] lg:min-h-[168px]">
+                            <H3 className="text-[var(--color-primary-blue-10)] text-lg lg:text-xl font-medium leading-tight">
                                 {resource.title}
                             </H3>
-                            <Body className="text-[var(--color-neutral-7)] text-base leading-snug flex-1">
+                            <Body className="text-[var(--color-neutral-7)] text-base leading-normal lg:leading-snug">
                                 {resource.description}
                             </Body>
-                            <div className="flex items-center gap-2 text-[var(--color-primary-blue-7)] text-sm font-normal">
+                            <div className="flex items-center gap-2 text-[var(--color-primary-blue-7)] text-base lg:text-[13.5px] font-medium lg:font-normal mt-auto">
                                 <span>Learn more</span>
-                                <ArrowRight className="w-3.5 h-3.5" />
+                                <ArrowRight className="w-4 h-4 lg:w-3.5 lg:h-3.5" />
                             </div>
                         </div>
                     </a>
