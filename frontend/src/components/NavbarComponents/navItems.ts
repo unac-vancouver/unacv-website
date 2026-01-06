@@ -35,9 +35,8 @@ export const navItems: NavItem[] = [
     label: 'Resources',
     path: '/resources',
     dropdown: [
-      { label: 'Publications', path: '/resources#publications', icon: HiBookOpen },
-      { label: 'Reports', path: '/resources#reports', icon: HiDocumentText },
-      { label: 'Links', path: '/resources#links', icon: HiLink },
+      { label: 'Global Learning Resources', path: '/resources#global-learning-resources', icon: HiBookOpen },
+      { label: 'National Office', path: '/resources#national-office', icon: HiGlobeAlt },
     ],
   },
   { label: 'Contact', path: '/contact' },
