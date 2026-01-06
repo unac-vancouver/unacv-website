@@ -22,14 +22,14 @@ export default function NationalOffice() {
                 {/* Description */}
                 <Body className="text-[#404040] text-[15px] leading-relaxed">
                     The United Nations Association in Canada is a historic civil society organization that educates and engages Canadians on the work of the United Nations and global issues that affect us all. There are over 12,000 members and{' '}
-                    <Link
-                        to="https://www.unac.org/branches/"
+                    <a
+                        href="https://www.unac.org/branches/"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-[#404040] underline hover:opacity-80 transition-opacity"
                     >
                         13 branches
-                    </Link>
+                    </a>
                     {' '}of UNAC across the country.
                 </Body>
 
@@ -63,15 +63,15 @@ export default function NationalOffice() {
                 </div>
 
                 {/* CTA Button */}
-                <Link
-                    to="https://www.unac.org/"
+                <a
+                    href="https://www.unac.org/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-[#4d65a7] hover:bg-[#4d65a7]/90 text-white rounded-lg py-2.5 px-5 flex items-center gap-2 text-[13.5px] w-fit transition-colors"
                 >
                     <span>About Our National Office</span>
                     <ArrowRight className="w-4 h-4" />
-                </Link>
+                </a>
             </div>
 
             {/* Right Image */}
