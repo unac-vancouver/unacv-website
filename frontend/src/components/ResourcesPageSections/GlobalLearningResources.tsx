@@ -51,9 +51,9 @@ export default function GlobalLearningResources() {
             {/* Resource Cards Grid */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 w-full max-w-7xl mb-8">
                 {RESOURCES.map((resource, index) => (
-                    <Link
+                    <a
                         key={index}
-                        to={resource.link}
+                        href={resource.link}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="bg-white rounded-xl shadow-[0px_3px_5px_-1px_rgba(0,0,0,0.1),0px_2px_3px_-2px_rgba(0,0,0,0.1)] overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col"
@@ -83,7 +83,7 @@ export default function GlobalLearningResources() {
                                 <ArrowRight className="w-3.5 h-3.5" />
                             </div>
                         </div>
-                    </Link>
+                    </a>
                 ))}
             </div>
 
