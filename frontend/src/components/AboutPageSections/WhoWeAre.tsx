@@ -16,7 +16,7 @@ export default function WhoWeAre() {
                 <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 items-center lg:items-start w-full max-w-7xl">
                     {/* Logo Container */}
                     <div className="flex-shrink-0 w-full lg:w-auto">
-                        <div className="w-full h-56 lg:w-64 lg:h-64 flex items-center justify-center bg-[var(--color-primary-blue-10)] rounded-xl p-8">
+                        <div className="w-full h-56 lg:w-64 lg:h-64 flex items-center justify-center bg-[#1E3A5F] rounded-xl p-8">
                             <img
                                 src={UNACVanLogo}
                                 alt="UNAC Vancouver Logo"
