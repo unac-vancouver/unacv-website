@@ -6,12 +6,19 @@ import EventsPage from '@/components/Events'
 import GetInvolvedPage from '@/components/GetInvolved'
 import AboutPage from '@/components/About'
 import Contact from '@/components/Contact'
+import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+import ScrollToHash from '@/components/ScrollToHash'
 
 function App() {
 
   return (
-    <div className="min-h-screen bg-blue-800 max-w-[1920px] mx-auto">
-      <Router>
+    <Router>
+      <ScrollToHash />
+      <div className="min-h-screen bg-blue-800 max-w-[1920px] mx-auto">
+        <Navbar />
+
+        <div className="h-20 bg-[#1A2D52]"></div>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/events" element={<EventsPage />} />
@@ -19,8 +26,10 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
-      </Router>
-    </div>
+        
+        <Footer />
+      </div>
+    </Router>
   );
 }
 
