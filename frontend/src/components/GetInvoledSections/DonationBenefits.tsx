@@ -37,7 +37,7 @@ const DONATION_BENEFITS = [
 
 export default function DonationBenefits() {
     return (
-        <section className="bg-[var(--color-neutral-1)] px-6 md:px-20 py-16 md:py-24">
+        <section id="donate" className="bg-[var(--color-neutral-1)] px-6 md:px-20 py-16 md:py-24">
             <div className="max-w-screen-xl mx-auto">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16  lg:divide-[var(--color-neutral-5)]">
                     {/* Left Side - Benefits */}
