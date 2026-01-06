@@ -6,8 +6,9 @@ export default function NationalOffice() {
     return (
         <section
             id="national-office"
-            className="bg-white w-full flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 py-12 md:py-16 px-6 md:px-12 lg:px-28"
+            className="bg-white w-full flex justify-center py-12 md:py-16 px-6 md:px-12 lg:px-28"
         >
+            <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16 w-full max-w-7xl">
             {/* Left Content */}
             <div className="flex flex-col gap-8 w-full lg:w-1/2 max-w-xl">
                 {/* Header */}
@@ -81,6 +82,7 @@ export default function NationalOffice() {
                         className="w-full h-auto object-cover"
                     />
                 </div>
+            </div>
             </div>
         </section>
     );
