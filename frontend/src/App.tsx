@@ -11,7 +11,7 @@ import ResourcesPage from '@/components/Resources'
 function App() {
 
   return (
-    <div className="min-h-screen bg-blue-800 max-w-[1920px] mx-auto">
+    <div className="min-h-screen bg-blue-800 max-w-[2560px] mx-auto">
       <Router>
         <Routes>
           <Route path="/" element={<HomePage />} />
