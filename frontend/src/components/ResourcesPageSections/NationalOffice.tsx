@@ -1,6 +1,5 @@
 import { H2, Body } from '@/components/ui/Typographies';
 import { ArrowRight, Users, MapPin } from 'lucide-react';
-import { Link } from 'react-router-dom';
 import UnBuildingImg from '@/assets/ResourcesPage/un-building.webp';
 
 export default function NationalOffice() {
@@ -13,20 +12,20 @@ export default function NationalOffice() {
             <div className="flex flex-col gap-8 w-full lg:w-1/2 max-w-xl">
                 {/* Header */}
                 <div className="flex flex-col gap-3">
-                    <H2 className="text-[#0f1f4c] text-2xl md:text-3xl lg:text-4xl">
+                    <H2 className="text-[var(--color-primary-blue-10)] text-2xl md:text-3xl lg:text-4xl">
                         Our National Office
                     </H2>
-                    <div className="h-[3px] w-28 rounded-full bg-gradient-to-r from-[#7693e4] to-[#4d65a7]" />
+                    <div className="h-[3px] w-28 rounded-full bg-gradient-to-r from-[var(--color-primary-blue-5)] to-[var(--color-primary-blue-7)]" />
                 </div>
 
                 {/* Description */}
-                <Body className="text-[#404040] text-[15px] leading-relaxed">
+                <Body className="text-[var(--color-neutral-8)] text-[15px] leading-relaxed">
                     The United Nations Association in Canada is a historic civil society organization that educates and engages Canadians on the work of the United Nations and global issues that affect us all. There are over 12,000 members and{' '}
                     <a
                         href="https://www.unac.org/branches/"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[#404040] underline hover:opacity-80 transition-opacity"
+                        className="text-[var(--color-neutral-8)] underline hover:opacity-80 transition-opacity"
                     >
                         13 branches
                     </a>
@@ -36,27 +35,27 @@ export default function NationalOffice() {
                 {/* Stats Cards */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     {/* Members Card */}
-                    <div className="bg-[#e9eefb] border-l-[3px] border-[#4d65a7] rounded-lg p-5 flex flex-col gap-2">
+                    <div className="bg-[var(--color-primary-blue-05)] border-l-[3px] border-[var(--color-primary-blue-7)] rounded-lg p-5 flex flex-col gap-2">
                         <div className="flex items-center gap-2.5">
-                            <Users className="w-5 h-5 text-[#4d65a7]" />
-                            <span className="text-[#0f1f4c] text-[25px] font-normal leading-tight">
+                            <Users className="w-5 h-5 text-[var(--color-primary-blue-7)]" />
+                            <span className="text-[var(--color-primary-blue-10)] text-[25px] font-normal leading-tight">
                                 12,000+
                             </span>
                         </div>
-                        <span className="text-[#5a5a5a] text-[13.5px]">
+                        <span className="text-[var(--color-neutral-7)] text-[13.5px]">
                             Members
                         </span>
                     </div>
 
                     {/* Branches Card */}
-                    <div className="bg-[#e9eefb] border-l-[3px] border-[#7693e4] rounded-lg p-5 flex flex-col gap-2">
+                    <div className="bg-[var(--color-primary-blue-05)] border-l-[3px] border-[var(--color-primary-blue-5)] rounded-lg p-5 flex flex-col gap-2">
                         <div className="flex items-center gap-2.5">
-                            <MapPin className="w-5 h-5 text-[#7693e4]" />
-                            <span className="text-[#0f1f4c] text-[25px] font-normal leading-tight">
+                            <MapPin className="w-5 h-5 text-[var(--color-primary-blue-5)]" />
+                            <span className="text-[var(--color-primary-blue-10)] text-[25px] font-normal leading-tight">
                                 13
                             </span>
                         </div>
-                        <span className="text-[#5a5a5a] text-[13.5px]">
+                        <span className="text-[var(--color-neutral-7)] text-[13.5px]">
                             Branches
                         </span>
                     </div>
@@ -67,7 +66,7 @@ export default function NationalOffice() {
                     href="https://www.unac.org/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-[#4d65a7] hover:bg-[#4d65a7]/90 text-white rounded-lg py-2.5 px-5 flex items-center gap-2 text-[13.5px] w-fit transition-colors"
+                    className="bg-[var(--color-primary-blue-7)] hover:bg-[var(--color-primary-blue-7)]/90 text-white rounded-lg py-2.5 px-5 flex items-center gap-2 text-[13.5px] w-fit transition-colors"
                 >
                     <span>About Our National Office</span>
                     <ArrowRight className="w-4 h-4" />

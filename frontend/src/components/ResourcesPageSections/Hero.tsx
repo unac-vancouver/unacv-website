@@ -1,5 +1,5 @@
 
-import { CTAButton } from '../ui/cta-button';
+import { CTAButton } from '@/components/ui/cta-button';
 import { HashLink } from 'react-router-hash-link';
 import { H1, BodyLarge } from '@/components/ui/Typographies';
 import ResourcesHeroImage from '@/assets/ResourcesPage/resources-hero.webp';

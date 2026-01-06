@@ -6,7 +6,7 @@ export default function CallToAction() {
     return (
         <section
             id="resources-cta"
-            className="bg-[#5471c6] w-full flex flex-col items-center py-12 md:py-16 px-6 md:px-12 lg:px-28"
+            className="bg-[var(--color-primary-blue-6)] w-full flex flex-col items-center py-12 md:py-16 px-6 md:px-12 lg:px-28"
         >
             <div className="flex flex-col items-center gap-6 w-full max-w-4xl text-center">
                 {/* Heading */}
