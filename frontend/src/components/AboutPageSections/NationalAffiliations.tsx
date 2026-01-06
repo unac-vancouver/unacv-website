@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 export default function NationalAffiliations() {
     return (
         <section
-            id="national-affiliations"
+            id="affiliations"
             className="relative w-full flex flex-col items-center py-14 md:py-24 px-6 md:px-20 lg:px-40"
         >
             {/* Background Image */}

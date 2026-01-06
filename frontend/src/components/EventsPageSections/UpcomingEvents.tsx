@@ -57,7 +57,7 @@ const UPCOMING_EVENTS: Event[] = [
 export default function UpcomingEvents() {
     return (
         <section 
-            id="upcoming-events" 
+            id="upcoming" 
             className="bg-[var(--color-primary-blue-05)] w-full flex flex-col items-center px-6 md:px-20 lg:px-40 py-16 md:py-20"
         >
             <div className="flex flex-col gap-16 items-start justify-center w-full max-w-screen-xl">

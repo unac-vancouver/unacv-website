@@ -54,7 +54,7 @@ const FEATURED_EVENTS: FeaturedEvent[] = [
 export default function FeaturedEvents() {
     return (
         <section 
-            id="featured-events" 
+            id="past" 
             className="bg-[var(--color-neutral-0)] w-full flex flex-col items-center px-6 md:px-20 lg:px-40 py-16 md:py-20"
         >
             <div className="flex flex-col items-start justify-center w-full gap-10">
