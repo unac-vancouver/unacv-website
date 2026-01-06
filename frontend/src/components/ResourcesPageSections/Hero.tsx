@@ -1,6 +1,6 @@
 
 import { CTAButton } from '@/components/ui/cta-button';
-import { HashLink } from 'react-router-hash-link';
+import { Link } from 'react-router-dom';
 import { H1, BodyLarge } from '@/components/ui/Typographies';
 import ResourcesHeroImage from '@/assets/ResourcesPage/resources-hero.webp';
 
@@ -41,7 +41,7 @@ export default function Hero() {
 
                 {/* Buttons Container */}
                 <div className="flex flex-col sm:flex-row gap-6 items-center justify-center">
-                    <HashLink smooth to="#global-learning-resources">
+                    <Link to="/resources#global-learning-resources">
                         <CTAButton
                             variant="solid"
                             size="lg"
@@ -49,9 +49,9 @@ export default function Hero() {
                         >
                             Global Learning Resources
                         </CTAButton>
-                    </HashLink>
+                    </Link>
 
-                    <HashLink smooth to="#national-office">
+                    <Link to="/resources#national-office">
                         <CTAButton
                             variant="light"
                             size="lg"
@@ -60,7 +60,7 @@ export default function Hero() {
                         >
                             Our National Office
                         </CTAButton>
-                    </HashLink>
+                    </Link>
                 </div>
             </div>
 
