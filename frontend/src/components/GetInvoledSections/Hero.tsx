@@ -7,7 +7,7 @@ export default function Hero() {
 
     return (
         <section
-            id="Get involved hero"
+            id="membership"
             className="relative w-full flex flex-col items-center py-14 px-6 md:px-20 lg:px-40"
         >
             {/* Background Image and Overlay */}

@@ -53,7 +53,10 @@ const MEMBERSHIP_BENEFITS: BenefitCard[] = [
 
 export default function WhyBecomeMember() {
   return (
-    <section className="bg-primary px-6 md:px-20 py-16 md:py-20">
+    <>
+      {/* Volunteer anchor */}
+      <div id="volunteer" />
+      <section className="bg-primary px-6 md:px-20 py-16 md:py-20">
       <div className="max-w-screen-xl mx-auto">
         {/* Header */}
         <div className="mb-10 md:mb-14">
@@ -87,5 +90,6 @@ export default function WhyBecomeMember() {
         </div>
       </div>
     </section>
+    </>
   )
 }
