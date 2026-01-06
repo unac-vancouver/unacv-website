@@ -61,7 +61,6 @@ export default function NationalOffice() {
                     </div>
                 </div>
 
-                {/* CTA Button */}
                 <a
                     href="https://www.unac.org/"
                     target="_blank"
