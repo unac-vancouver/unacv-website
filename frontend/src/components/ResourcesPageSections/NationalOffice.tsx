@@ -6,7 +6,7 @@ export default function NationalOffice() {
     return (
         <section
             id="national-office"
-            className="bg-white w-full flex justify-center py-12 md:py-16 px-6 md:px-12 lg:px-28"
+            className="bg-white w-full flex justify-center py-12 md:py-16 px-6 md:px-12 lg:px-28 border-t-[3px] border-[var(--color-primary-blue-7)] lg:border-t-0"
         >
             <div className="flex flex-col items-center gap-8 lg:gap-16 w-full max-w-7xl">
                 {/* Header - Mobile Only */}
