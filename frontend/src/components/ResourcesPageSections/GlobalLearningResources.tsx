@@ -88,7 +88,7 @@ export default function GlobalLearningResources() {
 
             {/* Bottom Link */}
             <a
-                to="https://www.un.org/en/"
+                href="https://www.un.org/en/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-2 text-[var(--color-primary-blue-7)] hover:opacity-80 transition-opacity"
