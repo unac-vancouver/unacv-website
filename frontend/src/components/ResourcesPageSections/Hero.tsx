@@ -1,6 +1,6 @@
 
 import { CTAButton } from '../ui/cta-button';
-import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 import { H1, BodyLarge } from '@/components/ui/Typographies';
 import ResourcesHeroImage from '@/assets/ResourcesPage/resources-hero.webp';
 
@@ -23,7 +23,7 @@ export default function Hero() {
             {/* Background Overlay */}
             <div
                 aria-hidden="true"
-                className="absolute inset-0 pointer-events-none overflow-hidden bg-[rgba(44,46,51,0.28)]"
+                className="absolute inset-0 pointer-events-none overflow-hidden bg-neutral-800/40"
             />
 
             {/* Content Container */}
@@ -41,7 +41,7 @@ export default function Hero() {
 
                 {/* Buttons Container */}
                 <div className="flex flex-col sm:flex-row gap-6 items-center justify-center">
-                    <Link to="/resources#global-resources">
+                    <HashLink smooth to="#global-learning-resources">
                         <CTAButton
                             variant="solid"
                             size="lg"
@@ -49,9 +49,9 @@ export default function Hero() {
                         >
                             Global Learning Resources
                         </CTAButton>
-                    </Link>
+                    </HashLink>
 
-                    <a href="https://www.un.org/" target="_blank" rel="noopener noreferrer">
+                    <HashLink smooth to="#national-office">
                         <CTAButton
                             variant="light"
                             size="lg"
@@ -60,7 +60,7 @@ export default function Hero() {
                         >
                             Our National Office
                         </CTAButton>
-                    </a>
+                    </HashLink>
                 </div>
             </div>
 
