@@ -1,5 +1,5 @@
 import type { NavItem } from '@/components/NavbarComponents/types';
-import { HiUserGroup, HiUsers, HiGlobeAlt, HiCalendar, HiClock, HiUser, HiHeart, HiCurrencyDollar, HiBookOpen, HiDocumentText, HiLink } from 'react-icons/hi';
+import { HiUsers, HiGlobeAlt, HiCalendar, HiClock, HiUser, HiHeart, HiCurrencyDollar, HiBookOpen } from 'react-icons/hi';
 import { SiUnitednations } from "react-icons/si";
 
 export const navItems: NavItem[] = [
@@ -35,9 +35,8 @@ export const navItems: NavItem[] = [
     label: 'Resources',
     path: '/resources',
     dropdown: [
-      { label: 'Publications', path: '/resources#publications', icon: HiBookOpen },
-      { label: 'Reports', path: '/resources#reports', icon: HiDocumentText },
-      { label: 'Links', path: '/resources#links', icon: HiLink },
+      { label: 'Global Learning Resources', path: '/resources#global-learning-resources', icon: HiBookOpen },
+      { label: 'National Office', path: '/resources#national-office', icon: HiGlobeAlt },
     ],
   },
   { label: 'Contact', path: '/contact' },

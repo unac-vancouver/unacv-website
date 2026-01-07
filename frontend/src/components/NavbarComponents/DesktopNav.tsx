@@ -6,10 +6,10 @@ interface DesktopNavProps {
     navItems: NavItem[];
     openDropdown: string | null;
     onMouseEnter: (label: string) => void;
-    onMouseLeave: () => void;
+    onMouseLeave: (event: React.MouseEvent) => void;
 }
 
-const DesktopNav = ({ navItems, openDropdown, onMouseEnter, onMouseLeave }: DesktopNavProps) => {
+const DesktopNav = ({ navItems, openDropdown, onMouseEnter }: DesktopNavProps) => {
     return (
         <div className="hidden lg:flex items-center justify-end flex-1">
             <div className="flex items-center space-x-2">
@@ -18,7 +18,6 @@ const DesktopNav = ({ navItems, openDropdown, onMouseEnter, onMouseLeave }: Desk
                         key={item.label}
                         className="relative"
                         onMouseEnter={() => item.dropdown && onMouseEnter(item.label)}
-                        onMouseLeave={onMouseLeave}
                     >
                         {item.path ? (
                             <>
@@ -59,18 +58,24 @@ const DesktopNav = ({ navItems, openDropdown, onMouseEnter, onMouseLeave }: Desk
 
                         {/* Mega Menu Dropdown */}
                         {item.dropdown && openDropdown === item.label && (
-                            <div
-                                className="fixed left-0 right-0 top-25 flex justify-center px-6"
-                                onMouseEnter={() => onMouseEnter(item.label)}
-                                onMouseLeave={onMouseLeave}
-                            >
+                            <>
+                                {/* Invisible bridge to prevent dropdown from closing */}
                                 <div
-                                    className="w-full max-w-[900px] bg-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-4 duration-300"
-                                    style={{
-                                        animation: 'slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
-                                    }}
+                                    className="absolute left-0 right-0 top-full h-6"
+                                    onMouseEnter={() => onMouseEnter(item.label)}
+                                />
+                                <div
+                                    className="fixed left-0 right-0 top-25 flex justify-center px-6 z-50 pointer-events-none"
+                                    data-dropdown-content
+                                    onMouseEnter={() => onMouseEnter(item.label)}
                                 >
-                                    <div className="grid grid-cols-2 gap-6 p-8">
+                                    <div
+                                        className="w-full max-w-[900px] bg-white rounded-2xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-top-4 duration-300 pointer-events-auto"
+                                        style={{
+                                            animation: 'slideDown 0.3s cubic-bezier(0.16, 1, 0.3, 1)',
+                                        }}
+                                    >
+                                        <div className="grid grid-cols-2 gap-6 p-8">
                                         {item.dropdown.map((dropdownItem, index) => {
                                             const Icon = dropdownItem.icon;
                                             
@@ -100,6 +105,7 @@ const DesktopNav = ({ navItems, openDropdown, onMouseEnter, onMouseLeave }: Desk
                                     </div>
                                 </div>
                             </div>
+                            </>
                         )}
                     </div>
                 ))}

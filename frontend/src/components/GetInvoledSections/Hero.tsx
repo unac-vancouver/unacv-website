@@ -33,7 +33,7 @@ export default function Hero() {
 
                 {/* Description */}
                 <div className="flex items-center justify-center px-7 max-w-4xl">
-                    <BodyLarge className="text-white text-center">
+                    <BodyLarge className="text-white font-medium text-center">
                         By becoming a member of UNAC-V, you are helping to mobilize Canadians.
                     </BodyLarge>
                 </div>
