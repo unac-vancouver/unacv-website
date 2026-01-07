@@ -15,7 +15,7 @@ export default function CallToAction() {
                 </H2>
 
                 {/* Description */}
-                <Body className="text-white/90 text-[15px] max-w-3xl">
+                <Body className="text-white text-base max-w-3xl">
                     Your time and support help us strengthen our local impact. Explore how you can get involved through volunteering, memberships, and community-led action.
                 </Body>
 
