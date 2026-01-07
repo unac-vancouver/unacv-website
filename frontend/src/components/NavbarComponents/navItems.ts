@@ -1,5 +1,5 @@
 import type { NavItem } from '@/components/NavbarComponents/types';
-import { HiUserGroup, HiUsers, HiGlobeAlt, HiCalendar, HiClock, HiUser, HiHeart, HiCurrencyDollar, HiBookOpen, HiDocumentText, HiLink } from 'react-icons/hi';
+import { HiUsers, HiGlobeAlt, HiCalendar, HiClock, HiUser, HiHeart, HiCurrencyDollar, HiBookOpen } from 'react-icons/hi';
 import { SiUnitednations } from "react-icons/si";
 
 export const navItems: NavItem[] = [

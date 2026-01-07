@@ -1,5 +1,5 @@
 import { H2, Body } from '@/components/ui/Typographies';
-import { ArrowRight, Users, MapPin } from 'lucide-react';
+import { Users, MapPin } from 'lucide-react';
 import UnBuildingImg from '@/assets/ResourcesPage/un-building.webp';
 import { CTAButton } from '../ui/cta-button';
 

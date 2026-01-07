@@ -9,7 +9,7 @@ interface DesktopNavProps {
     onMouseLeave: (event: React.MouseEvent) => void;
 }
 
-const DesktopNav = ({ navItems, openDropdown, onMouseEnter, onMouseLeave }: DesktopNavProps) => {
+const DesktopNav = ({ navItems, openDropdown, onMouseEnter }: DesktopNavProps) => {
     return (
         <div className="hidden lg:flex items-center justify-end flex-1">
             <div className="flex items-center space-x-2">
