@@ -40,7 +40,6 @@ export default function GlobalLearningResources() {
                     <H2 className="text-[var(--color-primary-blue-10)] text-center text-2xl md:text-3xl lg:text-4xl">
                         Global Learning Resources
                     </H2>
-                    <div className="h-[3px] w-full max-w-md rounded-full bg-gradient-to-r from-[var(--color-primary-blue-5)] to-[var(--color-primary-blue-7)]" />
                 </div>
                 <Body className="text-[var(--color-neutral-8)] text-center text-lg md:text-xl max-w-2xl">
                     Start with trusted global sources to deepen your understanding of the UN and its mission.
@@ -91,9 +90,9 @@ export default function GlobalLearningResources() {
                 href="https://www.un.org/en/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 text-[var(--color-primary-blue-7)] hover:opacity-80 transition-opacity"
+                className="flex items-center gap-2 text-[var(--color-primary-blue-9)] underline decoration-solid leading-5 tracking-tight hover:opacity-80 transition-opacity"
             >
-                <span className="text-[15px] font-normal">Explore All Global Resources</span>
+                <span className="text-base font-normal">Explore All Global Resources</span>
                 <ArrowRight className="w-4 h-4" />
             </a>
         </section>

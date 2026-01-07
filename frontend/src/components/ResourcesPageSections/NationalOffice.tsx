@@ -1,6 +1,7 @@
 import { H2, Body } from '@/components/ui/Typographies';
 import { ArrowRight, Users, MapPin } from 'lucide-react';
 import UnBuildingImg from '@/assets/ResourcesPage/un-building.webp';
+import { CTAButton } from '../ui/cta-button';
 
 export default function NationalOffice() {
     return (
@@ -14,7 +15,6 @@ export default function NationalOffice() {
                     <H2 className="text-[var(--color-primary-blue-10)] text-2xl">
                         Our National Office
                     </H2>
-                    <div className="h-[3px] w-28 rounded-full bg-gradient-to-r from-[var(--color-primary-blue-5)] to-[var(--color-primary-blue-7)]" />
                 </div>
 
                 {/* Image - Above text on mobile, right side on desktop */}
@@ -36,7 +36,6 @@ export default function NationalOffice() {
                             <H2 className="text-[var(--color-primary-blue-10)] text-2xl md:text-3xl lg:text-4xl">
                                 Our National Office
                             </H2>
-                            <div className="h-[3px] w-28 rounded-full bg-gradient-to-r from-[var(--color-primary-blue-5)] to-[var(--color-primary-blue-7)]" />
                         </div>
 
                         {/* Description */}
@@ -87,10 +86,10 @@ export default function NationalOffice() {
                             href="https://www.unac.org/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="bg-[var(--color-primary-blue-7)] hover:bg-[var(--color-primary-blue-7)]/90 text-white rounded-lg py-2.5 px-5 flex items-center justify-center lg:justify-start gap-2 text-[13.5px] w-full sm:w-fit mx-auto lg:mx-0 transition-colors"
                         >
-                            <span>About Our National Office</span>
-                            <ArrowRight className="w-4 h-4" />
+                            <CTAButton className='p-5 sm:p-6'>
+                                About Our National Office
+                            </CTAButton>
                         </a>
                     </div>
 

@@ -30,7 +30,7 @@ export default function Hero() {
             <div className="relative z-10 flex flex-col gap-12 items-center justify-center w-full max-w-5xl">
                 {/* Title and Subtitle */}
                 <div className="flex flex-col gap-6 items-center text-center">
-                    <H1 className="text-white font-extrabold text-3xl md:text-4xl lg:text-5xl leading-tight">
+                    <H1 className="text-white">
                         Trusted Resources for Global Learning
                     </H1>
 
@@ -45,7 +45,7 @@ export default function Hero() {
                         <CTAButton
                             variant="solid"
                             size="lg"
-                            className="p-[18px] text-lg"
+                            className="p-5 sm:p-6 text-lg"
                         >
                             Global Learning Resources
                         </CTAButton>
@@ -55,7 +55,7 @@ export default function Hero() {
                         <CTAButton
                             variant="light"
                             size="lg"
-                            className="p-[18px] text-lg"
+                            className="p-5 sm:p-6 text-lg"
                             showArrow={false}
                         >
                             Our National Office
