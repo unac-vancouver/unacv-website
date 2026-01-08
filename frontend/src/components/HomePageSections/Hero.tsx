@@ -1,22 +1,28 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import HeroImage from '@/assets/HomePage/HeroImage.webp'
+import TGLLImage from '@/assets/HomePage/TGLL-2024-Group-Shot.webp'
+import RichardSplaneImage from '@/assets/HomePage/Richard-Splane-Lecture-2025.jpg'
 import { Display } from '@/components/ui/Typographies'
 import { CTAButton } from '@/components/ui/cta-button'
 
-const TOTAL_SLIDES = 7;
+const HERO_SLIDES = [
+    {
+        image: HeroImage,
+        text: "Advocating for and promoting the values and goals of the United Nations within Vancouver.",
+    },
+    {
+        image: TGLLImage,
+        text: "TGLL is fast approaching. Register now for tickets at a discounted rate.",
+    },
+    {
+        image: RichardSplaneImage,
+        text: "Join us for the Richard Splane Lecture 2025. Stay tuned for more details.",
+    }
+];
+
 const SLIDE_DURATION = 8000; // 8 seconds
 //Changing SLIDE_DURATION will also require changing index.css to match the animation duration
-
-const SLIDE_CONTENT = [
-    "Advocating for and promoting the values and goals of the United Nations within Vancouver.",
-    "Building bridges between communities through global understanding and cooperation.",
-    "Empowering youth to become tomorrow's leaders in sustainable development.",
-    "Promoting human rights and social justice for all members of our community.",
-    "Fostering dialogue and collaboration on critical global challenges.",
-    "Supporting the United Nations Sustainable Development Goals locally.",
-    "Creating opportunities for engagement with international issues and perspectives."
-];
 
 export default function Hero() {
     const [activeSlide, setActiveSlide] = useState(0);
@@ -24,24 +30,29 @@ export default function Hero() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setActiveSlide((current) => (current + 1) % TOTAL_SLIDES);
+            setActiveSlide((current) => (current + 1) % HERO_SLIDES.length);
             setKey((prev) => prev + 1);
         }, SLIDE_DURATION);
 
         return () => clearInterval(interval);
-    }, []);
+    }, [activeSlide]);
     return (
         <section 
             id="hero" 
             className="relative w-full h-[30rem] flex flex-col items-center "
         >
-            {/* Background Image and Overlay */}
+            {/* Background Images with Fade Transition */}
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
-                <img 
-                    alt="Hero Image" 
-                    className="absolute inset-0 w-full h-full object-cover" 
-                    src={HeroImage} 
-                />
+                {HERO_SLIDES.map((slide, index) => (
+                    <img 
+                        key={index}
+                        alt={`Hero Image ${index + 1}`}
+                        className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-1000 ease-in-out ${
+                            activeSlide === index ? 'opacity-100' : 'opacity-0'
+                        }`}
+                        src={slide.image}
+                    />
+                ))}
                 <div 
                     className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60"                 
                 />
@@ -49,10 +60,13 @@ export default function Hero() {
 
             {/* Content Container */}
             <div className="relative z-10 flex flex-col gap-y-10 items-center justify-center w-full pt-2.5 flex-1">
-                {/* Heading */}
+                {/* Heading with Fade Transition */}
                 <div className="flex items-center justify-center h-52 w-3/4">
-                    <Display className="text-white text-center">
-                        {SLIDE_CONTENT[activeSlide]}
+                    <Display 
+                        key={activeSlide}
+                        className="text-white text-center animate-[fadeIn_0.8s_ease-in-out]"
+                    >
+                        {HERO_SLIDES[activeSlide].text}
                     </Display>
                 </div>
 
@@ -82,7 +96,7 @@ export default function Hero() {
 
             {/* Progress Indicator */}
             <div className="relative flex gap-2 h-1 items-center mb-10">
-                {Array.from({ length: TOTAL_SLIDES }).map((_, index) => (
+                {HERO_SLIDES.map((_, index) => (
                     <button
                         key={index}
                         onClick={() => {
