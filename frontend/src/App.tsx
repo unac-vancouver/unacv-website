@@ -10,6 +10,7 @@ import ResourcesPage from '@/components/Resources'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import ScrollToHash from '@/components/ScrollToHash'
+import SDGPage from '@/components/SDG'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<Contact />} />
           <Route path='/resources' element={<ResourcesPage />} />
+          <Route path='/sdgs' element={<SDGPage />} />
         </Routes>
         
         <Footer />
