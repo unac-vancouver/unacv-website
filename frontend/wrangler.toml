@@ -1,0 +1,11 @@
+name = "unacv-website"
+compatibility_date = "2026-01-08"
+pages_build_output_dir = "dist"
+
+# SPA routing - serve index.html for all routes
+[[pages_plugins]]
+binding = "ASSETS"
+
+# Optional: Set node compatibility if needed
+# [compatibility_flags]
+# nodejs_compat = true
