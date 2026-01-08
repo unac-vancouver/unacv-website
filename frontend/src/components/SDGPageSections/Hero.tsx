@@ -31,7 +31,7 @@ export default function Hero() {
                 {/* Subtitle */}
                 <div className="flex items-center justify-center px-7 max-w-4xl">
                     <p className="font-roboto font-bold text-white text-lg md:text-xl leading-relaxed text-center">
-                        "a world free from poverty and inequality"
+                        "A world free from poverty and inequality"
                     </p>
                 </div>
 

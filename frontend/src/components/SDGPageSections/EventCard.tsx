@@ -29,7 +29,7 @@ export default function EventCard({
   };
 
   return (
-    <div className="bg-white rounded-[10px] p-4 flex flex-col gap-2 w-96 min-h-44">
+    <div className="bg-white rounded-[10px] p-3 flex flex-col gap-1.5 w-[400px] min-h-36">
       {/* Image and Title/SDG Row */}
       <div className="flex items-start gap-4">
         <img

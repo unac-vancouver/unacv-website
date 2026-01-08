@@ -29,7 +29,7 @@ export default function OurContributions() {
     ];
 
     return (
-        <section className="bg-[var(--color-primary-blue-7)] w-full flex justify-center py-16 md:py-24 px-6 md:px-12 lg:px-28">
+        <section className="bg-[var(--color-primary-blue-7)] w-full flex justify-center py-16 md:py-24 max-md:px-4">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 w-full max-w-7xl">
                 {/* Left Side - Text Content */}
                 <div className="flex flex-col justify-start gap-12 w-full lg:w-2/5">
@@ -71,12 +71,12 @@ export default function OurContributions() {
                 </div>
 
                 {/* Right Side - Event Cards */}
-                <div className="w-full lg:w-3/5 flex flex-col items-center lg:items-start gap-12 lg:pt-32 lg:pr-0">
+                <div className="w-full lg:w-3/5 flex flex-col items-center gap-6 lg:pt-0 lg:pr-0">
                     {events.map((event, index) => (
                         <div
                             key={index}
                             className={`
-                                ${index === 1 ? 'lg:-ml-50' : 'lg:ml-50 '}
+                                ${index === 0 ? 'lg:ml-50' : index === 1 ? '' : 'lg:-ml-50'}
                                 transition-all
                             `}
                         >
