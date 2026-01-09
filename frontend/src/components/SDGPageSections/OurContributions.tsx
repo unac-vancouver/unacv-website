@@ -29,7 +29,7 @@ export default function OurContributions() {
     ];
 
     return (
-        <section className="bg-[var(--color-primary-blue-7)] w-full flex justify-center py-16 md:py-24 max-md:px-4">
+        <section className="bg-[var(--color-primary-blue-9)] w-full flex justify-center py-16 md:py-24 max-md:px-4">
             <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 w-full max-w-7xl">
                 {/* Left Side - Text Content */}
                 <div className="flex flex-col justify-start gap-12 w-full lg:w-2/5">
@@ -40,7 +40,7 @@ export default function OurContributions() {
                         </H2>
 
                         {/* Description */}
-                        <Body className="text-white text-[24px] leading-[32px] font-light">
+                        <Body className="text-white md:text-xl leading-[32px] font-light">
                             We are guided by the UN Sustainable Development Goals (SDGs) and host community events, programs, and partnerships that foster dialogue and action on critical issues such as poverty, gender inequalities, human rights, cross-cultural understanding, environmental degradation, and threats to peace and security.
                         </Body>
                     </div>
@@ -49,9 +49,9 @@ export default function OurContributions() {
                     <div className="hidden lg:flex flex-col sm:flex-row gap-6 items-start">
                         <Link to="/get-involved#donate">
                             <CTAButton
-                                variant="solidWhite"
+                                variant="solid"
                                 size="lg"
-                                className="p-5 sm:p-6 text-lg"
+                                className="p-5 sm:p-6 text-lg border-white border-2 bg-white text-primary hover:bg-white/90"
                             >
                                 Donate
                             </CTAButton>
@@ -59,9 +59,9 @@ export default function OurContributions() {
 
                         <Link to="/events">
                             <CTAButton
-                                variant="light"
+                                variant="ghost"
                                 size="lg"
-                                className="p-5 sm:p-6 text-lg"
+                                className="p-5 sm:p-6 text-lg border-white text-white hover:bg-primary"
                                 showArrow={false}
                             >
                                 See Events
@@ -71,18 +71,21 @@ export default function OurContributions() {
                 </div>
 
                 {/* Right Side - Event Cards */}
-                <div className="w-full lg:w-3/5 flex flex-col items-center gap-6 lg:pt-0 lg:pr-0">
-                    {events.map((event, index) => (
-                        <div
-                            key={index}
-                            className={`
-                                ${index === 0 ? 'lg:ml-50' : index === 1 ? '' : 'lg:-ml-50'}
-                                transition-all
-                            `}
-                        >
-                            <EventCard {...event} />
-                        </div>
-                    ))}
+                <div className="w-full lg:w-3/5 flex flex-col gap-6 lg:gap-2 lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:auto-rows-fr">
+                    {/* Card 1 - Top Right */}
+                    <div className="lg:col-start-2 lg:row-start-1 lg:self-start lg:justify-self-end">
+                        <EventCard {...events[0]} />
+                    </div>
+                    
+                    {/* Card 2 - Left Middle */}
+                    <div className="lg:col-start-1 lg:row-start-2 lg:self-center lg:justify-self-start">
+                        <EventCard {...events[1]} />
+                    </div>
+                    
+                    {/* Card 3 - Bottom Right */}
+                    <div className="lg:col-start-2 lg:row-start-3 lg:self-end lg:justify-self-end">
+                        <EventCard {...events[2]} />
+                    </div>
                 </div>
             </div>
         </section>

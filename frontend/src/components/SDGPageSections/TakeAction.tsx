@@ -26,7 +26,7 @@ export default function TakeAction() {
                 </H2>
 
                 {/* Quote */}
-                <Body className="text-white text-[20px] font-bold leading-relaxed">
+                <Body className="text-white text-xl md:text-2xl font-semibold leading-relaxed">
                     "Together, we can make a difference - locally and globally."
                 </Body>
 

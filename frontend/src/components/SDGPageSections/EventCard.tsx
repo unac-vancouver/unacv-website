@@ -29,46 +29,50 @@ export default function EventCard({
   };
 
   return (
-    <div className="bg-white rounded-[10px] p-3 flex flex-col gap-1.5 w-[400px] min-h-36">
-      {/* Image and Title/SDG Row */}
-      <div className="flex items-start gap-4">
+    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-4 flex gap-4 w-full max-w-md">
+      {/* Image */}
+      <div className="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
         <img
           src={imageSrc}
           alt={title}
-          className="w-[85px] h-[74px] rounded-[10px] object-cover flex-shrink-0"
+          className="w-full h-full object-cover"
         />
-        <div className="flex flex-col gap-1.5 flex-1">
-          <h3 className="font-extrabold text-base leading-5 tracking-[-0.15px]">
-            {title}
-          </h3>
-          {/* SDG Goals */}
-          {sdgGoals.length > 0 && (
-            <div className="flex gap-3">
-              {sdgGoals.map((goal) => (
-                <img
-                  key={goal}
-                  src={sdgIcons[goal]}
-                  alt={`SDG Goal ${goal}`}
-                  className="w-9 h-9"
-                />
-              ))}
-            </div>
-          )}
-        </div>
       </div>
 
-      {/* Description */}
-      <p className="font-light text-[11px] leading-tight tracking-[-0.15px] text-black line-clamp-4">
-        {description}
-      </p>
+      {/* Content */}
+      <div className="flex flex-col gap-2 flex-1 min-w-0">
+        {/* Title */}
+        <h3 className="font-bold text-base leading-tight tracking-tight text-gray-900">
+          {title}
+        </h3>
 
-      {/* Read More Button */}
-      <div className="flex justify-end mt-1">
-        <Link to={link}>
-          <CTAButton variant="solid" size="default" className="text-[9px] px-3 py-0.5 h-auto min-h-0">
-            Read More
-          </CTAButton>
-        </Link>
+        {/* SDG Goals */}
+        {sdgGoals.length > 0 && (
+          <div className="flex gap-1.5 flex-wrap">
+            {sdgGoals.map((goal) => (
+              <img
+                key={goal}
+                src={sdgIcons[goal]}
+                alt={`SDG Goal ${goal}`}
+                className="w-8 h-8 rounded"
+              />
+            ))}
+          </div>
+        )}
+
+        {/* Description */}
+        <p className="font-normal text-xs leading-relaxed text-gray-600 line-clamp-2">
+          {description}
+        </p>
+
+        {/* Read More Button */}
+        <div className="mt-auto">
+          <Link to={link} className="inline-block">
+            <CTAButton variant="solid" size="default" className="text-xs px-4 py-1.5 h-auto">
+              Read More
+            </CTAButton>
+          </Link>
+        </div>
       </div>
     </div>
   );

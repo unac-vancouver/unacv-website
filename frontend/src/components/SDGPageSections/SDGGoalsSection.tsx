@@ -24,7 +24,7 @@ export default function SDGGoalsSection() {
                     </H2>
 
                     {/* Description */}
-                    <Body className="text-[var(--color-neutral-8)] text-[23px] leading-relaxed font-light">
+                    <Body className="text-[var(--color-neutral-8)] md:text-xl leading-relaxed font-light">
                         The 2030 Sustainable Development Agenda is subdivided into 17 Goals, 169 Targets, and 232 Indicators. These have been specifically measured by government agencies, business, and civil society so that nations can be compared to their peers. The Agenda is meant to be ambitious and universal, advocating for collective action at a global scale.
                     </Body>
 
