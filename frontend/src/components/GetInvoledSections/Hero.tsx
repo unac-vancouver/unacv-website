@@ -2,8 +2,11 @@ import GetInvolvedHeroImage from '@/assets/GetInvolved/Hero.webp'
 import { BodyLarge, H1 } from '@/components/ui/Typographies'
 import { CTAButton } from '@/components/ui/cta-button'
 import { Link } from 'react-router-dom'
+import DonationModal from '@/components/ui/DonationModal'
+import { useState } from 'react'
 
 export default function Hero() {
+    const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
 
     return (
         <section
@@ -50,7 +53,7 @@ export default function Hero() {
                         </CTAButton>
                     </Link>
 
-                    <Link to="/events">
+                    <button onClick={() => setIsDonationModalOpen(true)}>
                         <CTAButton
                             variant="light"
                             size="lg"
@@ -59,9 +62,15 @@ export default function Hero() {
                         >
                             Donate
                         </CTAButton>
-                    </Link>
+                    </button>
                 </div>
             </div>
+
+            {/* Donation Modal */}
+            <DonationModal
+                isOpen={isDonationModalOpen}
+                onClose={() => setIsDonationModalOpen(false)}
+            />
         </section>
     )
 }

@@ -57,15 +57,17 @@ export default function AboutSnapshot() {
                             </a>
                             {' '}through meaningful events, partnerships, and awareness initiatives.
                         </BodyLarge>
-                        <Link
-                            to="/mission"
+                        <a
+                            href="https://www.unac.org/mission-and-vision/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="flex lg:hidden gap-2 items-center rounded-lg hover:opacity-80 transition-opacity"
                         >
                             <span className="font-semibold text-base sm:text-lg text-primary tracking-tight leading-5 underline decoration-solid">
                                 See Our Mission & Vision
                             </span>
                             <ArrowRight className="w-5 h-5 text-primary" />
-                        </Link>
+                        </a>
                     </div>
                 </div>
 
@@ -84,15 +86,17 @@ export default function AboutSnapshot() {
                     </div>
 
                     <div className="flex-1">
-                        <Link
-                            to="/mission"
+                        <a
+                            href="https://www.unac.org/mission-and-vision/"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="flex gap-2 items-center rounded-lg hover:opacity-80 transition-opacity"
                         >
                             <span className="font-semibold text-base sm:text-lg text-primary tracking-tight leading-5 underline decoration-solid">
                                 See Our Mission & Vision
                             </span>
                             <ArrowRight className="w-5 h-5 text-primary" />
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>

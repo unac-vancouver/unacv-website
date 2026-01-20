@@ -3,6 +3,8 @@ import HandHeart from '@/assets/HomePage/HandHeart.svg'
 import MoneySignCircle from '@/assets/HomePage/MoneySignCircle.svg'
 import { ArrowRight } from 'lucide-react';
 import { Body, H2, BodyLarge, H4 } from '@/components/ui/Typographies';
+import DonationModal from '@/components/ui/DonationModal';
+import { useState } from 'react';
 
 interface InvolvementCard {
   id: number;
@@ -20,7 +22,7 @@ const INVOLVEMENT_OPTIONS: InvolvementCard[] = [
     title: 'Volunteer',
     description: 'Join our team and contribute your time and skills to support our events, programs, and community initiatives.',
     buttonText: 'Start Volunteering',
-    buttonLink: '/volunteer',
+    buttonLink: '/get-involved#volunteer',
   },
   {
     id: 2,
@@ -36,11 +38,21 @@ const INVOLVEMENT_OPTIONS: InvolvementCard[] = [
     title: 'Become a Member',
     description: "Join a network of passionate individuals committed to advancing the UN's mission and the Global Goals.",
     buttonText: 'Join as Member',
-    buttonLink: '/membership',
+    buttonLink: '/get-involved#membership',
   },
 ];
 
 export default function GetInvolved() {
+  const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+
+  const handleCardClick = (buttonLink: string) => {
+    if (buttonLink === '/donate') {
+      setIsDonationModalOpen(true);
+    } else {
+      window.location.href = buttonLink;
+    }
+  };
+
   return (
     <section className="bg-[var(--color-primary-blue-1)] px-6 md:px-20 py-16 md:py-20">
       <div className="max-w-screen-xl mx-auto">
@@ -78,18 +90,24 @@ export default function GetInvolved() {
                 <Body >{option.description}</Body>
 
                 {/* Button */}
-                <a
-                  href={option.buttonLink}
+                <button
+                  onClick={() => handleCardClick(option.buttonLink)}
                   className="bg-[var(--color-primary-blue-9)] hover:bg-[var(--color-primary-blue-10)] transition-colors rounded-lg px-4 md:px-5 py-2.5 flex items-center justify-center gap-4 text-[var(--color-neutral-0)] text-base md:text-lg font-medium"
                 >
                   <span>{option.buttonText}</span>
                   <ArrowRight className="w-5 h-5" />
-                </a>
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
+
+      {/* Donation Modal */}
+      <DonationModal
+        isOpen={isDonationModalOpen}
+        onClose={() => setIsDonationModalOpen(false)}
+      />
     </section>
   );
 }

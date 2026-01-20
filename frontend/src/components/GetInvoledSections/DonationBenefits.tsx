@@ -2,6 +2,8 @@ import { H2, H3, Body } from '@/components/ui/Typographies'
 import { CTAButton } from '@/components/ui/cta-button'
 import { Link } from 'react-router-dom'
 import { ArrowRight, Users, Globe, Handshake } from 'lucide-react'
+import DonationModal from '@/components/ui/DonationModal'
+import { useState } from 'react'
 
 import UBCLogo from '@/assets/GetInvolved/ubc_logo.png'
 import AntonaLogo from '@/assets/GetInvolved/antona_logo.png'
@@ -36,6 +38,8 @@ const DONATION_BENEFITS = [
 ]
 
 export default function DonationBenefits() {
+    const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+
     return (
         <section id="donate" className="bg-[var(--color-neutral-1)] px-6 md:px-20 py-16 md:py-24">
             <div className="max-w-screen-xl mx-auto">
@@ -64,7 +68,7 @@ export default function DonationBenefits() {
 
                         {/* Action Buttons */}
                         <div className="flex flex-wrap gap-4 pt-2">
-                            <Link to="/donate">
+                            <button onClick={() => setIsDonationModalOpen(true)}>
                                 <CTAButton
                                     variant="solid"
                                     size="lg"
@@ -72,7 +76,7 @@ export default function DonationBenefits() {
                                 >
                                     Donate Now
                                 </CTAButton>
-                            </Link>
+                            </button>
 
                             <Link to="/contact">
                                 <CTAButton
@@ -133,6 +137,12 @@ export default function DonationBenefits() {
                     </div>
                 </div>
             </div>
+
+            {/* Donation Modal */}
+            <DonationModal
+                isOpen={isDonationModalOpen}
+                onClose={() => setIsDonationModalOpen(false)}
+            />
         </section>
     )
 }

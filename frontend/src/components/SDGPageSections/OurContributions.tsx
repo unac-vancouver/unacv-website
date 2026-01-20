@@ -2,8 +2,12 @@ import { H2, Body } from '@/components/ui/Typographies';
 import { CTAButton } from '@/components/ui/cta-button';
 import { Link } from 'react-router-dom';
 import EventCard from './EventCard';
+import DonationModal from '@/components/ui/DonationModal';
+import { useState } from 'react';
 
 export default function OurContributions() {
+    const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+
     const events = [
         {
             title: "World Oceans Day",
@@ -47,7 +51,7 @@ export default function OurContributions() {
 
                     {/* Buttons Container - Positioned at bottom */}
                     <div className="hidden lg:flex flex-col sm:flex-row gap-6 items-start">
-                        <Link to="/get-involved#donate">
+                        <button onClick={() => setIsDonationModalOpen(true)}>
                             <CTAButton
                                 variant="solid"
                                 size="lg"
@@ -55,7 +59,7 @@ export default function OurContributions() {
                             >
                                 Donate
                             </CTAButton>
-                        </Link>
+                        </button>
 
                         <Link to="/events">
                             <CTAButton
@@ -88,6 +92,12 @@ export default function OurContributions() {
                     </div>
                 </div>
             </div>
+
+            {/* Donation Modal */}
+            <DonationModal
+                isOpen={isDonationModalOpen}
+                onClose={() => setIsDonationModalOpen(false)}
+            />
         </section>
     );
 }
