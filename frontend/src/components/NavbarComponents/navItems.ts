@@ -5,7 +5,7 @@ import { SiUnitednations } from "react-icons/si";
 export const navItems: NavItem[] = [
   { label: 'Home', path: '/' },
   {
-    label: 'About us',
+    label: 'About Us',
     path: '/about',
     dropdown: [
       { label: 'Who We Are', path: '/about', icon: SiUnitednations },
@@ -21,7 +21,7 @@ export const navItems: NavItem[] = [
       { label: 'Past Events', path: '/events#past', icon: HiClock },
     ],
   },
-  { label: "SDG's", path: '/sdgs' },
+  { label: "SDGs", path: '/sdgs' },
   {
     label: 'Get Involved',
     path: '/get-involved',
