@@ -1,6 +1,5 @@
 import { BodyLarge, H2 } from '@/components/ui/Typographies'
 import { ArrowRight } from "lucide-react"
-import { Link } from 'react-router-dom'
 
 
 export default function AboutSnapshot() {
