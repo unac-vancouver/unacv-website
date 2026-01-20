@@ -1,9 +1,13 @@
 import { Link } from 'react-router-dom';
 import { FaLinkedin, FaFacebookF, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 import logo from '@/assets/unacvancouver-logo.png';
+import DonationModal from '@/components/ui/DonationModal';
+import { useState } from 'react';
 
 
 export default function Footer() {
+    const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+
     return (
         <footer className="bg-[#1A2D52] text-white">
             <div className="max-w-[1400px] mx-auto px-6 py-12 md:py-16">
@@ -60,9 +64,12 @@ export default function Footer() {
                     <div className="lg:col-span-2 text-center md:text-left">
                         <h3 className="text-xl font-semibold mb-4">Act Today</h3>
                         <nav className="flex flex-col gap-2 items-center md:items-start">
-                            <Link to="/get-involved#donate" className="text-white/70 hover:text-white transition-colors text-base italic">
+                            <button 
+                                onClick={() => setIsDonationModalOpen(true)}
+                                className="text-white/70 hover:text-white transition-colors text-base italic"
+                            >
                                 Donate
-                            </Link>
+                            </button>
                             <Link to="/get-involved#volunteer" className="text-white/70 hover:text-white transition-colors text-base italic">
                                 Volunteer
                             </Link>
@@ -120,6 +127,12 @@ export default function Footer() {
                     © 2025 UN Association in Canada - Vancouver Branch
                 </div>
             </div>
+
+            {/* Donation Modal */}
+            <DonationModal
+                isOpen={isDonationModalOpen}
+                onClose={() => setIsDonationModalOpen(false)}
+            />
         </footer>
     );
 }
