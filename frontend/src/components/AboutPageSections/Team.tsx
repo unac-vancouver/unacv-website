@@ -1,89 +1,9 @@
 import { useState } from 'react';
 import { H4, Body } from '@/components/ui/Typographies';
-import SameerEsmail from '@/assets/AboutPage/team/sameer_esmail.png';
 import TeamMemberCard from './TeamMemberCard';
 import type { TeamMember } from './TeamMemberCard';
 import TeamMemberModal from './TeamMemberModal';
-
-// Board of Directors data
-const boardMembers: TeamMember[] = [
-    {
-        id: 1,
-        name: 'Team Member',
-        role: 'Role/Title',
-        image: SameerEsmail,
-        bio: 'This is a placeholder bio for the team member. Replace this with actual information about their background, expertise, and contributions to UNAC Vancouver.',
-        email: 'member@unacvancouver.ca',
-        linkedin: 'https://linkedin.com'
-    },
-    {
-        id: 2,
-        name: 'Team Member',
-        role: 'Role/Title',
-        image: SameerEsmail,
-        bio: 'This is a placeholder bio for the team member. Replace this with actual information about their background, expertise, and contributions to UNAC Vancouver.'
-    },
-    {
-        id: 3,
-        name: 'Team Member',
-        role: 'Role/Title',
-        image: SameerEsmail,
-        bio: 'This is a placeholder bio for the team member. Replace this with actual information about their background, expertise, and contributions to UNAC Vancouver.'
-    },
-    {
-        id: 4,
-        name: 'Team Member',
-        role: 'Role/Title',
-        image: SameerEsmail,
-        bio: 'This is a placeholder bio for the team member. Replace this with actual information about their background, expertise, and contributions to UNAC Vancouver.'
-    },
-    {
-        id: 5,
-        name: 'Team Member',
-        role: 'Role/Title',
-        image: SameerEsmail,
-        bio: 'This is a placeholder bio for the team member. Replace this with actual information about their background, expertise, and contributions to UNAC Vancouver.'
-    }
-];
-
-// Advisory Council data
-const advisoryMembers: TeamMember[] = [
-    {
-        id: 1,
-        name: 'Team Member',
-        role: 'Role/Title',
-        image: SameerEsmail,
-        bio: 'This is a placeholder bio for the team member. Replace this with actual information about their background, expertise, and contributions to UNAC Vancouver.'
-    },
-    {
-        id: 2,
-        name: 'Team Member',
-        role: 'Role/Title',
-        image: SameerEsmail,
-        bio: 'This is a placeholder bio for the team member. Replace this with actual information about their background, expertise, and contributions to UNAC Vancouver.'
-    },
-    {
-        id: 3,
-        name: 'Team Member',
-        role: 'Role/Title',
-        image: SameerEsmail,
-        bio: 'This is a placeholder bio for the team member. Replace this with actual information about their background, expertise, and contributions to UNAC Vancouver.'
-    },
-    {
-        id: 4,
-        name: 'Team Member',
-        role: 'Role/Title',
-        image: SameerEsmail,
-        bio: 'This is a placeholder bio for the team member. Replace this with actual information about their background, expertise, and contributions to UNAC Vancouver.'
-    },
-    {
-        id: 5,
-        name: 'Team Member',
-        role: 'Role/Title',
-        image: SameerEsmail,
-        bio: 'This is a placeholder bio for the team member. Replace this with actual information about their background, expertise, and contributions to UNAC Vancouver.'
-    }
-];
+import { boardMembers, advisoryMembers } from '@/content/teamMembers';
 
 export default function Team() {
     const [selectedMember, setSelectedMember] = useState<TeamMember | null>(null);
