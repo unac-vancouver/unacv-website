@@ -60,7 +60,7 @@ export default function TeamMemberModal({ member, isOpen, onClose }: TeamMemberM
                 <div
                     onClick={(e) => e.stopPropagation()}
                     className={`
-                        bg-white rounded-2xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-y-auto relative
+                        bg-white rounded-2xl shadow-2xl w-full max-w-7xl max-h-[90vh] overflow-y-auto relative
                         transition-all duration-400
                         ${isOpen 
                             ? 'scale-100 opacity-100' 
