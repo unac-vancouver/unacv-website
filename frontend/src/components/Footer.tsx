@@ -80,7 +80,7 @@ export default function Footer() {
                     <div className="md:col-span-2 lg:col-span-3 flex justify-center md:justify-end items-start">
                         <div className="flex gap-4">
                             <a
-                                href="https://linkedin.com"
+                                href="https://linkedin.com/company/united-nations-association-vancouver/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 flex items-center justify-center hover:opacity-70 transition-opacity"
@@ -89,7 +89,7 @@ export default function Footer() {
                                 <FaLinkedin className="w-8 h-8" />
                             </a>
                             <a
-                                href="https://facebook.com"
+                                href="https://www.facebook.com/UNACVancouver/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 flex items-center justify-center hover:opacity-70 transition-opacity"
@@ -98,7 +98,7 @@ export default function Footer() {
                                 <FaFacebookF className="w-8 h-8" />
                             </a>
                             <a
-                                href="https://instagram.com"
+                                href="https://www.instagram.com/unacvancouver/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 flex items-center justify-center hover:opacity-70 transition-opacity"
@@ -107,7 +107,7 @@ export default function Footer() {
                                 <FaInstagram className="w-8 h-8" />
                             </a>
                             <a
-                                href="https://x.com"
+                                href="https://x.com/UNACVancouver"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="w-12 h-12 flex items-center justify-center hover:opacity-70 transition-opacity"
