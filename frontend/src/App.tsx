@@ -17,7 +17,7 @@ function App() {
   return (
     <Router>
       <ScrollToHash />
-      <div className="min-h-screen bg-blue-800 max-w-[1920px] mx-auto">
+      <div className="min-h-screen bg-blue-800 max-w-[1920px] mx-auto overflow-x-hidden">
         <Navbar />
 
         <div className="h-20 bg-[#1A2D52]"></div>
