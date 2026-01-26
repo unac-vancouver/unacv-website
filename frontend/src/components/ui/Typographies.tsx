@@ -47,7 +47,7 @@ export function H2({ children, className }: TypographyProps) {
     <h2
       className={cn(
         "font-roboto font-bold text-foreground",
-        "text-2xl leading-snug tracking-tight", // Mobile
+        "text-3xl leading-snug tracking-tight", // Mobile
         "md:text-3xl md:leading-snug", // Tablet
         "lg:text-4xl lg:leading-normal", // Desktop
         className
