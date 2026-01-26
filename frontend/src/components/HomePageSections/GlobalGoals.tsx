@@ -2,7 +2,7 @@ import Goal3 from '@/assets/SDGGoals/SdgGoal3.webp'
 import Goal4 from '@/assets/SDGGoals/SdgGoal4.webp'
 import Goal11 from '@/assets/SDGGoals/SdgGoal11.webp'
 import Goal17 from '@/assets/SDGGoals/SdgGoal17.webp'
-import { BodySmall, H4 } from '@/components/ui/Typographies'
+import { H4 } from '@/components/ui/Typographies'
 import { ArrowRight } from 'lucide-react'
 
 const GOALS = [
@@ -55,14 +55,7 @@ export default function GlobalGoals() {
                                 className="w-full h-full object-cover"
                             />
                         </div>
-                        <div className="flex flex-col gap-0.5 items-center w-full">
-                            <BodySmall className="text-[var(--color-primary-blue-10)] text-center">
-                                Goal {goal.number}
-                            </BodySmall>
-                            <H4 className="text-[var(--color-primary-blue-10)] text-center">
-                                {goal.title}
-                            </H4>
-                        </div>
+                  
                     </div>
                 ))}
             </div>
