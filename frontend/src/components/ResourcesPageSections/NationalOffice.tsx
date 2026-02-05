@@ -1,13 +1,13 @@
 import { H2, Body } from '@/components/ui/Typographies';
 import { Users, MapPin } from 'lucide-react';
-import UnBuildingImg from '@/assets/ResourcesPage/un-building.webp';
+import Ottawa from '@/assets/ResourcesPage/ottawa.jpg';
 import { CTAButton } from '../ui/cta-button';
 
 export default function NationalOffice() {
     return (
         <section
             id="national-office"
-            className="bg-white w-full flex justify-center py-12 md:py-16 px-6 md:px-12 lg:px-28 border-t-[3px] border-[var(--color-primary-blue-7)] lg:border-t-0"
+            className="bg-white w-full flex justify-center py-12 md:py-16 px-6 md:px-12 lg:px-28 "
         >
             <div className="flex flex-col items-center gap-8 lg:gap-16 w-full max-w-7xl">
                 {/* Header - Mobile Only */}
@@ -21,7 +21,7 @@ export default function NationalOffice() {
                 <div className="w-full lg:hidden max-w-md">
                     <div className="rounded-xl overflow-hidden shadow-[0px_17px_21px_-4px_rgba(0,0,0,0.1),0px_7px_8px_-5px_rgba(0,0,0,0.1)]">
                         <img
-                            src={UnBuildingImg}
+                            src={Ottawa}
                             alt="United Nations headquarters building"
                             className="w-full h-auto object-cover"
                         />
@@ -94,10 +94,10 @@ export default function NationalOffice() {
                     </div>
 
                     {/* Right Image - Desktop Only */}
-                    <div className="hidden lg:block w-full lg:w-1/2 max-w-xl">
+                    <div className="hidden lg:block w-full lg:w-1/2 max-w-2xl">
                         <div className="rounded-xl overflow-hidden shadow-[0px_17px_21px_-4px_rgba(0,0,0,0.1),0px_7px_8px_-5px_rgba(0,0,0,0.1)]">
                             <img
-                                src={UnBuildingImg}
+                                src={Ottawa}
                                 alt="United Nations headquarters building"
                                 className="w-full h-auto object-cover"
                             />
