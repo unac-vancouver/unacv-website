@@ -1,8 +1,8 @@
 import { Body, H2 } from '@/components/ui/Typographies'
 import EventCard from '@/components/EventCard'
-import { getFeaturedEvents } from '@/content/events'
+import { getUpcomingEvents } from '@/content/events'
 
-const FEATURED_EVENTS = getFeaturedEvents();
+const FEATURED_EVENTS = getUpcomingEvents();
 
 export default function FeaturedEvents() {
     return (
