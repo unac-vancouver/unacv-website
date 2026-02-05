@@ -1,24 +1,23 @@
 import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import HeroImage from '@/assets/HomePage/HeroImage.webp'
-import TGLLImage from '@/assets/HomePage/TGLL-2024-Group-Shot.webp'
-import RichardSplaneImage from '@/assets/HomePage/Richard-Splane-Lecture-2025.jpg'
 import { Display } from '@/components/ui/Typographies'
 import { CTAButton } from '@/components/ui/cta-button'
+import { getFeaturedEvents } from '@/content/events'
 
+// Get featured events and create hero slides
+const featuredEvents = getFeaturedEvents();
 const HERO_SLIDES = [
     {
         image: HeroImage,
         text: "Advocating for and promoting the values and goals of the United Nations within Vancouver.",
     },
-    {
-        image: TGLLImage,
-        text: "TGLL is fast approaching. Register now for tickets at a discounted rate.",
-    },
-    {
-        image: RichardSplaneImage,
-        text: "Join us for the Richard Splane Lecture 2025. Stay tuned for more details.",
-    }
+    ...featuredEvents
+        .filter(event => event.promotionalMessage && event.image)
+        .map(event => ({
+            image: event.image!,
+            text: event.promotionalMessage!,
+        }))
 ];
 
 const SLIDE_DURATION = 8000; // 8 seconds
