@@ -1,7 +1,6 @@
 import { H2 } from '@/components/ui/Typographies'
 import YearlyEventCard from '@/components/YearlyEventCard'
 import { getYearlyEvents } from '@/content/events'
-import ArrowRightBlue from '@/assets/arrow-right-blue.svg'
 
 const YEARLY_EVENTS = getYearlyEvents();
 
@@ -30,18 +29,6 @@ export default function UpcomingEvents() {
                     ))}
                 </div>
 
-                {/* See More Link */}
-                <div className="flex gap-2 items-center justify-center w-full">
-                    <a 
-                        href="/events" 
-                        className="flex gap-2 items-center hover:opacity-80 transition-opacity"
-                    >
-                        <span className="font-bold text-lg text-[var(--color-primary-blue-9)] tracking-tight leading-5 underline decoration-solid">
-                            See more
-                        </span>
-                        <img src={ArrowRightBlue} alt="" className="w-5 h-5" />
-                    </a>
-                </div>
             </div>
         </section>
     )
