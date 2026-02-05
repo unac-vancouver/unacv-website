@@ -1,7 +1,7 @@
-import Goal3 from '@/assets/SDGGoals/SdgGoal3.webp'
-import Goal4 from '@/assets/SDGGoals/SdgGoal4.webp'
-import Goal11 from '@/assets/SDGGoals/SdgGoal11.webp'
-import Goal17 from '@/assets/SDGGoals/SdgGoal17.webp'
+import Goal3 from '@/assets/SDGGoals/E-WEB-Goal-03.png'
+import Goal4 from '@/assets/SDGGoals/E-WEB-Goal-04.png'
+import Goal11 from '@/assets/SDGGoals/E-WEB-Goal-11.png'
+import Goal17 from '@/assets/SDGGoals/E-WEB-Goal-17.png'
 import { H4 } from '@/components/ui/Typographies'
 import { ArrowRight } from 'lucide-react'
 
