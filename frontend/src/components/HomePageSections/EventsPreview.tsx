@@ -2,9 +2,9 @@ import { ArrowRight } from 'lucide-react'
 import { BodyLarge, H2 } from '@/components/ui/Typographies'
 import { Link } from 'react-router-dom'
 import EventCard from '@/components/EventCard'
-import { getFeaturedEvents } from '@/content/events'
+import { getUpcomingEvents } from '@/content/events'
 
-const EVENTS = getFeaturedEvents();;
+const EVENTS = getUpcomingEvents();
 
 export default function EventsPreview() {
     return (
