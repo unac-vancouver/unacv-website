@@ -51,28 +51,39 @@ export default function YearlyEventCard({ event, index }: YearlyEventCardProps) 
                 {/* Event Info */}
                 <div className="flex flex-col gap-3">
                     <div className="flex gap-3 items-center">
-                        <img src={CalendarIcon} alt="" className="w-5 h-5" />
+                        <img src={CalendarIcon} alt="calendar icon" className="w-5 h-5" />
                         <span className="font-medium text-base text-[var(--color-primary-blue-10)] leading-6">
                             {event.date}
                         </span>
                     </div>
                     {event.time && (
                         <div className="flex gap-3 items-center">
-                            <img src={ClockIcon} alt="" className="w-5 h-5" />
+                            <img src={ClockIcon} alt="clock icon" className="w-5 h-5" />
                             <span className="font-medium text-base text-[var(--color-primary-blue-10)] leading-6">
                                 {event.time}
                             </span>
                         </div>
                     )}
-                    {event.location && (
-                        <div className="flex gap-3 items-center">
-                            <img src={LocationIcon} alt="" className="w-5 h-5" />
-                            <span className="font-medium text-base text-[var(--color-primary-blue-10)] leading-6">
-                                {event.location}
-                            </span>
-                        </div>
-                    )}
+
                 </div>
+
+                {/* Venue Details */}
+                {event.venue && event.venue !== event.location && (
+                    <div className="flex gap-3 items-start">
+                        <img src={LocationIcon} alt="location icon" className="w-5 h-5 mt-0.5" />
+                        <div>
+                            <p className="font-medium text-base text-[var(--color-primary-blue-10)]">{event.venue}</p>
+                        </div>
+                    </div>
+                )}
+
+                {/* Partners */}
+                {event.partners && event.partners.length > 0 && (
+                    <div>
+                        <span className="font-semibold text-sm text-[var(--color-neutral-7)]">In Partnership With</span>
+                        <p className="mt-1 font-medium text-base text-[var(--color-primary-blue-10)]">{event.partners.join(', ')}</p>
+                    </div>
+                )}
 
                 {/* SDG Goals */}
                 {event.sdgGoals && event.sdgGoals.length > 0 && (
@@ -89,15 +100,32 @@ export default function YearlyEventCard({ event, index }: YearlyEventCardProps) 
                     </div>
                 )}
 
-                {/* Register Button */}
-                <Link to={`/events/${event.slug}`} className="w-fit">
-                    <CTAButton
-                        variant="solid"
-                        size="lg"
-                    >
-                        Learn More
-                    </CTAButton>
-                </Link>
+                {/* Action Buttons */}
+                <div className="flex flex-wrap gap-3">
+                    <Link to={`/events/${event.slug}`} className="w-fit">
+                        <CTAButton
+                            variant="solid"
+                            size="lg"
+                        >
+                            Learn More
+                        </CTAButton>
+                    </Link>
+                    {event.registrationLink && (
+                        <a
+                            href={event.registrationLink}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-fit"
+                        >
+                            <CTAButton
+                                variant="solidWhite"
+                                size="lg"
+                            >
+                                Register
+                            </CTAButton>
+                        </a>
+                    )}
+                </div>
                 </div>
                 </div>
             </div>
