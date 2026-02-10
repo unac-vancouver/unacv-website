@@ -1,8 +1,13 @@
 import WorldOceansDayImage from "@/assets/SDGPage/world-oceans-day.webp";
-import SDGGoal13 from "@/assets/SDGPage/sdg-goal-13.webp";
-import SDGGoal03 from "@/assets/SDGPage/sdg-goal-03.webp";
-import SDGGoal15 from "@/assets/SDGPage/sdg-goal-15.webp";
-import SDGGoal14 from "@/assets/SDGPage/sdg-goal-14.webp";
+import SDGGoal03 from "@/assets/SDGGoals/E-WEB-Goal-03.png";
+import SDGGoal04 from "@/assets/SDGGoals/E-WEB-Goal-04.png";
+import SDGGoal05 from "@/assets/SDGGoals/E-WEB-Goal-05.png";
+import SDGGoal10 from "@/assets/SDGGoals/E-WEB-Goal-10.png";
+import SDGGoal13 from "@/assets/SDGGoals/E-WEB-Goal-13.png";
+import SDGGoal14 from "@/assets/SDGGoals/E-WEB-Goal-14.png";
+import SDGGoal15 from "@/assets/SDGGoals/E-WEB-Goal-15.png";
+import SDGGoal16 from "@/assets/SDGGoals/E-WEB-Goal-16.png";
+import SDGGoal17 from "@/assets/SDGGoals/E-WEB-Goal-17.png";
 import { CTAButton } from "@/components/ui/cta-button";
 import { Link } from "react-router-dom";
 
@@ -23,13 +28,18 @@ export default function EventCard({
 }: EventCardProps) {
   const sdgIcons: { [key: string]: string } = {
     "3": SDGGoal03,
+    "4": SDGGoal04,
+    "5": SDGGoal05,
+    "10": SDGGoal10,
     "13": SDGGoal13,
     "14": SDGGoal14,
     "15": SDGGoal15,
+    "16": SDGGoal16,
+    "17": SDGGoal17,
   };
 
   return (
-    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-4 flex gap-4 w-full max-w-md">
+    <div className="bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 p-4 flex gap-4 w-full max-w-md md:max-w-xl lg:max-w-2xl">
       {/* Image */}
       <div className="relative w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
         <img
