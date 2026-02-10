@@ -18,7 +18,7 @@ export const navItems: NavItem[] = [
     path: '/events',
     dropdown: [
       { label: 'Upcoming Events', path: '/events#upcoming', icon: HiCalendar },
-      { label: 'Past Events', path: '/events#past', icon: HiClock },
+      { label: 'Yearly Events', path: '/events#yearly', icon: HiClock },
     ],
   },
   { label: "SDGs", path: '/sdgs' },
