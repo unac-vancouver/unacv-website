@@ -4,53 +4,59 @@ import { Link } from 'react-router-dom';
 import EventCard from './EventCard';
 import DonationModal from '@/components/ui/DonationModal';
 import { useState } from 'react';
+import TGLLImage from '@/assets/EventsPages/TGLL/TGLL-2024.jpg';
+import RichardSplaneImage from '@/assets/HomePage/Richard-Splane-Lecture-2025.jpg';
+import JohnGibbardImage from '@/assets/EventsPages/John-Gibbard/john-gibbard5.webp';
 
 export default function OurContributions() {
     const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
 
     const events = [
         {
-            title: "World Oceans Day",
+            imageSrc: TGLLImage,
+            title: "Think Global, Link Local (TGLL)",
             description:
-                "Since 2018, UNAC-V has partnered annually with the City of Vancouver, the Great Canadian Shoreline Cleanup, Ocean Wise Conservation Association, and Surfrider Vancouver to host a World Oceans Day Celebration at the Plaza of Nations.",
-            sdgGoals: ["13", "3", "14", "15"],
-            link: "/events",
+                "Join us for the Annual Think Global, Link Local event fostering connections among students, non-profits, and civil society groups. This inspiring event connects young people with professionals in Canadian and international public‑service fields.",
+            sdgGoals: ["4", "5", "10", "17"],
+            link: "/events/tgll",
         },
         {
-            title: "World Oceans Day",
+            imageSrc: RichardSplaneImage,
+            title: "Dr. Richard B. Splane Lecture",
             description:
-                "Since 2018, UNAC-V has partnered annually with the City of Vancouver, the Great Canadian Shoreline Cleanup, Ocean Wise Conservation Association, and Surfrider Vancouver to host a World Oceans Day Celebration at the Plaza of Nations.",
-            sdgGoals: ["13", "3", "14", "15"],
-            link: "/events",
+                "Each year, the Dr. Richard Splane Lecture is held at UBC's Vancouver Campus as a joint collaboration between the UBC School of Social Work and UNAC Vancouver, highlighting pressing social policy issues affecting Canadian society.",
+            sdgGoals: ["5", "10", "16"],
+            link: "/events/richard-splane-lecture",
         },
         {
-            title: "World Oceans Day",
+            imageSrc: JohnGibbardImage,
+            title: "John Gibbard Memorial Award",
             description:
-                "Since 2018, UNAC-V has partnered annually with the City of Vancouver, the Great Canadian Shoreline Cleanup, Ocean Wise Conservation Association, and Surfrider Vancouver to host a World Oceans Day Celebration at the Plaza of Nations.",
-            sdgGoals: ["13", "3", "14", "15"],
-            link: "/events",
+                "Presented annually on UN Day, this award recognizes young people in Metro Vancouver who are working to build a more just, peaceful and sustainable world, celebrating youth who embody global citizenship and service to humanity.",
+            sdgGoals: ["16"],
+            link: "/events/john-gibbard-award",
         },
     ];
 
     return (
         <section className="bg-[var(--color-primary-blue-9)] w-full flex justify-center py-16 md:py-24 max-md:px-4">
-            <div className="flex flex-col lg:flex-row gap-8 lg:gap-20 w-full max-w-7xl">
+            <div className="flex flex-col xl:flex-row gap-8 xl:gap-16 w-full max-w-7xl items-center xl:items-start xl:px-4 2xl:px-0 ">
                 {/* Left Side - Text Content */}
-                <div className="flex flex-col justify-start gap-12 w-full lg:w-2/5">
+                <div className="flex flex-col justify-start gap-12 w-full xl:w-2/5 xl:my-auto">
                     <div className="flex flex-col gap-6">
                         {/* Header */}
-                        <H2 className="text-white text-3xl md:text-4xl">
+                        <H2 className="text-white text-3xl md:text-4xl md:text-center xl:text-left">
                             Our Contributions
                         </H2>
 
                         {/* Description */}
-                        <Body className="text-white md:text-xl leading-[32px] font-light">
+                        <Body className="text-white md:text-xl md:text-center xl:text-left md:px-12 xl:px-0 leading-[32px] font-light">
                             We are guided by the UN Sustainable Development Goals (SDGs) and host community events, programs, and partnerships that foster dialogue and action on critical issues such as poverty, gender inequalities, human rights, cross-cultural understanding, environmental degradation, and threats to peace and security.
                         </Body>
                     </div>
 
                     {/* Buttons Container - Positioned at bottom */}
-                    <div className="hidden lg:flex flex-col sm:flex-row gap-6 items-start">
+                    <div className="hidden xl:flex flex-col sm:flex-row gap-6 items-start">
                         <button onClick={() => setIsDonationModalOpen(true)}>
                             <CTAButton
                                 variant="solid"
@@ -75,19 +81,19 @@ export default function OurContributions() {
                 </div>
 
                 {/* Right Side - Event Cards */}
-                <div className="w-full lg:w-3/5 flex flex-col gap-6 lg:gap-2 lg:grid lg:grid-cols-2 lg:grid-rows-3 lg:auto-rows-fr">
+                <div className="w-full xl:w-3/5 flex flex-col gap-6 items-center md:items-center xl:items-stretch xl:gap-2 xl:grid xl:grid-cols-2 xl:grid-rows-3 xl:auto-rows-fr">
                     {/* Card 1 - Top Right */}
-                    <div className="lg:col-start-2 lg:row-start-1 lg:self-start lg:justify-self-end">
+                    <div className="xl:col-start-2 xl:row-start-1 xl:self-start xl:justify-self-end">
                         <EventCard {...events[0]} />
                     </div>
                     
                     {/* Card 2 - Left Middle */}
-                    <div className="lg:col-start-1 lg:row-start-2 lg:self-center lg:justify-self-start">
+                    <div className="xl:col-start-1 xl:row-start-2 xl:self-center xl:justify-self-start">
                         <EventCard {...events[1]} />
                     </div>
                     
                     {/* Card 3 - Bottom Right */}
-                    <div className="lg:col-start-2 lg:row-start-3 lg:self-end lg:justify-self-end">
+                    <div className="xl:col-start-2 xl:row-start-3 xl:self-end xl:justify-self-end">
                         <EventCard {...events[2]} />
                     </div>
                 </div>
