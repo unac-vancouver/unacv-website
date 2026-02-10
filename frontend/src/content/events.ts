@@ -91,7 +91,7 @@ Join us to discover new perspectives, build valuable connections, and explore in
         listInYearly: true,
         promotionalMessage: 'Join us at TGLL to discover new perspectives, build valuable connections, and explore innovative ideas!',
         keynoteSpeaker: 'Jessie Sunner - BC Minister of Post-Secondary Education and Future Skills | Human Rights Lawyer',
-        pastKeynotes: ['Bob Rae', 'Dr. Tara Cookson (2024)', 'Leilani Farha (2025)'],
+        pastKeynotes: ['Bob Rae (2021)', 'Dr. Tara Cookson (2024)', 'Leilani Farha (2025)'],
         partners: ['Kwantlen Polytechnic University (KPU)'],
         socialMedia: {
 
