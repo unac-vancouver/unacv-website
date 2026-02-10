@@ -7,7 +7,7 @@ const YEARLY_EVENTS = getYearlyEvents();
 export default function UpcomingEvents() {
     return (
         <section 
-            id="upcoming" 
+            id="yearly" 
             className="bg-[#e9eefb] w-full relative flex flex-col items-center px-6 md:px-20 lg:px-40 py-16 md:py-20"
         >
             <div className="flex flex-col gap-4 items-start justify-center w-full max-w-screen-xl relative">
