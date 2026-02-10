@@ -7,7 +7,7 @@ const FEATURED_EVENTS = getUpcomingEvents();
 export default function FeaturedEvents() {
     return (
         <section 
-            id="past" 
+            id="upcoming" 
             className="bg-[var(--color-neutral-0)] w-full flex flex-col items-center px-6 md:px-12 lg:px-20 py-16 md:py-20"
         >
             <div className="flex flex-col gap-12 items-center w-full">
