@@ -47,7 +47,7 @@ const MEMBERSHIP_BENEFITS: BenefitCard[] = [
     id: 6,
     iconName: 'Cash',
     icon: Cash,
-    title: 'Member and non-member prices for events',
+    title: 'Be notified first about early bird prices for our events',
   },
 ]
 
