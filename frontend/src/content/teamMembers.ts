@@ -12,6 +12,13 @@ export const boardMembers: TeamMember[] = [
     linkedin: "https://www.linkedin.com/in/lauren-k-farmer-abaa1aa8/",
   },
   {
+    id: 13,
+    name: "Koyali Burman",
+    role: "Co-President",
+    image: SameerEsmailImg,
+    email: "koyali.burman@unacvancouver.org",
+    bio: "Koyali Burman is a senior leader in the immigration and integration sector in Canada, with extensive experience in strategy, diplomacy, and monitoring and evaluation. She is a United Nations Diplomacy Fellow, strategist, and Monitoring and Evaluation specialist, with research interests spanning migration and integration, global diplomacy and governance, and gender and economic development. Originally from India, Koyali holds a Master of Arts in Adult and Higher Education from the University of British Columbia. She has held multiple board of directors and advisory roles in Canada, contributing to strategic decision-making and advancing development initiatives across diverse areas, including sustainable local economic development, gender-sensitive ICT strategies in open schooling, entrepreneurship as a pathway to community development, mentorship for women and girls, global citizenship, and workplace diversity and inclusion. Koyali has spoken on international migration, integration, and community economic development at universities and professional platforms in Canada, the United States, and India. Her leadership reflects a strong commitment to evidence-informed practice, equity, and systems change. She is deeply engaged with the United Nations Association in Canada–Vancouver and is passionate about advancing the Sustainable Development Goals, with a particular focus on building economically resilient communities that are inclusive and innovative for generations to come. "},
+  {
     id: 2,
     name: "Dariel Filwood",
     role: "Co-Vice President, Social Media & Volunteer Coordinator",
@@ -114,6 +121,7 @@ export const advisoryMembers: TeamMember[] = [
     image: SameerEsmailImg, // TODO: Replace with actual image
     bio: "Axel Velasquez is a member of the UNAC–Vancouver Advisory Council, where he leads the Website Committee and oversees the organization’s digital infrastructure. He is responsible for website architecture, feature development, data management, and ongoing maintenance. His work ensures the platform supports public outreach, accessibility, and community engagement.\n\nAxel works in research at Langara College, contributing to applied and community-based research initiatives. His experience includes data collection, analysis, and synthesizing qualitative and quantitative insights to support evidence-based projects.\n\nHe brings a strong technical background in web development and systems design, bridging research and technology to build practical, reliable, and impact-focused digital platforms.",
     email: "axel.velasquez@unacvancouver.org",
-    linkedin: "https://www.linkedin.com/in/axel-gael-velasquez-castaneda-1a4075323/",
+    linkedin:
+      "https://www.linkedin.com/in/axel-gael-velasquez-castaneda-1a4075323/",
   },
 ];
