@@ -24,7 +24,7 @@ export default function OurContributions() {
             imageSrc: RichardSplaneImage,
             title: "Dr. Richard B. Splane Lecture",
             description:
-                "Each year, the Dr. Richard Splane Lecture is held at UBC's Vancouver Campus as a joint collaboration between the UBC School of Social Work and UNAC Vancouver, highlighting pressing social policy issues affecting Canadian society.",
+                "Each year, the Dr. Richard Splane Lecture is held at UBC's Vancouver Campus as a joint collaboration between the UBC School of Social Work and UNAC-Vancouver, highlighting pressing social policy issues affecting Canadian society.",
             sdgGoals: ["5", "10", "16"],
             link: "/events/richard-splane-lecture",
         },

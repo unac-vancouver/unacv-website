@@ -24,7 +24,7 @@ export default function Hero() {
                 {/* Heading */}
                 <div className="flex items-center justify-center w-full">
                     <H1 className="text-white text-center">
-                        UNAC Vancouver Events
+                        UNAC-Vancouver Events
                     </H1>
                 </div>
 

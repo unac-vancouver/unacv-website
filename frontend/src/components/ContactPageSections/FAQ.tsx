@@ -20,7 +20,7 @@ const faqData: FAQItem[] = [
     ],
   },
   {
-    question: 'Can a UNAC Vancouver representative speak at my event?',
+    question: 'Can a UNAC-Vancouver representative speak at my event?',
     answer:
       'Yes — we consider speaking requests for community, school, and youth events. Please submit details through our contact form.',
 
@@ -29,14 +29,14 @@ const faqData: FAQItem[] = [
     question:
       'Do you offer internships, student roles, or volunteer opportunities for youth?',
     answer:
-     'Yes — students are encouraged to apply for volunteer roles through our Volunteer page or attend our events to get involved. We welcome passionate individuals who want to support our events and community initiatives. UNAC Vancouver does not offer paid internship opportunities.',
+     'Yes — students are encouraged to apply for volunteer roles through our Volunteer page or attend our events to get involved. We welcome passionate individuals who want to support our events and community initiatives. UNAC-Vancouver does not offer paid internship opportunities.',
     relatedLinks: [
       { text: 'Get Involved', url: '/get-involved' },
       { text: 'Upcoming Events', url: '/events' },
     ],
 },
   {
-    question: 'How do I become a member of UNAC Vancouver?',
+    question: 'How do I become a member of UNAC-Vancouver?',
     answer:
    'You can join as a member through our Become a Member page where you will be asked to make a donation and direct it to the local branch.  The minimum donation is $3 CAD. Membership helps grow our impact and connect like-minded people. Your support helps us run local programs and awareness initiatives.',
     relatedLinks: [

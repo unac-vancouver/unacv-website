@@ -17,7 +17,7 @@ export default function AboutSnapshot() {
                             Who We Are
                         </H2>
                         <BodyLarge className="text-[var(--color-neutral-9)] w-full xl:w-10/12">
-                            UNAC Vancouver is a branch of the{' '}
+                            UNAC-Vancouver is a branch of the{' '}
                             <a
                                 href="https://unac.org"
                                 target="_blank"
