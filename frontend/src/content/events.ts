@@ -104,7 +104,7 @@ Join us to discover new perspectives, build valuable connections, and explore in
         slug: 'richard-splane-lecture',
         category: 'Social Policy',
         title: 'Dr. Richard B. Splane Lecture',
-        shortDescription: 'Annual UBC School of Social Work and UNAC Vancouver lecture highlighting pressing social policy issues.',
+        shortDescription: 'Annual UBC School of Social Work and UNAC-Vancouver lecture highlighting pressing social policy issues.',
         description: `Each year, the Dr. Richard Splane Lecture is held at the University of British Columbia's Vancouver Campus as a joint collaboration between the UBC School of Social Work and the United Nations Association in Canada – Vancouver Branch. The lecture honours the memory of Richard Splane, a leader in Canadian social policy.`,
         longDescription: `Each year, the Dr. Richard Splane Lecture is held at the University of British Columbia's Vancouver Campus as a joint collaboration between the UBC School of Social Work and the United Nations Association in Canada – Vancouver Branch. The lecture honours the memory of Richard Splane, a leader in Canadian social policy.
 
