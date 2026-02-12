@@ -96,7 +96,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                 <div className="border border-[var(--color-neutral-3)] rounded-lg overflow-hidden shadow-md">
                   <img 
                     src={DonationExampleImage} 
-                    alt="Example showing how to leave a comment for UNAC Vancouver branch donation"
+                    alt="Example showing how to leave a comment for UNAC-Vancouver branch donation"
                     className="w-full h-auto"
                   />
                 </div>
@@ -110,7 +110,7 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
               
               {/* Introduction */}
               <Body className="text-[var(--color-neutral-8)]">
-                Thank you for considering a donation to UNAC Vancouver! Your support helps us advance the UN's mission and the Sustainable Development Goals in our local community.
+                Thank you for considering a donation to UNAC-Vancouver! Your support helps us advance the UN's mission and the Sustainable Development Goals in our local community.
               </Body>
 
               {/* Instructions */}
@@ -127,8 +127,8 @@ export default function DonationModal({ isOpen, onClose }: DonationModalProps) {
                     <span className="font-medium">Fill out your personal and financial information</span>
                   </li>
                   <li className="text-[var(--color-neutral-8)]">
-                    <span className="font-medium">Important:</span> If you want to direct your donation to the UNAC Vancouver branch, please leave a comment stating{' '}
-                    <span className="italic font-medium">"Donation for the UNAC Vancouver branch"</span> in the comment section
+                    <span className="font-medium">Important:</span> If you want to direct your donation to the UNAC-Vancouver branch, please leave a comment stating{' '}
+                    <span className="italic font-medium">"Donation for the UNAC-Vancouver branch"</span> in the comment section
                   </li>
                 </ol>
               </div>

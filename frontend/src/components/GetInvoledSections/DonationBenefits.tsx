@@ -6,17 +6,19 @@ import DonationModal from '@/components/ui/DonationModal'
 import { useState } from 'react'
 
 import UBCLogo from '@/assets/GetInvolved/ubc_logo.png'
-import AntonaLogo from '@/assets/GetInvolved/antona_logo.png'
 import SFULogo from '@/assets/GetInvolved/sfu_logo.png'
 import HolidayInnLogo from '@/assets/GetInvolved/holiday_inn_logo.png'
 import VancouverFoundationLogo from '@/assets/GetInvolved/vancouver_foundation_logo.png'
+import KPULogo from '@/assets/GetInvolved/kpu_logo.png'
+import BCCICLogo from '@/assets/GetInvolved/bccic_logo.png'
 
 const PARTNER_LOGOS = [
     { id: 1, name: 'UBC', src: UBCLogo, alt: 'University of British Columbia' },
-    { id: 2, name: 'Antona', src: AntonaLogo, alt: 'Antona' },
     { id: 3, name: 'SFU', src: SFULogo, alt: 'Simon Fraser University' },
     { id: 4, name: 'Holiday Inn', src: HolidayInnLogo, alt: 'Holiday Inn Vancouver Centre' },
     { id: 5, name: 'Vancouver Foundation', src: VancouverFoundationLogo, alt: 'Vancouver Foundation' },
+    { id: 6, name: 'KPU', src: KPULogo, alt: 'Kwantlen Polytechnic University' },
+    { id: 7, name: 'BCCIC', src: BCCICLogo, alt: 'British Columbia Institute of Technology' },  
 ]
 
 const DONATION_BENEFITS = [
@@ -112,7 +114,7 @@ export default function DonationBenefits() {
                     <div className="flex flex-col gap-8 lg:pl-8">
                         <div>
                             <H2 className="text-[var(--color-primary-blue-10)] mb-8">
-                                Special Thanks to Our Friends
+                                Special Thanks to Our Partners and Friends
                             </H2>
 
                             {/* Partner Logos Grid */}
