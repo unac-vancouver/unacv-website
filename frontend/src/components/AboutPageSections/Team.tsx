@@ -35,7 +35,7 @@ export default function Team() {
                                 Board of Directors
                             </H4>
                             <Body className="text-[var(--color-neutral-10)] leading-relaxed">
-                                UNAC Vancouver is led and guided by a dedicated team of volunteers that oversee and implement activities, and manage branch operations. The volunteer Board of Directors is elected annually by branch members at an Annual General Meeting in May and serves for a one-year term per the UNAC Vancouver bylaws.
+                                UNAC-Vancouver is led and guided by a dedicated team of volunteers that oversee and implement activities, and manage branch operations. The volunteer Board of Directors is elected annually by branch members at an Annual General Meeting in May and serves for a one-year term per the UNAC-Vancouver bylaws.
                             </Body>
                         </div>
 
@@ -59,7 +59,7 @@ export default function Team() {
                                 Advisory Council
                             </H4>
                             <Body className="text-[var(--color-neutral-10)] leading-relaxed">
-                                UNAC Vancouver Advisory Council members are non-voting members of the Board and are also appointed at the Annual General Meeting.
+                                UNAC-Vancouver Advisory Council members are non-voting members of the Board and are also appointed at the Annual General Meeting.
                             </Body>
                         </div>
 

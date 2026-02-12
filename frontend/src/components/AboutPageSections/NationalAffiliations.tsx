@@ -29,7 +29,7 @@ export default function NationalAffiliations() {
                 {/* Paragraphs */}
                 <div className="flex flex-col gap-4">
                     <BodyLarge className="text-[var(--color-neutral-10)] leading-relaxed">
-                        UNAC Vancouver is a local chapter of the United Nations Association in Canada (UNAC), a national, volunteer-based charitable organization dedicated to advocating for and promoting the values and goals of the United Nations within Canada.
+                        UNAC-Vancouver is a local chapter of the United Nations Association in Canada (UNAC), a national, volunteer-based charitable organization dedicated to advocating for and promoting the values and goals of the United Nations within Canada.
                     </BodyLarge>
 
                     <BodyLarge className="text-[var(--color-neutral-10)] leading-relaxed">
@@ -37,7 +37,7 @@ export default function NationalAffiliations() {
                     </BodyLarge>
 
                     <BodyLarge className="text-[var(--color-neutral-10)] leading-relaxed">
-                        UNAC Vancouver is dedicated to informing, inspiring, and engaging the Metro Vancouver community in advancing the vital work of the United Nations.
+                        UNAC-Vancouver is dedicated to informing, inspiring, and engaging the Metro Vancouver community in advancing the vital work of the United Nations.
                     </BodyLarge>
                 </div>
 

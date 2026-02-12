@@ -19,7 +19,7 @@ export default function WhoWeAre() {
                         <div className="w-full h-56 lg:w-64 lg:h-64 flex items-center justify-center bg-[#1E3A5F] rounded-xl p-8">
                             <img
                                 src={UNACVanLogo}
-                                alt="UNAC Vancouver Logo"
+                                alt="UNAC-Vancouver Logo"
                                 className="w-full h-full object-contain"
                             />
                         </div>
