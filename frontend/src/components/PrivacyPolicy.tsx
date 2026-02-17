@@ -72,7 +72,7 @@ export default function PrivacyPolicy() {
                     <div className="mb-12">
                         <H2 className="text-primary mb-6">How Do We Collect Personal Information?</H2>
                         <p className="text-gray-700 leading-relaxed mb-4">
-                            UNAC-Vancouver does not directly store personal information such as credit card information. All such information is handled by third parties or the United Nations Association in Canada (UNAC) head branch for activities such as donations and membership management.
+                            UNAC-Vancouver does not directly store personal information such as credit card information. All such information is handled by third parties or the United Nations Association in Canada (UNAC) head office for activities such as donations and membership management.
                         </p>
                         <p className="text-gray-700 leading-relaxed">
                             UNAC-Vancouver may hold personal information in our records only when individuals provide explicit consent to do so, such as when subscribing to our mailing list or volunteering for our programs.
@@ -97,7 +97,7 @@ export default function PrivacyPolicy() {
                             UNAC-Vancouver endeavours to protect your personal information from loss or theft, as well as unauthorized access, use or disclosure, regardless of the format in which such personal information is stored. When we do hold information with consent, we implement technical measures appropriate to the sensitivity level of the information in our efforts to protect the personal information under our control.
                         </p>
                         <p className="text-gray-700 leading-relaxed mb-4">
-                            With respect to donations and payments, UNAC-Vancouver does not process any payments directly. All financial transactions are handled securely through third-party payment processors or the United Nations Association in Canada (UNAC) head branch.
+                            With respect to donations and payments, UNAC-Vancouver does not process any payments directly. All financial transactions are handled securely through third-party payment processors or the United Nations Association in Canada (UNAC) head office.
                         </p>
                         <p className="text-gray-700 leading-relaxed">
                             While UNAC-Vancouver strives to use commercially acceptable means to protect your personal information, we cannot guarantee its absolute security.
@@ -165,7 +165,7 @@ export default function PrivacyPolicy() {
                     <div className="mb-12">
                         <H2 className="text-primary mb-6">Disclosure of Personal Information</H2>
                         <p className="text-gray-700 leading-relaxed">
-                            UNAC-Vancouver does not trade, rent nor sell your personal information. Any financial information is handled exclusively by third-party payment processors or the UNAC head branch, and is not accessed or stored by UNAC-Vancouver.
+                            UNAC-Vancouver does not trade, rent nor sell your personal information. Any financial information is handled exclusively by third-party payment processors or the UNAC head office, and is not accessed or stored by UNAC-Vancouver.
                         </p>
                     </div>
 
