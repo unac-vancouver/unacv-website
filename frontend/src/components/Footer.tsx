@@ -122,7 +122,7 @@ export default function Footer() {
 
                 {/* Copyright */}
                 <div className="text-center text-white/70 text-base italic">
-                    © 2025 UN Association in Canada - Vancouver Branch
+                   Copyright &copy; {new Date().getFullYear()} United Nations Association In Canada, Vancouver, All Rights Reserved
                 </div>
             </div>
 
