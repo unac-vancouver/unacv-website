@@ -29,7 +29,7 @@ const MEMBERSHIP_BENEFITS: BenefitCard[] = [
     id: 3,
     iconName: 'Globe',
     icon: Globe,
-    title: "Connect with UNAC-V's IDDIP, Green Corps, etc.",
+    title: "Connect with experienced professionals in global affairs",
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const MEMBERSHIP_BENEFITS: BenefitCard[] = [
     id: 5,
     iconName: 'Newspaper',
     icon: Newspaper,
-    title: 'News from our members (Ex. Editorials on our website)',
+    title: 'News, editorials and events on our website',
   },
   {
     id: 6,
