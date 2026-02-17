@@ -15,20 +15,20 @@ import UNACVLogoImg from "@/assets/unacvancouver-blue-logo.png";
 // Board of Directors data
 export const boardMembers: TeamMember[] = [
   {
-    id: 1,
-    name: "Lauren Farmer",
-    role: "Co-President",
-    image: LaurenFarmerImg,
-    bio: "Lauren Farmer (she/her) was born and raised in Montreal and has lived in British Columbia for the past 10 years. She is a Program Manager at CBC/Radio-Canada, supporting the organization's first National Indigenous Strategy by leading initiatives that uphold Indigenous rights and advance reconciliation. Based in Vancouver, Lauren brings extensive experience in Indigenous relations, public policy, and intergovernmental collaboration across the public sector.\n\nPrior to joining CBC/Radio-Canada, she worked at Metro Vancouver as Senior Policy Analyst and Acting Program Manager in Indigenous Relations. She also served the Tsleil-Waututh Nation as an Environmental Specialist and Parks Planner, representing the Nation on intergovernmental tables and contributing to park co-management agreements grounded in Indigenous rights, title, and culture.\n\nLauren holds an MSc in Geography from the University of Victoria and a BA in Human Geography from Concordia University. Her other experience includes research with Natural Resources Canada, the United Nations Secretariat of the Convention on Biological Diversity, and an international research fellowship in Taiwan.\n\nShe has served as Advisory Council member and Secretary for UNAC-V and is fluent in English and French, with intermediate Spanish. Outside of work, Lauren enjoys urban and outdoor adventures—she has biked from BC to California, completed multiple half marathons and a triathlon, and enjoys surfing and skiing.",
-    linkedin: "https://www.linkedin.com/in/lauren-k-farmer-abaa1aa8/",
-  },
-  {
     id: 13,
     name: "Koyali Burman",
     role: "Co-President",
     image: KoyaliBurmanImg,
     email: "koyali.burman@unacvancouver.org",
     bio: "Koyali Burman is a senior leader in the immigration and integration sector in Canada, with extensive experience in strategy, diplomacy, and monitoring and evaluation. She is a United Nations Diplomacy Fellow, strategist, and Monitoring and Evaluation specialist, with research interests spanning migration and integration, global diplomacy and governance, and gender and economic development. Originally from India, Koyali holds a Master of Arts in Adult and Higher Education from the University of British Columbia. She has held multiple board of directors and advisory roles in Canada, contributing to strategic decision-making and advancing development initiatives across diverse areas, including sustainable local economic development, gender-sensitive ICT strategies in open schooling, entrepreneurship as a pathway to community development, mentorship for women and girls, global citizenship, and workplace diversity and inclusion. Koyali has spoken on international migration, integration, and community economic development at universities and professional platforms in Canada, the United States, and India. Her leadership reflects a strong commitment to evidence-informed practice, equity, and systems change. She is deeply engaged with the United Nations Association in Canada–Vancouver and is passionate about advancing the Sustainable Development Goals, with a particular focus on building economically resilient communities that are inclusive and innovative for generations to come. ",
+  },
+  {
+    id: 1,
+    name: "Lauren Farmer",
+    role: "Co-President",
+    image: LaurenFarmerImg,
+    bio: "Lauren Farmer (she/her) was born and raised in Montreal and has lived in British Columbia for the past 10 years. She is a Program Manager at CBC/Radio-Canada, supporting the organization's first National Indigenous Strategy by leading initiatives that uphold Indigenous rights and advance reconciliation. Based in Vancouver, Lauren brings extensive experience in Indigenous relations, public policy, and intergovernmental collaboration across the public sector.\n\nPrior to joining CBC/Radio-Canada, she worked at Metro Vancouver as Senior Policy Analyst and Acting Program Manager in Indigenous Relations. She also served the Tsleil-Waututh Nation as an Environmental Specialist and Parks Planner, representing the Nation on intergovernmental tables and contributing to park co-management agreements grounded in Indigenous rights, title, and culture.\n\nLauren holds an MSc in Geography from the University of Victoria and a BA in Human Geography from Concordia University. Her other experience includes research with Natural Resources Canada, the United Nations Secretariat of the Convention on Biological Diversity, and an international research fellowship in Taiwan.\n\nShe has served as Advisory Council member and Secretary for UNAC-V and is fluent in English and French, with intermediate Spanish. Outside of work, Lauren enjoys urban and outdoor adventures—she has biked from BC to California, completed multiple half marathons and a triathlon, and enjoys surfing and skiing.",
+    linkedin: "https://www.linkedin.com/in/lauren-k-farmer-abaa1aa8/",
   },
   {
     id: 2,
@@ -56,6 +56,24 @@ export const boardMembers: TeamMember[] = [
     bio: "Rosio Godomar is a nutritionist with over 30 years of experience in public health, humanitarian aid, and food security programs across Latin America, Africa, the Middle East, and South Asia. Born in Peru and now living in Vancouver, Rosio holds an MSc in Human Nutrition from the Federal University of Rio de Janeiro, Brazil, and has studied nutrition in Peru and Germany.\n\nRosio started her career with the Peruvian government as well as in Bolivia. From 1991 to 2011 she worked in emergency and development programs with the United Nations World Food Programme (WFP) and the Food and Agriculture Organization (FAO) in Africa (Angola, Sudan, Ethiopia, Liberia), the Middle East (Iraq) and South Asia (Pakistan, and Afghanistan) where she led initiatives to combat malnutrition and improve agriculture in vulnerable communities.\n\nWhile working in Africa Rosio saw the many barriers to girls' education on that continent. In 2014, she founded the Educate Girls Network (EGN), to support girls from underprivileged rural families in Liberia (West Africa). EGN scholarships allow the girls to complete their education at William V.S Tubman University and become teachers or nurses.\n\nReturning to Canada in 2011, Rosio served as Food Service Supervisor at Burnaby Hospital until 2017. Today, she continues her commitment to community development as a volunteer mentor with MOSAIC's Workplace Connections Program and as Treasurer of the Vancouver Branch of the UN Association in Canada. A passionate advocate for education and empowerment, Rosio also enjoys photography as a creative pursuit.",
   },
   {
+    id: 8,
+    name: "Melisa Gardiola",
+    role: "Co-Secretary",
+    image: UNACVLogoImg,
+    bio: "Melisa believes that when systems are well-designed, people can focus on what matters most: creating positive change. As an operations leader, administrator, and community advocate, she is passionate about building processes and workflows that allow changemakers to have greater impact and drive meaningful progress toward the United Nations Sustainable Development Goals.\n\nOver nine years at Apple, Melisa supported partner networks across APAC and ANZ, helping teams navigate complex operational and technical challenges. Her focus was on removing obstacles, streamlining workflows, and empowering others to work independently and effectively ensuring people could dedicate more energy to meaningful outcomes rather than process inefficiencies.\n\nMelisa has also held leadership roles in the nonprofit sector, including the YMCA of Singapore, where she oversaw planning, budgeting, project execution, and volunteer coordination. She began as an Advisory Council member before advancing to Co-Secretary with the United Nations Association in Canada – Vancouver, where she manages governance, board communications, and programs that advance sustainable development.\n\nMelisa is committed to creating an environment that supports positive changemakers, enhances organizational effectiveness, and amplifies the impact of those working to make the world a better place.",
+    email: "melisa.gardiola@unacvancouver.org",
+    linkedin: "www.linkedin.com/in/melisa-gardiola",
+  },
+  {
+    id: 9,
+    name: "Salma Ameera Husain",
+    role: "Co-Secretary",
+    image: SalmaHusainImg,
+    bio: "Salma is a Business Degree Advisor at the Melville School of Business at Kwantlen Polytechnic University (KPU). Her post-secondary studies started in 2012, graduating with the Legal Administrative Studies Certificate (with Distinction), and then completing the Bachelor of Business Administration in Human Resources Management in 2017. She holds a Master of Business Administration from Thompson Rivers University. Additionally, she obtained the NGO and Non-Profit Studies Certificate at KPU, which instilled a core focus on incorporating student advocacy, humanitarianism, and social justice within business concepts. Her advocacy work for students and marginalized communities led her on the Board of Directors as Co-Secretary for the United Nations Association in Canada – Vancouver Branch (UNAC-V), addressing critical issues such as poverty, gender inequalities, human rights, cross-cultural understanding; under the framework of the United Nations Sustainable Development Goals (UNSDGs).\n\nFor the past 25 years, her family and her manage a Youth Centre in Surrey, BC where they host educational and community events; she is the Treasurer on the Executive Board. Additionally, she is on the University's Diversity and Equity Committee (UDEC) at KPU, which fosters community dialogue on student services and EDI measures. Salma envisions a world with harmony, compassion, and humility, through universal goals and education.",
+    email: "salma.husain@unacvancouver.org",
+    linkedin: "https://www.linkedin.com/in/salmahusain/",
+  },
+  {
     id: 5,
     name: "Sameer Esmail",
     role: "Past President",
@@ -81,27 +99,9 @@ export const boardMembers: TeamMember[] = [
     linkedin: "www.linkedin.com/in/slswitzer",
   },
   {
-    id: 8,
-    name: "Melisa Gardiola",
-    role: "Co-Secretary",
-    image: UNACVLogoImg,
-    bio: "Melisa believes that when systems are well-designed, people can focus on what matters most: creating positive change. As an operations leader, administrator, and community advocate, she is passionate about building processes and workflows that allow changemakers to have greater impact and drive meaningful progress toward the United Nations Sustainable Development Goals.\n\nOver nine years at Apple, Melisa supported partner networks across APAC and ANZ, helping teams navigate complex operational and technical challenges. Her focus was on removing obstacles, streamlining workflows, and empowering others to work independently and effectively ensuring people could dedicate more energy to meaningful outcomes rather than process inefficiencies.\n\nMelisa has also held leadership roles in the nonprofit sector, including the YMCA of Singapore, where she oversaw planning, budgeting, project execution, and volunteer coordination. She began as an Advisory Council member before advancing to Co-Secretary with the United Nations Association in Canada – Vancouver, where she manages governance, board communications, and programs that advance sustainable development.\n\nMelisa is committed to creating an environment that supports positive changemakers, enhances organizational effectiveness, and amplifies the impact of those working to make the world a better place.",
-    email: "melisa.gardiola@unacvancouver.org",
-    linkedin: "www.linkedin.com/in/melisa-gardiola",
-  },
-  {
-    id: 9,
-    name: "Salma Ameera Husain",
-    role: "Co-Secretary",
-    image: SalmaHusainImg,
-    bio: "Salma is a Business Degree Advisor at the Melville School of Business at Kwantlen Polytechnic University (KPU). Her post-secondary studies started in 2012, graduating with the Legal Administrative Studies Certificate (with Distinction), and then completing the Bachelor of Business Administration in Human Resources Management in 2017. She holds a Master of Business Administration from Thompson Rivers University. Additionally, she obtained the NGO and Non-Profit Studies Certificate at KPU, which instilled a core focus on incorporating student advocacy, humanitarianism, and social justice within business concepts. Her advocacy work for students and marginalized communities led her on the Board of Directors as Co-Secretary for the United Nations Association in Canada – Vancouver Branch (UNAC-V), addressing critical issues such as poverty, gender inequalities, human rights, cross-cultural understanding; under the framework of the United Nations Sustainable Development Goals (UNSDGs).\n\nFor the past 25 years, her family and her manage a Youth Centre in Surrey, BC where they host educational and community events; she is the Treasurer on the Executive Board. Additionally, she is on the University's Diversity and Equity Committee (UDEC) at KPU, which fosters community dialogue on student services and EDI measures. Salma envisions a world with harmony, compassion, and humility, through universal goals and education.",
-    email: "salma.husain@unacvancouver.org",
-    linkedin: "https://www.linkedin.com/in/salmahusain/",
-  },
-  {
     id: 10,
     name: "George Somerwill",
-    role: "Honorary Director, Past co-President",
+    role: "Honorary Director",
     image: GeorgeSomerwillImg,
     bio: "George Somerwill is a retired media and communications professional with a career spanning journalism, humanitarian work, and United Nations peace operations. He began his career in the early 1970s with the BBC Africa Service, later joining CBC Radio in 1976. George served as senior producer on As It Happens and spent three years as a producer in the CBC's Paris bureau. His journalism work took him to global crisis zones, including Ethiopia, Eritrea, and Somalia, where he reported on revolutions and the devastating 1984 famine.\n\nIn the early 1990s, George transitioned to international development, working with CARE Canada in communications and fundraising in Zimbabwe, Somalia, and Rwanda. While in Angola, he was recruited by the United Nations Department of Peacekeeping Operations (DPKO) in 1996 to support demobilization efforts under UNAVEM III.\n\nGeorge's UN career included roles in some of the world's most challenging hotspots. He served as UN spokesperson for the Oil-for-Food Programme in Baghdad, worked with UNICEF in Pakistan in 2002 later returning to peacekeeping in the UN Mission in Ethiopia and Eritrea. In 2004, he joined the newly established UN Mission in Sudan (UNMIS) as Chief of Public Information, and concluded his UN service in 2011 as Director of Communications for the UN Mission in Liberia.\n\nSince retirement George has served a term as vice-President of the board of MOSAIC, an immigrant services NGO and is a past-President of the Vancouver board of the UN Association in Canada.\n\nGeorge holds an MA in Post-Conflict Reconstruction and Development from the University of York, UK. His career reflects a lifelong commitment to global communication, humanitarian action, and peacebuilding.",
   },
@@ -110,20 +110,12 @@ export const boardMembers: TeamMember[] = [
     name: "Patsy George",
     role: "Honorary Director",
     image: PatsyGeorgeImg,
-    bio: "Patsy George is a retired public servant and social worker with an MA in Social Work and two Honorary Doctorates of Law from the University of the Fraser Valley and the University of British Columbia, respectively. Patsy has specialized in community development, working across Canada from Ontario, Quebec and Nova Scotia prior to arriving in BC in 1975. She was the Director of Immigrant and Settlement Services for BC before she retired. Patsy has served on the Immigration and Refugee Board and was appointed to the commission responsible for reviewing government policies and laws of Family and Children’s services.As the president of the International Council on Social Welfare, she represented Canada at various UN summits, forums and conferences, contributing to the development of international agreements, protocols to fight poverty, enhance social cohesion, human rights and international development. For her volunteer work, the Senate of Canada, City of Vancouver, M.O.S.A.I.C., United Way and others, have recognized Patsy. She holds both the Queen’s the Golden and Diamond Jubilee Medals, Order of British Columbia and the Order of Canada. She is a past president of UNAC-V, Vancouver Branch."  },
+    bio: "Patsy George is a retired public servant and social worker with an MA in Social Work and two Honorary Doctorates of Law from the University of the Fraser Valley and the University of British Columbia, respectively. Patsy has specialized in community development, working across Canada from Ontario, Quebec and Nova Scotia prior to arriving in BC in 1975. She was the Director of Immigrant and Settlement Services for BC before she retired. Patsy has served on the Immigration and Refugee Board and was appointed to the commission responsible for reviewing government policies and laws of Family and Children’s services.As the president of the International Council on Social Welfare, she represented Canada at various UN summits, forums and conferences, contributing to the development of international agreements, protocols to fight poverty, enhance social cohesion, human rights and international development. For her volunteer work, the Senate of Canada, City of Vancouver, M.O.S.A.I.C., United Way and others, have recognized Patsy. She holds both the Queen’s the Golden and Diamond Jubilee Medals, Order of British Columbia and the Order of Canada. She is a past president of UNAC-V, Vancouver Branch.",
+  },
 ];
 
 // Advisory Council data
 export const advisoryMembers: TeamMember[] = [
-  {
-    id: 1,
-    name: "Nadia Levi",
-    role: "Advisory Council Member",
-    image: NadiaLeviImg,
-    bio: "Nadia Levi is a strategy and advisory professional working at the intersection of land use, sustainability, infrastructure, and public policy. Nadia holds postgraduate training in sustainability and planning and brings over 20 years of experience working across Canada, the United States, Europe, Asia, and Australia. She currently serves as Senior Vice President, Land Use Strategies at Colliers in Vancouver, where she leads advisory work supporting governments, institutions, Indigenous partners, and private sector clients on master planning, economic development, feasibility, and long-term value creation. Nadia is particularly interested in translating global sustainability frameworks into practical, implementable strategies at the city and regional scale.\n\nNadia's engagement with the United Nations began in university as a youth delegate, where she worked on the Millennium Development Goals at the United Nations headquarters in New York. Her work has continued to align closely with the evolution of the UN agenda into the Sustainable Development Goals. She has served as an expert contributor to the United for Smart Sustainable Cities initiative under the United Nations Economic Commission for Europe, supporting thematic groups focused on infrastructure systems, intelligence and data, and the built environment. Nadia currently serves as an Advisory Council member with UNAC-Vancouver and is committed to advancing global citizenship and systems thinking as well as collaborative leadership in support of the UN's mission.",
-    email: "nadia.levi@unacvancouver.org",
-    linkedin: "https://www.linkedin.com/in/linkedinwithnadiayen/",
-  },
   {
     id: 2,
     name: "Alfred Lai",
@@ -141,5 +133,14 @@ export const advisoryMembers: TeamMember[] = [
     email: "axel.velasquez@unacvancouver.org",
     linkedin:
       "https://www.linkedin.com/in/axel-gael-velasquez-castaneda-1a4075323/",
+  },
+  {
+    id: 1,
+    name: "Nadia Levi",
+    role: "Advisory Council",
+    image: NadiaLeviImg,
+    bio: "Nadia Levi is a strategy and advisory professional working at the intersection of land use, sustainability, infrastructure, and public policy. Nadia holds postgraduate training in sustainability and planning and brings over 20 years of experience working across Canada, the United States, Europe, Asia, and Australia. She currently serves as Senior Vice President, Land Use Strategies at Colliers in Vancouver, where she leads advisory work supporting governments, institutions, Indigenous partners, and private sector clients on master planning, economic development, feasibility, and long-term value creation. Nadia is particularly interested in translating global sustainability frameworks into practical, implementable strategies at the city and regional scale.\n\nNadia's engagement with the United Nations began in university as a youth delegate, where she worked on the Millennium Development Goals at the United Nations headquarters in New York. Her work has continued to align closely with the evolution of the UN agenda into the Sustainable Development Goals. She has served as an expert contributor to the United for Smart Sustainable Cities initiative under the United Nations Economic Commission for Europe, supporting thematic groups focused on infrastructure systems, intelligence and data, and the built environment. Nadia currently serves as an Advisory Council member with UNAC-Vancouver and is committed to advancing global citizenship and systems thinking as well as collaborative leadership in support of the UN's mission.",
+    email: "nadia.levi@unacvancouver.org",
+    linkedin: "https://www.linkedin.com/in/linkedinwithnadiayen/",
   },
 ];
