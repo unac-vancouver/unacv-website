@@ -29,11 +29,11 @@ export default function NationalAffiliations() {
                 {/* Paragraphs */}
                 <div className="flex flex-col gap-4">
                     <BodyLarge className="text-[var(--color-neutral-10)] leading-relaxed">
-                        UNAC-Vancouver is a local chapter of the United Nations Association in Canada (UNAC), a national, volunteer-based charitable organization dedicated to advocating for and promoting the values and goals of the United Nations within Canada.
+                        UNAC-Vancouver is a branch of the United Nations Association in Canada (UNAC), headquartered in Ottawa, a national, volunteer-based charitable organization dedicated to advocating for and promoting the values and goals of the United Nations within Canada.
                     </BodyLarge>
 
                     <BodyLarge className="text-[var(--color-neutral-10)] leading-relaxed">
-                        Though UNAC is not an official UN office, it is a founding member of the World Federation of United Nations Associations (WFUNA), established in 1946. UNAC -Vancouver contributes to this international network by promoting global awareness and advancing the work of the UN through education, recognition programs, partnerships, and fundraising efforts.
+                        Though UNAC is not an official UN office, it is a founding member of the World Federation of United Nations Associations (WFUNA), established in 1946. UNAC-Vancouver contributes to the local and international networks by promoting global awareness and advancing the work of the UN through education, recognition programs, partnerships, and fundraising efforts.
                     </BodyLarge>
 
                     <BodyLarge className="text-[var(--color-neutral-10)] leading-relaxed">
