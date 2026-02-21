@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom';
 import { FaLinkedin, FaFacebookF, FaInstagram, FaXTwitter } from 'react-icons/fa6';
 import logo from '@/assets/unacvancouver-logo.png';
 import DonationModal from '@/components/ui/DonationModal';
+import VolunteerModal from '@/components/ui/VolunteerModal';
 import { useState } from 'react';
 
 
 export default function Footer() {
     const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+    const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
 
     return (
         <footer className="bg-[#1A2D52] text-white">
@@ -68,9 +70,12 @@ export default function Footer() {
                             >
                                 Donate
                             </button>
-                            <Link to="/get-involved#volunteer" className="text-white/70 hover:text-white transition-colors text-base italic">
+                            <button
+                                onClick={() => setIsVolunteerModalOpen(true)}
+                                className="text-white/70 hover:text-white transition-colors text-base italic"
+                            >
                                 Volunteer
-                            </Link>
+                            </button>
                         </nav>
                     </div>
 
@@ -125,6 +130,12 @@ export default function Footer() {
                    Copyright &copy; {new Date().getFullYear()} United Nations Association In Canada, Vancouver, All Rights Reserved
                 </div>
             </div>
+
+            {/* Volunteer Modal */}
+            <VolunteerModal
+                isOpen={isVolunteerModalOpen}
+                onClose={() => setIsVolunteerModalOpen(false)}
+            />
 
             {/* Donation Modal */}
             <DonationModal
