@@ -1,6 +1,4 @@
 import { H2, Body } from '@/components/ui/Typographies';
-import { CTAButton } from '@/components/ui/cta-button';
-import { Link } from 'react-router-dom';
 import SDGGoalsGrid from '@/assets/SDGPage/sdg-goals-grid.webp';
 
 export default function SDGGoalsSection() {
@@ -17,7 +15,7 @@ export default function SDGGoalsSection() {
                 </div>
 
                 {/* Text Content - Right on desktop */}
-                <div className="flex flex-col gap-8 w-full lg:w-1/2">
+                <div className="flex flex-col gap-8 w-full lg:w-1/2 my-auto">
                     {/* Header */}
                     <H2 className="text-[var(--color-neutral-10)] text-3xl md:text-4xl">
                         Sustainable Development Goals
@@ -28,16 +26,6 @@ export default function SDGGoalsSection() {
                         The 2030 Sustainable Development Agenda is subdivided into 17 Goals, 169 Targets, and 232 Indicators. These have been specifically measured by government agencies, business, and civil society so that nations can be compared to their peers. The Agenda is meant to be ambitious and universal, advocating for collective action at a global scale.
                     </Body>
 
-                    {/* Button */}
-                    <Link to="/get-involved">
-                        <CTAButton
-                            variant="solid"
-                            size="lg"
-                            className="p-5 sm:p-6 text-lg w-fit"
-                        >
-                            Get Involved
-                        </CTAButton>
-                    </Link>
                 </div>
             </div>
         </section>
