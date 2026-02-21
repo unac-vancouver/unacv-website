@@ -4,6 +4,7 @@ import MoneySignCircle from '@/assets/HomePage/MoneySignCircle.svg'
 import { ArrowRight } from 'lucide-react';
 import { Body, H2, BodyLarge, H4 } from '@/components/ui/Typographies';
 import DonationModal from '@/components/ui/DonationModal';
+import VolunteerModal from '@/components/ui/VolunteerModal';
 import { useState } from 'react';
 
 interface InvolvementCard {
@@ -44,10 +45,13 @@ const INVOLVEMENT_OPTIONS: InvolvementCard[] = [
 
 export default function GetInvolved() {
   const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
+  const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
 
   const handleCardClick = (buttonLink: string) => {
     if (buttonLink === '/donate') {
       setIsDonationModalOpen(true);
+    } else if (buttonLink === '/get-involved#volunteer') {
+      setIsVolunteerModalOpen(true);
     } else {
       window.location.href = buttonLink;
     }
@@ -102,6 +106,12 @@ export default function GetInvolved() {
           ))}
         </div>
       </div>
+
+      {/* Volunteer Modal */}
+      <VolunteerModal
+        isOpen={isVolunteerModalOpen}
+        onClose={() => setIsVolunteerModalOpen(false)}
+      />
 
       {/* Donation Modal */}
       <DonationModal
