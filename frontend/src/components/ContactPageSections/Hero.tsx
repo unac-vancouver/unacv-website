@@ -2,8 +2,11 @@ import ContactPageHero from '@/assets/ContactPage/contact-hero.jpg'
 import { H1 } from '@/components/ui/Typographies';
 import { CTAButton } from '../ui/cta-button';
 import { Link } from 'react-router-dom';
+import VolunteerModal from '@/components/ui/VolunteerModal';
+import { useState } from 'react';
 
 export default function Hero() {
+    const [isVolunteerModalOpen, setIsVolunteerModalOpen] = useState(false);
 
     return (
         <section
@@ -44,7 +47,7 @@ export default function Hero() {
                         </CTAButton>
                     </Link>
 
-                    <Link to="/get-involved">
+                    <button onClick={() => setIsVolunteerModalOpen(true)}>
                         <CTAButton
                             variant="light"
                             size="lg"
@@ -53,9 +56,15 @@ export default function Hero() {
                         >
                             Interested in Volunteering?
                         </CTAButton>
-                    </Link>
+                    </button>
                 </div>
             </div>
+
+            {/* Volunteer Modal */}
+            <VolunteerModal
+                isOpen={isVolunteerModalOpen}
+                onClose={() => setIsVolunteerModalOpen(false)}
+            />
 
         </section>
     )
