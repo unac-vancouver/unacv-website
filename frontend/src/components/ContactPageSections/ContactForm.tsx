@@ -1,30 +1,14 @@
-import { useState } from 'react';
+import { useRef } from 'react';
 import { Button } from '@/components/ui/button';
-import {
-    Select,
-    SelectContent,
-    SelectItem,
-    SelectTrigger,
-    SelectValue,
-} from '@/components/ui/select';
+import { useForm, ValidationError } from '@formspree/react'
 
 import { FaLinkedin as Linkedin, FaFacebook as Facebook, FaInstagram as Instagram } from 'react-icons/fa';
 import { Mail } from 'lucide-react';
 import { H2, H3 } from '@/components/ui/Typographies';
 
 export default function ContactForm() {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        subject: 'general',
-        message: '',
-    });
-
-    const handleSubmit = (e: React.FormEvent) => {
-        e.preventDefault();
-        // Handle form submission
-        console.log(formData);
-    };
+    const [state, handleSubmit, reset] = useForm("mgolnnda");
+    const formRef = useRef<HTMLFormElement>(null);
 
     return (
         <section className="w-full flex flex-col items-center py-16 md:py-24 px-6 md:px-20 lg:px-40 bg-white">
@@ -108,7 +92,27 @@ export default function ContactForm() {
 
                         {/* Right Column - Contact Form */}
                         <div className="p-8 lg:p-12">
-                            <form onSubmit={handleSubmit} className="space-y-6">
+                            {state.succeeded ? (
+                                <div className="flex flex-col items-center justify-center min-h-[400px] text-center">
+                                    <div className="text-green-600 text-5xl mb-4">✓</div>
+                                    <H3 className="text-2xl font-semibold mb-2 text-gray-900">
+                                        Thank you for your message!
+                                    </H3>
+                                    <p className="text-gray-600 mb-6">
+                                        We'll get back to you soon.
+                                    </p>
+                                    <Button
+                                        onClick={() => {
+                                            reset();
+                                            formRef.current?.reset();
+                                        }}
+                                        className="bg-[#1e3a5f] hover:bg-[#152a45] text-white px-8 py-2.5 h-auto rounded-md font-medium transition-colors"
+                                    >
+                                        Send another message
+                                    </Button>
+                                </div>
+                            ) : (
+                            <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                                 {/* Name and Email Row */}
                                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                                     {/* Name Field */}
@@ -121,14 +125,17 @@ export default function ContactForm() {
                                         </label>
                                         <input
                                             id="name"
+                                            name="name"
                                             type="text"
                                             placeholder="Name"
-                                            value={formData.name}
-                                            onChange={(e) =>
-                                                setFormData({ ...formData, name: e.target.value })
-                                            }
                                             className="w-full px-4 py-1 rounded-md border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                             required
+                                            disabled={state.submitting}
+                                        />
+                                        <ValidationError 
+                                            prefix="Name" 
+                                            field="name"
+                                            errors={state.errors}
                                         />
                                     </div>
 
@@ -142,14 +149,17 @@ export default function ContactForm() {
                                         </label>
                                         <input
                                             id="email"
+                                            name="email"
                                             type="email"
                                             placeholder="Email"
-                                            value={formData.email}
-                                            onChange={(e) =>
-                                                setFormData({ ...formData, email: e.target.value })
-                                            }
                                             className="w-full px-4 py-1 rounded-md border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
                                             required
+                                            disabled={state.submitting}
+                                        />
+                                        <ValidationError 
+                                            prefix="Email" 
+                                            field="email"
+                                            errors={state.errors}
                                         />
                                     </div>
                                 </div>
@@ -162,24 +172,20 @@ export default function ContactForm() {
                                     >
                                         Subject
                                     </label>
-                                    <Select
-                                        value={formData.subject}
-                                        onValueChange={(value) =>
-                                            setFormData({ ...formData, subject: value })
-                                        }
+                                    <select
+                                        id="subject"
+                                        name="subject"
+                                        defaultValue="General Inquiry"
+                                        className="w-full h-11 px-4 rounded-md border border-gray-300 bg-white text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+                                        disabled={state.submitting}
                                     >
-                                        <SelectTrigger className="w-full h-11 bg-white">
-                                            <SelectValue placeholder="General Inquiry" />
-                                        </SelectTrigger>
-                                        <SelectContent>
-                                            <SelectItem value="General Inquiry">General Inquiry</SelectItem>
-                                            <SelectItem value="Volunteer Inquiry">Volunteer Inquiry</SelectItem>
-                                            <SelectItem value="Sponsorship, Partnership or Collaboration">Sponsorship, Partnership or Collaboration</SelectItem>
-                                            <SelectItem value="Event / Speaking Request">Event / Speaking Request</SelectItem>
-                                            <SelectItem value="Membership or Donation">Membership or Donation</SelectItem>
-                                            <SelectItem value="Media or Press">Media or Press</SelectItem>
-                                        </SelectContent>
-                                    </Select>
+                                        <option value="General Inquiry">General Inquiry</option>
+                                        <option value="Volunteer Inquiry">Volunteer Inquiry</option>
+                                        <option value="Sponsorship, Partnership or Collaboration">Sponsorship, Partnership or Collaboration</option>
+                                        <option value="Event / Speaking Request">Event / Speaking Request</option>
+                                        <option value="Membership or Donation">Membership or Donation</option>
+                                        <option value="Media or Press">Media or Press</option>
+                                    </select>
                                 </div>
 
                                 {/* Message Field */}
@@ -192,27 +198,32 @@ export default function ContactForm() {
                                     </label>
                                     <textarea
                                         id="message"
+                                        name="message"
                                         placeholder="Leave us a message..."
-                                        value={formData.message}
-                                        onChange={(e) =>
-                                            setFormData({ ...formData, message: e.target.value })
-                                        }
                                         rows={6}
                                         className="w-full px-4 py-2.5 rounded-md border border-gray-300 bg-white text-gray-900 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
                                         required
+                                        disabled={state.submitting}
+                                    />
+                                    <ValidationError 
+                                        prefix="Message" 
+                                        field="message"
+                                        errors={state.errors}
                                     />
                                 </div>
 
-                                {/* Footer with info text and button */}
+                                {/* Submit Button */}
                                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 pt-2">
                                     <Button
                                         type="submit"
-                                        className="bg-[#1e3a5f] hover:bg-[#152a45] text-white px-8 py-2.5 h-auto rounded-md font-medium transition-colors"
+                                        className="bg-[#1e3a5f] hover:bg-[#152a45] text-white px-8 py-2.5 h-auto rounded-md font-medium transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                                        disabled={state.submitting}
                                     >
-                                        Send Message
+                                        {state.submitting ? 'Sending...' : 'Send Message'}
                                     </Button>
                                 </div>
                             </form>
+                            )}
                         </div>
                     </div>
                 </div>
