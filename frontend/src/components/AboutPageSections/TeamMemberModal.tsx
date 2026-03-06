@@ -92,7 +92,7 @@ export default function TeamMemberModal({ member, isOpen, onClose }: TeamMemberM
                     <div className="flex flex-col md:flex-row gap-6 md:gap-8 p-8">
                         {/* Image */}
                         <div className="flex-shrink-0">
-                            <div className="w-48 h-48 md:w-56 md:h-56 rounded-xl overflow-hidden shadow-lg">
+                            <div className="w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden shadow-lg">
                                 <img
                                     src={member.image}
                                     alt={member.name}

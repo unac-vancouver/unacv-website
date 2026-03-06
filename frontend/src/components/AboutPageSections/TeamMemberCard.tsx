@@ -25,11 +25,11 @@ export default function TeamMemberCard({ member, onSelect }: TeamMemberCardProps
             onClick={() => onSelect(member)}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="flex flex-col gap-3 text-left cursor-pointer group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary-blue-7)] focus-visible:ring-offset-2 rounded-lg"
+            className="flex flex-col gap-3 text-center items-center cursor-pointer group focus:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-primary-blue-7)] focus-visible:ring-offset-2 rounded-lg"
         >
             <div 
                 className={`
-                    w-full aspect-square rounded-lg overflow-hidden relative
+                    w-full aspect-square rounded-full overflow-hidden relative
                     transition-all duration-300 ease-out
                     ${member.isActive ? 'ring-4 ring-[var(--color-primary-blue-7)]' : ''}
                     ${isHovered ? 'shadow-xl' : 'shadow-md'}
@@ -53,7 +53,7 @@ export default function TeamMemberCard({ member, onSelect }: TeamMemberCardProps
                     `}
                 />
             </div>
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 items-center">
                 <Body className={`
                     font-semibold text-[var(--color-neutral-10)]
                     transition-colors duration-200
