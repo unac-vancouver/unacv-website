@@ -34,13 +34,13 @@ export default function Hero() {
                         Trusted Resources for Global Learning
                     </H1>
 
-                    <BodyLarge className="text-white/95 font-medium text-lg md:text-xl max-w-2xl">
+                    <BodyLarge className="text-white/95 font-medium text-base md:text-xl max-w-2xl">
                         Access credible materials and references that help students, educators, and community members explore the UN's work, Sustainable Development Goals, and global issues.
                     </BodyLarge>
                 </div>
 
                 {/* Buttons Container */}
-                <div className="flex flex-col sm:flex-row gap-6 items-center justify-center">
+                <div className="flex flex-col sm:flex-row gap-6  justify-start">
                     <Link to="/resources#global-learning-resources">
                         <CTAButton
                             variant="solid"

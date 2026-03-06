@@ -13,6 +13,7 @@ import ScrollToHash from '@/components/ScrollToHash'
 import SDGPage from '@/components/SDG'
 import EventDetailPage from '@/components/EventDetailPage'
 import PrivacyPolicy from '@/components/PrivacyPolicy'
+import NotFound from '@/components/NotFound'
 
 function App() {
 
@@ -33,6 +34,7 @@ function App() {
           <Route path='/resources' element={<ResourcesPage />} />
           <Route path='/sdgs' element={<SDGPage />} />
           <Route path='/privacy-policy' element={<PrivacyPolicy />} />
+          <Route path='*' element={<NotFound />} />
         </Routes>
         
         <Footer />

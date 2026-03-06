@@ -19,7 +19,7 @@ export function CTAButton({
   ...props
 }: CTAButtonProps) {
   const ctaVariants = {
-    solid: "bg-primary text-primary-foreground hover:bg-primary/90",
+    solid: "bg-primary text-primary-foreground hover:bg-primary",
     solidWhite: "bg-white text-primary hover:bg-gray-100",
     ghost: "bg-transparent text-primary border-2 border-primary hover:bg-primary hover:text-primary-foreground",
     light: "bg-background text-primary hover:bg-sidebar"

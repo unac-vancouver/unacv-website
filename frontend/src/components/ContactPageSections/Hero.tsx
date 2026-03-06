@@ -30,13 +30,13 @@ export default function Hero() {
                 {/* Heading */}
                 <div className="flex items-center justify-center w-full">
                     <H1 className="text-white text-left sm:text-center font-[420] text-2xl md:text-3xl lg:text-4xl lg:leading-tight tracking-normal w-10/12">
-                        Have a question or want to collaborate? We’d love to hear from you.                    
-                        </H1>
+                        Have a question or want to collaborate? We’d love to hear from you.
+                    </H1>
                 </div>
 
 
                 {/* Buttons Container */}
-                <div className="flex flex-col sm:flex-row gap-6 items-left sm:items-center mt-8 w-10/12 sm:justify-center">
+                <div className="flex flex-col sm:flex-row gap-6 items-left justify-left sm:items-center mt-8 w-10/12 sm:justify-center">
                     <Link to="/#">
                         <CTAButton
                             variant="solid"
@@ -47,16 +47,15 @@ export default function Hero() {
                         </CTAButton>
                     </Link>
 
-                    <button onClick={() => setIsVolunteerModalOpen(true)}>
-                        <CTAButton
-                            variant="light"
-                            size="lg"
-                            className="py-6 text-lg"
-                            showArrow={false}
-                        >
-                            Interested in Volunteering?
-                        </CTAButton>
-                    </button>
+                    <CTAButton
+                        variant="light"
+                        size="lg"
+                        className="p-6 text-lg"
+                        showArrow={false}
+                        onClick={() => setIsVolunteerModalOpen(true)}
+                    >
+                        Interested in Volunteering?
+                    </CTAButton>
                 </div>
             </div>
 

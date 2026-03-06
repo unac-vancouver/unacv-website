@@ -6,6 +6,7 @@ import TGLL4 from '@/assets/EventsPages/TGLL/TGLL4.webp'
 import TGLL5 from '@/assets/EventsPages/TGLL/TGLL5.webp'
 import TGLL6 from '@/assets/EventsPages/TGLL/TGLL6.webp'
 
+import RenateShearer from '@/assets/EventsPages/Renate-Shearer/renate-shearer-award.jpg'
 import RenateShearer1 from '@/assets/EventsPages/Renate-Shearer/renate-shearer1.png'
 import RenateShearer2 from '@/assets/EventsPages/Renate-Shearer/renate-shearer2.png'
 import RenateShearer3 from '@/assets/EventsPages/Renate-Shearer/renate-shearer3.png'
@@ -41,7 +42,6 @@ export interface SiteEvent {
     gallery?: string[]
     sdgGoals?: string[]
     registrationLink?: string
-    sourceUrl?: string
     featured?: boolean
     listInYearly?: boolean
     promotionalMessage?: string
@@ -86,7 +86,6 @@ Join us to discover new perspectives, build valuable connections, and explore in
         image: TGLLImage,
         sdgGoals: [SdgGoal4, SdgGoal5, SdgGoal10, SdgGoal17],
         registrationLink: 'https://www.eventbrite.ca/e/1977544906048?aff=oddtdtcreator',
-        sourceUrl: 'https://unacvancouver.org/tgll/',
         featured: true,
         listInYearly: true,
         promotionalMessage: 'Join us at TGLL to discover new perspectives, build valuable connections, and explore innovative ideas!',
@@ -124,7 +123,6 @@ In his community, he served with the University of British Columbia, the Univers
         venue: 'Jack Bell Building, Room 125, The University of British Columbia’s Vancouver Campus',
         image: RichardSplaneImage,
         sdgGoals: [SdgGoal5, SdgGoal10, SdgGoal16],
-        sourceUrl: 'https://unacvancouver.org/richard-splane-lecture/',
         featured: true,
         listInYearly: true,
         partners: ['University of British Columbia (UBC) School of Social Work'],
@@ -169,7 +167,6 @@ Note: The Sustainable Development Goals listed for this event are indicative onl
         venue: 'Unitarian Church of Vancouver - 949 West 49th Avenue, Vancouver, BC',
         image: JohnGibbord5,
         sdgGoals: [SdgGoal16],
-        sourceUrl: 'https://unacvancouver.org/john-gibbard-award/',
         featured: true,
         listInYearly: true,
         promotionalMessage: 'Honouring UN Day by celebrating outstanding Metro Vancouver youth working for peace and a better world.',
@@ -198,9 +195,8 @@ In 2025, UNAC-V highlighted the Rights of Seniors as our theme, in recognition o
         time: '6:00 PM - 8:00 PM',
         location: 'Vancouver, BC',
         venue: 'ISSofBC, 2610 Victoria Dr, Vancouver',
-        image: 'https://unacvancouver.org/wp-content/uploads/2021/02/Reante-Shearer-award.jpeg',
+        image: RenateShearer,
         sdgGoals: [SdgGoal5, SdgGoal10, SdgGoal16, SdgGoal17],
-        sourceUrl: 'https://unacvancouver.org/renate-shearer-award/',
         featured: false,
         listInYearly: true,
         partners: ['British Columbia Council for International Cooperation (BCCIC)'],

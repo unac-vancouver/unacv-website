@@ -10,7 +10,7 @@ const featuredEvents = getFeaturedEvents();
 const HERO_SLIDES = [
     {
         image: HeroImage,
-        text: "Advocating for and promoting the values and goals of the United Nations within Vancouver.",
+        text: "Advocating for and promoting the values and goals of the United Nations within Metro Vancouver.",
     },
     ...featuredEvents
         .filter(event => event.promotionalMessage && event.image)

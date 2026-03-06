@@ -121,13 +121,18 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-
+         
                 {/* Divider */}
                 <div className="border-t border-white/20 mb-8"></div>
 
                 {/* Copyright */}
-                <div className="text-center text-white/70 text-base italic">
+                <div className="text-center text-white/70 text-base italic mb-12">
                    Copyright &copy; {new Date().getFullYear()} United Nations Association In Canada, Vancouver, All Rights Reserved
+                </div>
+
+                       {/* Territorial Acknowledgement */}
+                <div className="text-center text-white/70 text-sm italic max-w-3xl mx-auto leading-relaxed">
+                    We acknowledge that we live and work on the unceded and ancestral territories of the xʷməθkʷəy̓əm (Musqueam), Skwxú7mesh Úxwumixw (Squamish) and səlilwətaɬ (Tsleil-Waututh) — supporting reconciliation, the Truth and Reconciliation Commission Calls to Action and the UNDRIP.
                 </div>
             </div>
 

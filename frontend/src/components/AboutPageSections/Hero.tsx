@@ -26,7 +26,7 @@ export default function Hero() {
             <div className="relative z-10 flex flex-col gap-6 items-center justify-center w-full pt-2.5 pb-8">
                 {/* Heading */}
                 <div className="flex items-center justify-center w-full">
-                    <H1 className="text-white text-left sm:text-center font-[420] text-2xl md:text-3xl lg:text-4xl lg:leading-tight w-10/12">
+                    <H1 className="text-white text-left sm:text-center font-[420] text-xl sm:text-2xl md:text-3xl lg:text-4xl lg:leading-tight w-10/12">
                         UNAC-Vancouver mobilizes local communities to advance the principles and priorities of the United Nations through education, advocacy, and action, fostering a more just, sustainable, and peaceful world.
                     </H1>
                 </div>

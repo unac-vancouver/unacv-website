@@ -2,14 +2,11 @@ import { H2, Body } from '@/components/ui/Typographies';
 import { CTAButton } from '@/components/ui/cta-button';
 import { Link } from 'react-router-dom';
 import EventCard from './EventCard';
-import DonationModal from '@/components/ui/DonationModal';
-import { useState } from 'react';
 import TGLLImage from '@/assets/EventsPages/TGLL/TGLL-2024.jpg';
 import RichardSplaneImage from '@/assets/HomePage/Richard-Splane-Lecture-2025.jpg';
 import JohnGibbardImage from '@/assets/EventsPages/John-Gibbard/john-gibbard5.webp';
 
 export default function OurContributions() {
-    const [isDonationModalOpen, setIsDonationModalOpen] = useState(false);
 
     const events = [
         {
@@ -57,16 +54,6 @@ export default function OurContributions() {
 
                     {/* Buttons Container - Positioned at bottom */}
                     <div className="hidden xl:flex flex-col sm:flex-row gap-6 items-start">
-                        <button onClick={() => setIsDonationModalOpen(true)}>
-                            <CTAButton
-                                variant="solid"
-                                size="lg"
-                                className="p-5 sm:p-6 text-lg border-white border-2 bg-white text-primary hover:bg-white/90"
-                            >
-                                Donate
-                            </CTAButton>
-                        </button>
-
                         <Link to="/events">
                             <CTAButton
                                 variant="ghost"
@@ -99,11 +86,6 @@ export default function OurContributions() {
                 </div>
             </div>
 
-            {/* Donation Modal */}
-            <DonationModal
-                isOpen={isDonationModalOpen}
-                onClose={() => setIsDonationModalOpen(false)}
-            />
         </section>
     );
 }
