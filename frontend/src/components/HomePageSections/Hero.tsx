@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, type FocusEvent } from 'react'
 import { Link } from 'react-router-dom'
 import HeroImage from '@/assets/HomePage/vancouver_hero.webp'
 import { Display } from '@/components/ui/Typographies'
@@ -20,25 +20,49 @@ const HERO_SLIDES = [
         }))
 ];
 
-const SLIDE_DURATION = 8000; // 8 seconds
-//Changing SLIDE_DURATION will also require changing index.css to match the animation duration
-
 export default function Hero() {
     const [activeSlide, setActiveSlide] = useState(0);
-    const [key, setKey] = useState(0);
+    const [animationKey, setAnimationKey] = useState(0);
+    const [isHovered, setIsHovered] = useState(false);
+    const [isFocusWithin, setIsFocusWithin] = useState(false);
 
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setActiveSlide((current) => (current + 1) % HERO_SLIDES.length);
-            setKey((prev) => prev + 1);
-        }, SLIDE_DURATION);
+    const isPaused = isHovered || isFocusWithin;
+    const hasMultipleSlides = HERO_SLIDES.length > 1;
 
-        return () => clearInterval(interval);
-    }, [activeSlide]);
+    const handleBlurCapture = (event: FocusEvent<HTMLElement>) => {
+        const nextFocusTarget = event.relatedTarget as Node | null;
+        if (
+            !nextFocusTarget ||
+            !event.currentTarget.contains(nextFocusTarget)
+        ) {
+            setIsFocusWithin(false);
+        }
+    };
+
+    const handleSlideSelect = (index: number) => {
+        if (index === activeSlide) {
+            return;
+        }
+        setActiveSlide(index);
+        setAnimationKey((prev) => prev + 1);
+    };
+
+    const handleProgressAnimationEnd = () => {
+        if (!hasMultipleSlides) {
+            return;
+        }
+        setActiveSlide((current) => (current + 1) % HERO_SLIDES.length);
+        setAnimationKey((prev) => prev + 1);
+    };
+
     return (
         <section 
             id="hero" 
             className="relative w-full h-[30rem] flex flex-col items-center "
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+            onFocusCapture={() => setIsFocusWithin(true)}
+            onBlurCapture={handleBlurCapture}
         >
             {/* Background Images with Fade Transition */}
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -94,28 +118,31 @@ export default function Hero() {
             </div>
 
             {/* Progress Indicator */}
-            <div className="relative flex gap-2 h-1 items-center mb-10">
-                {HERO_SLIDES.map((_, index) => (
-                    <button
-                        key={index}
-                        onClick={() => {
-                            setActiveSlide(index);
-                            setKey((prev) => prev + 1);
-                        }}
-                        className={`h-full w-8 sm:w-10 transition-colors duration-300 cursor-pointer relative overflow-hidden ${
-                            index === activeSlide ? 'bg-white/30' : 'bg-[#B7B7B7]/74 hover:bg-[#B7B7B7]/90'
-                        }`}
-                        aria-label={`Go to slide ${index + 1}`}
-                    >
-                        {index === activeSlide && (
-                            <div 
-                                key={key}
-                                className="absolute inset-0 bg-white h-full w-0 animate-[fillBar_8s_linear_forwards]"
-                            />
-                        )}
-                    </button>
-                ))}
-            </div>
+            {hasMultipleSlides && (
+                <div className="relative flex gap-2 h-1 items-center mb-10">
+                    {HERO_SLIDES.map((_, index) => (
+                        <button
+                            key={index}
+                            onClick={() => handleSlideSelect(index)}
+                            className={`h-full w-8 sm:w-10 transition-colors duration-300 cursor-pointer relative overflow-hidden ${
+                                index === activeSlide ? 'bg-white/30' : 'bg-[#B7B7B7]/74 hover:bg-[#B7B7B7]/90'
+                            }`}
+                            aria-label={`Go to slide ${index + 1}`}
+                            aria-current={index === activeSlide ? 'true' : undefined}
+                        >
+                            {index === activeSlide && (
+                                <div 
+                                    key={animationKey}
+                                    className={`absolute inset-0 bg-white h-full w-0 animate-[fillBar_8s_linear_forwards] ${
+                                        isPaused ? '[animation-play-state:paused]' : ''
+                                    }`}
+                                    onAnimationEnd={handleProgressAnimationEnd}
+                                />
+                            )}
+                        </button>
+                    ))}
+                </div>
+            )}
         </section>
     )
 }
