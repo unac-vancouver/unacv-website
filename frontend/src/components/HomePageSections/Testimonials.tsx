@@ -1,24 +1,43 @@
+import { useState, type FocusEvent } from 'react'
 import { Quote } from 'lucide-react'
+import { TESTIMONIALS } from '@/content/testimonials'
 import { Body, BodyLarge, H2 } from '@/components/ui/Typographies'
 
-interface Testimonial {
-    quote: string
-    name: string
-    role: string
-    detail?: string
-}
-
-const TESTIMONIALS: Testimonial[] = [
-    {
-        quote:
-            "I am very grateful for the opportunity to attend the 2026 TGLL conference. At the event, I was able to speak with representatives from many different organisations. Through this experience, I was able to gain a better understanding of what a career in international relations can look like. As a winner of a coffee chat with Rosio Godomar, I learned what a career in the United Nations entailed through Ms. Godomar's personal experience.",
-        name: 'Danielle Dillon',
-        role: 'UBC Student & TGLL 2026 Participant',
-        detail: 'Coffee chat winner with Rosio Godomar · March 21, 2026',
-    },
-]
-
 export default function Testimonials() {
+    const [activeTestimonial, setActiveTestimonial] = useState(0)
+    const [animationKey, setAnimationKey] = useState(0)
+    const [isHovered, setIsHovered] = useState(false)
+    const [isFocusWithin, setIsFocusWithin] = useState(false)
+
+    const isPaused = isHovered || isFocusWithin
+    const hasMultipleTestimonials = TESTIMONIALS.length > 1
+
+    const handleBlurCapture = (event: FocusEvent<HTMLElement>) => {
+        const nextFocusTarget = event.relatedTarget as Node | null
+        if (
+            !nextFocusTarget ||
+            !event.currentTarget.contains(nextFocusTarget)
+        ) {
+            setIsFocusWithin(false)
+        }
+    }
+
+    const handleTestimonialSelect = (index: number) => {
+        if (index === activeTestimonial) {
+            return
+        }
+        setActiveTestimonial(index)
+        setAnimationKey((prev) => prev + 1)
+    }
+
+    const handleProgressAnimationEnd = () => {
+        if (!hasMultipleTestimonials) {
+            return
+        }
+        setActiveTestimonial((current) => (current + 1) % TESTIMONIALS.length)
+        setAnimationKey((prev) => prev + 1)
+    }
+
     return (
         <section
             id="testimonials"
@@ -34,38 +53,97 @@ export default function Testimonials() {
 
                 {/* Testimonial Cards */}
                 <div className="flex flex-col gap-8 w-full">
-                    {TESTIMONIALS.map((t, i) => (
-                        <figure
-                            key={i}
-                            className="bg-[var(--color-neutral-0)] rounded-2xl shadow-sm px-8 py-8 flex flex-col gap-5"
-                        >
-                            <Quote
-                                className="w-8 h-8 text-[var(--color-primary-blue-7)] shrink-0 self-start rotate-180"
-                                aria-hidden="true"
-                            />
+                    <div
+                        className="grid w-full [grid-template-areas:'stack']"
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
+                    >
+                        {TESTIMONIALS.map((testimonial, index) => (
+                            <figure
+                                key={testimonial.id}
+                                className={`[grid-area:stack] bg-[var(--color-neutral-0)] rounded-2xl shadow-sm px-8 py-8 flex flex-col gap-5 h-full transition-opacity duration-700 ${
+                                    index === activeTestimonial
+                                        ? 'opacity-100 z-10'
+                                        : 'opacity-0 pointer-events-none select-none'
+                                }`}
+                                aria-hidden={index !== activeTestimonial}
+                            >
+                                <Quote
+                                    className="w-8 h-8 text-[var(--color-primary-blue-7)] shrink-0 self-start rotate-180"
+                                    aria-hidden="true"
+                                />
 
-                            <blockquote>
-                                <BodyLarge className="text-[var(--color-neutral-9)] italic">
-                                    {t.quote}
-                                </BodyLarge>
-                            </blockquote>
-                            <Quote
-                                className="w-8 h-8 text-[var(--color-primary-blue-7)] shrink-0 self-end"
-                                aria-hidden="true"
-                            />
-                            <figcaption className="flex flex-col gap-1 border-t border-[var(--color-neutral-3)] pt-4">
-                                <Body className="font-semibold text-[var(--color-primary-blue-10)]">
-                                    {t.name}
-                                </Body>
-                                <Body className="text-[var(--color-neutral-7)]">{t.role}</Body>
-                                {t.detail && (
-                                    <Body className="text-[var(--color-neutral-5)] text-sm">
-                                        {t.detail}
+                                <blockquote
+                                    aria-live={
+                                        index === activeTestimonial
+                                            ? 'polite'
+                                            : undefined
+                                    }
+                                >
+                                    <BodyLarge className="text-[var(--color-neutral-9)] italic">
+                                        {testimonial.quote}
+                                    </BodyLarge>
+                                </blockquote>
+                                <Quote
+                                    className="w-8 h-8 text-[var(--color-primary-blue-7)] shrink-0 self-end"
+                                    aria-hidden="true"
+                                />
+                                <figcaption className="mt-auto flex flex-col gap-1 border-t border-[var(--color-neutral-3)] pt-4">
+                                    <Body className="font-semibold text-[var(--color-primary-blue-10)]">
+                                        {testimonial.name}
                                     </Body>
-                                )}
-                            </figcaption>
-                        </figure>
-                    ))}
+                                    <Body className="text-[var(--color-neutral-7)]">
+                                        {testimonial.role}
+                                    </Body>
+                                    {testimonial.detail && (
+                                        <Body className="text-[var(--color-neutral-5)] text-sm">
+                                            {testimonial.detail}
+                                        </Body>
+                                    )}
+                                </figcaption>
+                            </figure>
+                        ))}
+                    </div>
+
+                    {hasMultipleTestimonials && (
+                        <div
+                            className="relative flex gap-2 h-1 items-center justify-center"
+                            onFocusCapture={() => setIsFocusWithin(true)}
+                            onBlurCapture={handleBlurCapture}
+                        >
+                            {TESTIMONIALS.map((testimonial, index) => (
+                                <button
+                                    key={testimonial.id}
+                                    onClick={() => handleTestimonialSelect(index)}
+                                    className={`h-full w-8 sm:w-10 transition-colors duration-300 cursor-pointer relative overflow-hidden ${
+                                        index === activeTestimonial
+                                            ? 'bg-white/30'
+                                            : 'bg-[#B7B7B7]/74 hover:bg-[#B7B7B7]/90'
+                                    }`}
+                                    aria-label={`Go to testimonial ${index + 1}`}
+                                    aria-current={
+                                        index === activeTestimonial
+                                            ? 'true'
+                                            : undefined
+                                    }
+                                >
+                                    {index === activeTestimonial && (
+                                        <div
+                                            key={animationKey}
+                                            className={`absolute inset-0 bg-white h-full w-0 animate-[fillBar_6s_linear_forwards] ${
+                                                isPaused
+                                                    ? '[animation-play-state:paused]'
+                                                    : ''
+                                            }`}
+                                            onAnimationEnd={
+                                                handleProgressAnimationEnd
+                                            }
+                                        />
+                                    )}
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
             </div>
         </section>
