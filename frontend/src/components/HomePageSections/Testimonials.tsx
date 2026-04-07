@@ -3,6 +3,20 @@ import { Quote } from 'lucide-react'
 import { TESTIMONIALS } from '@/content/testimonials'
 import { Body, BodyLarge, H2 } from '@/components/ui/Typographies'
 
+function getQuoteSizeClasses(quote: string) {
+    const length = quote.length
+
+    if (length > 1200) {
+        return 'text-sm md:text-base leading-relaxed'
+    }
+
+    if (length > 700) {
+        return 'text-[0.95rem] md:text-lg leading-relaxed'
+    }
+
+    return 'text-base md:text-xl leading-relaxed'
+}
+
 export default function Testimonials() {
     const [activeTestimonial, setActiveTestimonial] = useState(0)
     const [animationKey, setAnimationKey] = useState(0)
@@ -80,7 +94,9 @@ export default function Testimonials() {
                                             : undefined
                                     }
                                 >
-                                    <BodyLarge className="text-[var(--color-neutral-9)] italic">
+                                    <BodyLarge
+                                        className={`text-[var(--color-neutral-9)] italic whitespace-pre-line ${getQuoteSizeClasses(testimonial.quote)}`}
+                                    >
                                         {testimonial.quote}
                                     </BodyLarge>
                                 </blockquote>

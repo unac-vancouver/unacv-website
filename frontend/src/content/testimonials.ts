@@ -18,16 +18,9 @@ export const TESTIMONIALS: Testimonial[] = [
     {
         id: 2,
         quote:
-            'Based in Vancouver, Lauren brings extensive experience in Indigenous relations, public policy, and intergovernmental collaboration across the public sector.',
-        name: 'Lauren Farmer',
-        role: 'Co-President, UNAC-Vancouver',
-        detail: 'Program Manager at CBC/Radio-Canada',
-    },
-    {
-        id: 3,
-        quote:
-            'Sebastian is passionate about empowering resilient entrepreneurs operating in complex environments, helping them access growth opportunities that promote equitable and inclusive economic development.',
-        name: 'Juan Sebastian Mateus',
-        role: 'Co-Vice President, UNAC-Vancouver',
+            'I am a post-graduate student in Green Business Management and Sustainability at Kwantlen Polytechnic University (KPU). I learned about Think Global Link Local 2026 through KPU. I was the TGLL 2026 coffee-chat winner with George Somerwill of UNAC-Vancouver. His reflections on teamwork and global engagement were insightful and encouraging. His willingness to share his experience and offer guidance made me feel supported, and his words renewed my confidence in the possibilities ahead as I navigate my professional reintegration in Canada.\n\nI really appreciate that UNAC Vancouver provides meaningful networking opportunities through the Think Global Link Local event, both during and after the program. By bringing together individuals with diverse international backgrounds, organizations that do important humanitarian work, and leaders willing to share their experiences, the event fosters valuable network connections for participants. In particular, the one-on-one coffee meetings offer an excellent setting to build these relationships.',
+        name: 'Thais Torres Pires',
+        role: 'KPU Student & UNAC-Vancouver Think Global Link Local 2026 Participant',
+        detail: 'TGLL 2026 coffee-chat winner with George Somerwill',
     },
 ]
