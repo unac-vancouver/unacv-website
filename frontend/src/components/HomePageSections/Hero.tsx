@@ -51,12 +51,12 @@ function HeroProgressControls({
                     type="button"
                     onClick={() => onSelectSlide(index)}
                     onKeyDown={onProgressKeyDown}
-                    className="relative h-10 w-10 sm:w-12 flex items-center justify-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    className="relative h-10 w-10 md:w-12 flex items-center justify-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                     aria-label={`Go to slide ${index + 1}`}
                     aria-current={index === activeSlide ? 'true' : undefined}
                 >
                     <span
-                        className={`relative h-1 w-8 sm:w-10 overflow-hidden transition-colors duration-300 ${
+                        className={`relative h-1.5 w-7 md:h-1 md:w-8 lg:w-10 rounded-full overflow-hidden transition-colors duration-300 ${
                             index === activeSlide
                                 ? 'bg-white/30'
                                 : 'bg-[#B7B7B7]/74 hover:bg-[#B7B7B7]/90'
@@ -65,7 +65,7 @@ function HeroProgressControls({
                         {index === activeSlide && (
                             <span
                                 key={animationKey}
-                                className={`absolute inset-y-0 left-0 bg-white h-full w-0 animate-[fillBar_8s_linear_forwards] ${
+                                className={`absolute inset-y-0 left-0 bg-white h-full w-0 rounded-full animate-[fillBar_8s_linear_forwards] ${
                                     isPaused ? '[animation-play-state:paused]' : ''
                                 }`}
                                 onAnimationEnd={onProgressAnimationEnd}

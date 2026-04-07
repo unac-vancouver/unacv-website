@@ -307,7 +307,7 @@ export default function Testimonials() {
                                     }
                                 >
                                     <span
-                                        className={`relative h-1 w-8 sm:w-10 overflow-hidden transition-colors duration-300 ${
+                                        className={`relative h-1 w-8 sm:w-10 rounded-full overflow-hidden transition-colors duration-300 ${
                                             index === activeTestimonial
                                                 ? 'bg-white/30'
                                                 : 'bg-[#B7B7B7]/74 hover:bg-[#B7B7B7]/90'
@@ -316,7 +316,7 @@ export default function Testimonials() {
                                         {index === activeTestimonial && (
                                             <div
                                                 key={animationKey}
-                                                className={`absolute inset-y-0 left-0 bg-white h-full w-0 animate-[fillBar_6s_linear_forwards] ${
+                                                className={`absolute inset-y-0 left-0 bg-white h-full w-0 rounded-full animate-[fillBar_6s_linear_forwards] ${
                                                     isPaused
                                                         ? '[animation-play-state:paused]'
                                                         : ''
