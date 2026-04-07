@@ -79,6 +79,13 @@ export default function Hero() {
                 <div 
                     className="absolute inset-0 bg-gradient-to-b from-black/20 to-black/60"                 
                 />
+                <div
+                    className="absolute inset-0"
+                    style={{
+                        background:
+                            'radial-gradient(125% 90% at 50% 45%, rgba(0, 0, 0, 0) 38%, rgba(0, 0, 0, 0.62) 100%)',
+                    }}
+                />
             </div>
 
             {/* Content Container */}
