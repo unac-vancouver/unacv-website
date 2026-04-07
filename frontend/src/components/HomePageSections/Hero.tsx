@@ -1,4 +1,4 @@
-import { useState, type FocusEvent } from 'react'
+import { useEffect, useRef, useState, type FocusEvent, type TouchEvent } from 'react'
 import { Link } from 'react-router-dom'
 import HeroImage from '@/assets/HomePage/vancouver_hero.webp'
 import { Display } from '@/components/ui/Typographies'
@@ -25,9 +25,26 @@ export default function Hero() {
     const [animationKey, setAnimationKey] = useState(0);
     const [isHovered, setIsHovered] = useState(false);
     const [isFocusWithin, setIsFocusWithin] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
+
+    const touchStartRef = useRef<{ x: number; y: number } | null>(null);
 
     const isPaused = isHovered || isFocusWithin;
     const hasMultipleSlides = HERO_SLIDES.length > 1;
+
+    useEffect(() => {
+        const mediaQuery = window.matchMedia('(max-width: 767px)');
+        const handleMediaQueryChange = () => {
+            setIsMobile(mediaQuery.matches);
+        };
+
+        handleMediaQueryChange();
+        mediaQuery.addEventListener('change', handleMediaQueryChange);
+
+        return () => {
+            mediaQuery.removeEventListener('change', handleMediaQueryChange);
+        };
+    }, []);
 
     const handleBlurCapture = (event: FocusEvent<HTMLElement>) => {
         const nextFocusTarget = event.relatedTarget as Node | null;
@@ -47,12 +64,58 @@ export default function Hero() {
         setAnimationKey((prev) => prev + 1);
     };
 
-    const handleProgressAnimationEnd = () => {
-        if (!hasMultipleSlides) {
-            return;
-        }
+    const goToNextSlide = () => {
         setActiveSlide((current) => (current + 1) % HERO_SLIDES.length);
         setAnimationKey((prev) => prev + 1);
+    };
+
+    const goToPreviousSlide = () => {
+        setActiveSlide(
+            (current) => (current - 1 + HERO_SLIDES.length) % HERO_SLIDES.length
+        );
+        setAnimationKey((prev) => prev + 1);
+    };
+
+    const handleProgressAnimationEnd = () => {
+        if (!hasMultipleSlides || isMobile) {
+            return;
+        }
+        goToNextSlide();
+    };
+
+    const handleTouchStart = (event: TouchEvent<HTMLElement>) => {
+        if (!isMobile || !hasMultipleSlides) {
+            return;
+        }
+
+        const touch = event.touches[0];
+        touchStartRef.current = { x: touch.clientX, y: touch.clientY };
+    };
+
+    const handleTouchEnd = (event: TouchEvent<HTMLElement>) => {
+        if (!isMobile || !hasMultipleSlides || !touchStartRef.current) {
+            return;
+        }
+
+        const touch = event.changedTouches[0];
+        const deltaX = touch.clientX - touchStartRef.current.x;
+        const deltaY = touch.clientY - touchStartRef.current.y;
+        touchStartRef.current = null;
+
+        if (Math.abs(deltaX) < 40 || Math.abs(deltaX) <= Math.abs(deltaY)) {
+            return;
+        }
+
+        if (deltaX < 0) {
+            goToNextSlide();
+            return;
+        }
+
+        goToPreviousSlide();
+    };
+
+    const handleTouchCancel = () => {
+        touchStartRef.current = null;
     };
 
     return (
@@ -63,6 +126,9 @@ export default function Hero() {
             onMouseLeave={() => setIsHovered(false)}
             onFocusCapture={() => setIsFocusWithin(true)}
             onBlurCapture={handleBlurCapture}
+            onTouchStart={handleTouchStart}
+            onTouchEnd={handleTouchEnd}
+            onTouchCancel={handleTouchCancel}
         >
             {/* Background Images with Fade Transition */}
             <div aria-hidden="true" className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -126,7 +192,7 @@ export default function Hero() {
 
             {/* Progress Indicator */}
             {hasMultipleSlides && (
-                <div className="relative flex gap-2 h-1 items-center mb-10">
+                <div className="relative hidden md:flex gap-2 h-1 items-center mb-10">
                     {HERO_SLIDES.map((_, index) => (
                         <button
                             key={index}
