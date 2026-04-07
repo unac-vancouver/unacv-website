@@ -137,6 +137,9 @@ export default function Testimonials() {
         <section
             id="testimonials"
             className="bg-[var(--color-primary-blue-9)] w-full flex flex-col items-center px-5 md:px-16 lg:px-32 py-10 md:py-14 lg:py-16"
+            role="region"
+            aria-roledescription="carousel"
+            aria-label="Community testimonials"
         >
             <div className="flex flex-col gap-8 items-center w-full max-w-4xl">
                 {/* Header */}
@@ -153,6 +156,9 @@ export default function Testimonials() {
                             <figure
                                 key={`mobile-${activeMobileTestimonial.id}`}
                                 className="bg-[var(--color-neutral-0)] rounded-2xl shadow-sm px-4 py-4 flex flex-col gap-2.5"
+                                role="group"
+                                aria-roledescription="slide"
+                                aria-label={`Testimonial ${activeTestimonial + 1} of ${TESTIMONIALS.length}`}
                                 onTouchStart={handleMobileTouchStart}
                                 onTouchEnd={handleMobileTouchEnd}
                                 onTouchCancel={handleMobileTouchCancel}
@@ -192,19 +198,24 @@ export default function Testimonials() {
                                 {TESTIMONIALS.map((testimonial, index) => (
                                     <button
                                         key={`mobile-dot-${testimonial.id}`}
+                                        type="button"
                                         onClick={() => handleTestimonialSelect(index)}
-                                        className={`h-1.5 w-7 rounded-full transition-colors duration-300 ${
-                                            index === activeTestimonial
-                                                ? 'bg-[var(--color-neutral-0)]'
-                                                : 'bg-[#B7B7B7]/74'
-                                        }`}
+                                        className="relative h-10 w-10 flex items-center justify-center rounded-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-neutral-0)]"
                                         aria-label={`Go to testimonial ${index + 1}`}
                                         aria-current={
                                             index === activeTestimonial
                                                 ? 'true'
                                                 : undefined
                                         }
-                                    />
+                                    >
+                                        <span
+                                            className={`h-1.5 w-7 rounded-full transition-colors duration-300 ${
+                                                index === activeTestimonial
+                                                    ? 'bg-[var(--color-neutral-0)]'
+                                                    : 'bg-[#B7B7B7]/74'
+                                            }`}
+                                        />
+                                    </button>
                                 ))}
                             </div>
                         )}
@@ -231,6 +242,9 @@ export default function Testimonials() {
                                         ? 'opacity-100 z-10'
                                         : 'opacity-0 pointer-events-none select-none'
                                 }`}
+                                role="group"
+                                aria-roledescription="slide"
+                                aria-label={`Testimonial ${index + 1} of ${TESTIMONIALS.length}`}
                                 aria-hidden={index !== activeTestimonial}
                             >
                                 <Quote
@@ -275,19 +289,16 @@ export default function Testimonials() {
 
                     {hasMultipleTestimonials && (
                         <div
-                            className="relative hidden md:flex gap-2 h-1 items-center justify-center"
+                            className="relative hidden md:flex gap-2 h-10 items-center justify-center"
                             onFocusCapture={() => setIsFocusWithin(true)}
                             onBlurCapture={handleBlurCapture}
                         >
                             {TESTIMONIALS.map((testimonial, index) => (
                                 <button
                                     key={testimonial.id}
+                                    type="button"
                                     onClick={() => handleTestimonialSelect(index)}
-                                    className={`h-full w-8 sm:w-10 transition-colors duration-300 cursor-pointer relative overflow-hidden ${
-                                        index === activeTestimonial
-                                            ? 'bg-white/30'
-                                            : 'bg-[#B7B7B7]/74 hover:bg-[#B7B7B7]/90'
-                                    }`}
+                                    className="relative h-10 w-10 sm:w-12 flex items-center justify-center rounded-md cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white"
                                     aria-label={`Go to testimonial ${index + 1}`}
                                     aria-current={
                                         index === activeTestimonial
@@ -295,19 +306,27 @@ export default function Testimonials() {
                                             : undefined
                                     }
                                 >
-                                    {index === activeTestimonial && (
-                                        <div
-                                            key={animationKey}
-                                            className={`absolute inset-0 bg-white h-full w-0 animate-[fillBar_6s_linear_forwards] ${
-                                                isPaused
-                                                    ? '[animation-play-state:paused]'
-                                                    : ''
-                                            }`}
-                                            onAnimationEnd={
-                                                handleProgressAnimationEnd
-                                            }
-                                        />
-                                    )}
+                                    <span
+                                        className={`relative h-1 w-8 sm:w-10 overflow-hidden transition-colors duration-300 ${
+                                            index === activeTestimonial
+                                                ? 'bg-white/30'
+                                                : 'bg-[#B7B7B7]/74 hover:bg-[#B7B7B7]/90'
+                                        }`}
+                                    >
+                                        {index === activeTestimonial && (
+                                            <div
+                                                key={animationKey}
+                                                className={`absolute inset-y-0 left-0 bg-white h-full w-0 animate-[fillBar_6s_linear_forwards] ${
+                                                    isPaused
+                                                        ? '[animation-play-state:paused]'
+                                                        : ''
+                                                }`}
+                                                onAnimationEnd={
+                                                    handleProgressAnimationEnd
+                                                }
+                                            />
+                                        )}
+                                    </span>
                                 </button>
                             ))}
                         </div>
