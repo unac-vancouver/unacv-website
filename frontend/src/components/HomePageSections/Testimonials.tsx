@@ -1,45 +1,59 @@
-import { useRef, useState, type FocusEvent, type TouchEvent } from 'react'
+import { useEffect, useRef, useState, type FocusEvent, type TouchEvent } from 'react'
 import { Quote } from 'lucide-react'
 import { TESTIMONIALS } from '@/content/testimonials'
 import { Body, BodyLarge, H2 } from '@/components/ui/Typographies'
-
-function getDesktopQuoteSizeClasses(quote: string, testimonialId: number) {
-    if (testimonialId === 1) {
-        return 'md:text-[1.85rem] md:leading-[2.35rem] md:max-w-[94%]'
-    }
-
-    if (testimonialId === 2) {
-        return 'md:text-lg md:leading-relaxed'
-    }
-
-    const length = quote.length
-
-    if (length > 1200) {
-        return 'md:text-base md:leading-relaxed'
-    }
-
-    if (length > 850) {
-        return 'md:text-lg md:leading-relaxed'
-    }
-
-    if (length > 600) {
-        return 'md:text-xl md:leading-8'
-    }
-
-    return 'md:text-2xl md:leading-9'
-}
 
 export default function Testimonials() {
     const [activeTestimonial, setActiveTestimonial] = useState(0)
     const [animationKey, setAnimationKey] = useState(0)
     const [isHovered, setIsHovered] = useState(false)
     const [isFocusWithin, setIsFocusWithin] = useState(false)
+    const [desktopStackHeight, setDesktopStackHeight] = useState<number | null>(
+        null
+    )
     const touchStartRef = useRef<{ x: number; y: number } | null>(null)
+    const desktopCardRefs = useRef<Array<HTMLElement | null>>([])
 
     const isPaused = isHovered || isFocusWithin
     const hasMultipleTestimonials = TESTIMONIALS.length > 1
     const activeMobileTestimonial =
         TESTIMONIALS[activeTestimonial] ?? TESTIMONIALS[0]
+
+    useEffect(() => {
+        const updateDesktopStackHeight = () => {
+            const maxHeight = desktopCardRefs.current.reduce(
+                (currentMax, cardElement) => {
+                    if (!cardElement) {
+                        return currentMax
+                    }
+                    return Math.max(currentMax, cardElement.offsetHeight)
+                },
+                0
+            )
+
+            if (maxHeight > 0) {
+                setDesktopStackHeight(maxHeight)
+            }
+        }
+
+        updateDesktopStackHeight()
+
+        if (typeof ResizeObserver === 'undefined') {
+            return
+        }
+
+        const resizeObserver = new ResizeObserver(updateDesktopStackHeight)
+
+        desktopCardRefs.current.forEach((cardElement) => {
+            if (cardElement) {
+                resizeObserver.observe(cardElement)
+            }
+        })
+
+        return () => {
+            resizeObserver.disconnect()
+        }
+    }, [])
 
     const handleBlurCapture = (event: FocusEvent<HTMLElement>) => {
         const nextFocusTarget = event.relatedTarget as Node | null
@@ -197,14 +211,22 @@ export default function Testimonials() {
                     </div>
 
                     <div
-                        className="hidden md:grid w-full [grid-template-areas:'stack']"
+                        className="hidden md:grid w-full [grid-template-areas:'stack'] items-center"
+                        style={
+                            desktopStackHeight
+                                ? { minHeight: `${desktopStackHeight}px` }
+                                : undefined
+                        }
                         onMouseEnter={() => setIsHovered(true)}
                         onMouseLeave={() => setIsHovered(false)}
                     >
                         {TESTIMONIALS.map((testimonial, index) => (
                             <figure
                                 key={testimonial.id}
-                                className={`[grid-area:stack] bg-[var(--color-neutral-0)] rounded-2xl shadow-sm px-5 py-5 flex flex-col gap-3 h-full transition-opacity duration-700 ${
+                                ref={(element) => {
+                                    desktopCardRefs.current[index] = element
+                                }}
+                                className={`[grid-area:stack] w-full self-center bg-[var(--color-neutral-0)] rounded-2xl shadow-sm px-4 py-4 flex flex-col gap-2.5 transition-opacity duration-700 ${
                                     index === activeTestimonial
                                         ? 'opacity-100 z-10'
                                         : 'opacity-0 pointer-events-none select-none'
@@ -212,7 +234,7 @@ export default function Testimonials() {
                                 aria-hidden={index !== activeTestimonial}
                             >
                                 <Quote
-                                    className="w-7 h-7 text-[var(--color-primary-blue-7)] shrink-0 self-start rotate-180"
+                                    className="w-6 h-6 text-[var(--color-primary-blue-7)] shrink-0 self-start rotate-180"
                                     aria-hidden="true"
                                 />
 
@@ -222,18 +244,19 @@ export default function Testimonials() {
                                             ? 'polite'
                                             : undefined
                                     }
+                                    className="pr-1"
                                 >
                                     <BodyLarge
-                                        className={`text-base leading-relaxed text-[var(--color-neutral-9)] italic whitespace-pre-line ${getDesktopQuoteSizeClasses(testimonial.quote, testimonial.id)}`}
+                                        className="text-base leading-relaxed text-[var(--color-neutral-9)] italic whitespace-pre-line"
                                     >
                                         {testimonial.quote}
                                     </BodyLarge>
                                 </blockquote>
                                 <Quote
-                                    className="w-7 h-7 text-[var(--color-primary-blue-7)] shrink-0 self-end"
+                                    className="w-6 h-6 text-[var(--color-primary-blue-7)] shrink-0 self-end"
                                     aria-hidden="true"
                                 />
-                                <figcaption className="flex flex-col gap-1 border-t border-[var(--color-neutral-3)] pt-3">
+                                <figcaption className="flex flex-col gap-1 border-t border-[var(--color-neutral-3)] pt-2.5">
                                     <Body className="font-semibold text-[var(--color-primary-blue-10)]">
                                         {testimonial.name}
                                     </Body>
