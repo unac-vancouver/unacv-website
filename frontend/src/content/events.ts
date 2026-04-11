@@ -19,7 +19,9 @@ import JohnGibbord5 from '@/assets/EventsPages/John-Gibbard/john-gibbard5.webp'
 import JohnGibbord6 from '@/assets/EventsPages/John-Gibbard/john-gibbard6.webp'
 
 import RichardSplaneImage from '@/assets/HomePage/Richard-Splane-Lecture-2025.jpg'
+import SdgDay2026Image from '@/assets/EventsPages/un-sdg-day-2026.webp'
 import SdgGoal4 from '@/assets/SDGGoals/E-WEB-Goal-04.png'
+import SdgGoal11 from '@/assets/SDGGoals/E-WEB-Goal-11.png'
 import SdgGoal5 from '@/assets/SDGGoals/E-WEB-Goal-05.png'
 import SdgGoal10 from '@/assets/SDGGoals/E-WEB-Goal-10.png'
 import SdgGoal16 from '@/assets/SDGGoals/E-WEB-Goal-16.png'
@@ -123,7 +125,7 @@ In his community, he served with the University of British Columbia, the Univers
         venue: 'Jack Bell Building, Room 125, The University of British Columbia’s Vancouver Campus',
         image: RichardSplaneImage,
         sdgGoals: [SdgGoal5, SdgGoal10, SdgGoal16],
-        featured: true,
+        featured: false,
         listInYearly: true,
         partners: ['University of British Columbia (UBC) School of Social Work'],
         pastEvents: [
@@ -202,6 +204,47 @@ In 2025, UNAC-V highlighted the Rights of Seniors as our theme, in recognition o
         partners: ['British Columbia Council for International Cooperation (BCCIC)'],
         gallery: [RenateShearer1, RenateShearer2, RenateShearer3],
         pastRecipients: ['2025: 411 Seniors Centre Society']
+    },
+    {
+        id: 5,
+        slug: 'un-sdg-day-2026',
+        category: 'SDG Event',
+        title: 'SDG Day 2026',
+        shortDescription: 'A hybrid event exploring themes of migration and belonging in urban communities – Global North & South.',
+        description: `Join us for SDG Day 2026 as we explore themes of migration and belonging in urban communities — Global North & South. This hybrid event offers both in-person and virtual participation options, bringing together thought leaders and community members to engage with actionable ideas for inclusive urban spaces.`,
+        longDescription: `Join us for SDG Day 2026 as we explore themes of migration, belonging in urban communities — Global North & South.
+
+This hybrid event offers both in-person and virtual participation options. Engage with thought leaders, connect with your community, and explore actionable ideas for inclusive urban spaces.
+
+In-Person Program:
+
+2:00 – 2:30 PM: Registration and Light Refreshments
+2:30 PM: Welcome and Land Acknowledgement
+UNAC Message
+Keynote Remarks
+Interactive Panel
+Community Discussion
+Closing Remarks
+
+Virtual Program:
+
+Virtual access begins at 2:30 PM for the welcome session until 4:00 PM for the interactive panel discussion. A Zoom link will be provided upon registration.
+
+2:30 PM: Welcome and Land Acknowledgement
+UNAC Message
+Keynote Remarks
+Interactive Panel`,
+        date: 'April 29, 2026',
+        dateISO: '2026-04-29',
+        time: '2:00 PM – 4:30 PM (In-Person) | 2:30 PM – 4:00 PM (Virtual)',
+        location: 'Vancouver, BC (Hybrid)',
+        venue: '453 W 12th Ave, Vancouver, BC',
+        image: SdgDay2026Image,
+        sdgGoals: [SdgGoal10, SdgGoal11, SdgGoal16, SdgGoal17],
+        registrationLink: 'https://unsdg_day_2026.eventbrite.ca/',
+        featured: true,
+        listInYearly: false,
+        promotionalMessage: 'Explore migration and belonging in urban communities — join us for SDG Day 2026, a hybrid event open to all.',
     }
 ]
 

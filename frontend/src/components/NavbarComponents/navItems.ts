@@ -28,7 +28,7 @@ export const navItems: NavItem[] = [
     dropdown: [
       { label: 'Become a Member', path: '/get-involved#membership', icon: HiUser },
       { label: 'Volunteer', path: '/get-involved#volunteer', icon: HiHeart },
-      { label: 'Donate', path: '/get-involved#donate', icon: HiCurrencyDollar },
+      { label: 'Donate', path: '/get-involved#membership', icon: HiCurrencyDollar },
     ],
   },
   {
