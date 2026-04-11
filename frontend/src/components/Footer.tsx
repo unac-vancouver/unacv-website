@@ -132,7 +132,7 @@ export default function Footer() {
 
                        {/* Territorial Acknowledgement */}
                 <div className="text-center text-white/70 text-sm italic max-w-3xl mx-auto leading-relaxed">
-                    We acknowledge that we live and work on the unceded and ancestral territories of the xʷməθkʷəy̓əm (Musqueam), Skwxú7mesh Úxwumixw (Squamish) and səlilwətaɬ (Tsleil-Waututh) — supporting reconciliation, the Truth and Reconciliation Commission Calls to Action and the UNDRIP.
+                   We acknowledge that we live and work on the unceded and ancestral territories of the q̓ic̓əy̓ (Katzie), q̓ʷɑ:n̓ƛ̓ən̓ (Kwantlen), kʷikʷəƛ̓əm (Kwikwetlem), máthxwi (Matsqui), xʷməθkʷəy̓əm (Musqueam), qiqéyt (Qayqayt), Semiahmoo, Sḵwx̱wú7mesh Úxwumixw (Squamish), scəw̓aθən məsteyəxʷ (Tsawwassen), and səlilwətaɬ (Tsleil-Waututh). We aim to support reconciliation, UNDRIP, and the Truth and Reconciliation Commission Calls to Action.
                 </div>
             </div>
 
