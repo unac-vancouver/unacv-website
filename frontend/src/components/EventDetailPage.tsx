@@ -1,5 +1,5 @@
 import { useParams, Link, Navigate } from 'react-router-dom'
-import { Calendar, MapPin, Clock, ExternalLink } from 'lucide-react'
+import { Calendar, MapPin, Clock, ExternalLink, FileText } from 'lucide-react'
 import { getEventBySlug } from '@/content/events'
 import { Display, H2, H3, Body, BodyLarge } from '@/components/ui/Typographies'
 import { CTAButton } from '@/components/ui/cta-button'
@@ -251,6 +251,28 @@ export default function EventDetailPage() {
                                                     )}
                                                 </div>
                                             </div>
+                                        ))}
+                                    </div>
+                                </div>
+                            )}
+
+                            {/* Documents */}
+                            {event.documents && event.documents.length > 0 && (
+                                <div>
+                                    <H3 className="text-gray-900 mb-3">Documents</H3>
+                                    <div className="flex flex-col gap-2">
+                                        {event.documents.map((doc, idx) => (
+                                            <a
+                                                key={idx}
+                                                href={doc.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center gap-3 bg-gray-50 hover:bg-gray-100 border border-gray-200 rounded-lg px-4 py-3 transition-colors group"
+                                            >
+                                                <FileText className="w-5 h-5 text-primary flex-shrink-0" />
+                                                <span className="text-gray-800 font-medium group-hover:text-primary transition-colors">{doc.label}</span>
+                                                <ExternalLink className="w-4 h-4 text-gray-400 ml-auto flex-shrink-0" />
+                                            </a>
                                         ))}
                                     </div>
                                 </div>

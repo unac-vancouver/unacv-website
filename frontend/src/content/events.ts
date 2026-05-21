@@ -27,6 +27,8 @@ import SdgGoal10 from '@/assets/SDGGoals/E-WEB-Goal-10.png'
 import SdgGoal16 from '@/assets/SDGGoals/E-WEB-Goal-16.png'
 import SdgGoal17 from '@/assets/SDGGoals/E-WEB-Goal-17.png'
 
+import AGM from '@/assets/EventsPages/AGM.webp'
+
 export interface SiteEvent {
     id: number
     slug: string
@@ -63,6 +65,10 @@ export interface SiteEvent {
         twitter?: string
         website?: string
     }
+    documents?: Array<{
+        label: string
+        url: string
+    }>
 }
 
 export const EVENTS: SiteEvent[] = [
@@ -245,6 +251,33 @@ Interactive Panel`,
         featured: true,
         listInYearly: false,
         promotionalMessage: 'Explore migration and belonging in urban communities — join us for SDG Day 2026, a hybrid event open to all.',
+    },
+    {
+        id: 6,
+        slug: 'agm-2026',
+        category: 'Annual General Meeting',
+        title: 'UNAC-Vancouver 2026 AGM',
+        image: AGM,
+        shortDescription: 'Join us for the UNAC-Vancouver 2026 Annual General Meeting and Rosemary Brown Award ceremony.',
+        description: `Join us for the UNAC-Vancouver 2026 Annual General Meeting. Thank you for your continued support over the past year — your engagement helps sustain our work in advancing the UN Sustainable Development Goals locally, fostering inclusive dialogue, supporting youth, and raising awareness on key global issues such as peacebuilding, climate action, gender equality, and human rights.`,
+        longDescription: `Thank you for your continued support over the past year. Your engagement helps sustain UNAC-Vancouver's work in advancing the UN Sustainable Development Goals locally, fostering inclusive dialogue, supporting youth, and raising awareness on key global issues such as peacebuilding, climate action, gender equality, and human rights.
+
+We look forward to seeing you and celebrating our collective impact.`,
+        date: 'Thursday, May 21, 2026',
+        dateISO: '2026-05-21',
+        time: '6:00 PM – 8:00 PM',
+        location: 'Vancouver, BC',
+        venue: 'Immigrant Services Society of BC (ISSofBC), 2610 Victoria Drive, Vancouver (2nd floor)',
+        sdgGoals: [SdgGoal10, SdgGoal16, SdgGoal17],
+        registrationLink: 'https://www.eventbrite.ca/e/unac-vancouver-2026-annual-general-meeting-rosemary-brown-award-tickets-1987369540795',
+        featured: false,
+        listInYearly: true,
+        documents: [
+            { label: 'AGM Agenda', url: '/UNACV-AGM-2026-Agenda.pdf' },
+            { label: 'Minutes from May 2025 AGM', url: '/UNACV-2026-AGM-Minutes-from-May-2025.pdf' },
+            { label: "President's Report", url: '/UNACV-2026-PRESIDENTS-REPORT.pdf' },
+            { label: 'Nominations Committee Report', url: '/UNACV-2026-Nominations-Committee-Report.pdf' },
+        ],
     }
 ]
 
