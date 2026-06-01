@@ -256,9 +256,9 @@ Interactive Panel`,
         id: 6,
         slug: 'agm-2026',
         category: 'Annual General Meeting',
-        title: 'UNAC-Vancouver 2026 AGM',
+        title: 'UNAC-Vancouver 2026 AGM and Rosemary Brown Lecture',
         image: AGM,
-        shortDescription: 'Join us for the UNAC-Vancouver 2026 Annual General Meeting and Rosemary Brown Award ceremony.',
+        shortDescription: 'Join us for the UNAC-Vancouver 2026 Annual General Meeting and Rosemary Brown Lecture',
         description: `Join us for the UNAC-Vancouver 2026 Annual General Meeting. Thank you for your continued support over the past year — your engagement helps sustain our work in advancing the UN Sustainable Development Goals locally, fostering inclusive dialogue, supporting youth, and raising awareness on key global issues such as peacebuilding, climate action, gender equality, and human rights.`,
         longDescription: `Thank you for your continued support over the past year. Your engagement helps sustain UNAC-Vancouver's work in advancing the UN Sustainable Development Goals locally, fostering inclusive dialogue, supporting youth, and raising awareness on key global issues such as peacebuilding, climate action, gender equality, and human rights.
 
