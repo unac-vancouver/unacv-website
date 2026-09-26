@@ -1,6 +1,6 @@
 import type { TeamMember } from "@/components/AboutPageSections/TeamMemberCard";
 import SameerEsmailImg from "@/assets/AboutPage/team/sameer_esmail.png";
-import LaurenFarmerImg from "@/assets/AboutPage/team/lauren_farmer.jpg";
+import LaurenFarmerImg from "@/assets/AboutPage/team/lauren_farmer.webp";
 import KoyaliBurmanImg from "@/assets/AboutPage/team/koyali_burman.png";
 import RosioGodomarImg from "@/assets/AboutPage/team/Rosio Godomar.webp";
 import PatsyGeorgeImg from "@/assets/AboutPage/team/Patsy George.png";
@@ -130,7 +130,7 @@ export const advisoryMembers: TeamMember[] = [
     name: "Amir Abdollahi",
     role: "Advisory Council",
     image: AmirAbdollahiImg,
-    bio: "I work across retail operations, business analysis, and customer experience, focused on turning insights into practical results. In my previous marketing roles as a Business Analyst, I supported initiatives that improved decision-making and business performance. Today, at Walmart Canada, I focus on retail operations, customer service, fulfillment, and day-to-day problem solving in a fast-paced environment. My background has helped me develop strong leadership, communication, and teamwork skills, while staying detail-oriented and focused on the bigger picture.\n\nI completed my Global Business studies in Vancouver and continue to focus on practical, data-driven ways to improve performance, support teams, and enhance customer experience.",
+    bio: "Amir Abdollahi is a retail operations and business analysis professional based in Vancouver, BC. He currently works at Walmart Canada, where he supports retail operations, fulfillment, customer service, and performance improvement in a fast-paced environment. His previous experience includes business insights, marketing analysis, business development, and cross-functional collaboration. At Kwantlen Polytechnic University, Amir worked as a Research Assistant on projects connected to the United Nations Sustainable Development Goals, including modern slavery in supply chains and the evaluation of a work-integrated learning platform. He has also contributed to environmental sustainability through his volunteer work as an Urban Forestry Leader with the City of Surrey, supporting park stewardship activities such as tree planting and invasive plant removal. Amir holds an MBA in Marketing and completed a Graduate Diploma in Global Business Management at KPU. His interests include sustainable supply chains, customer experience, data-driven performance improvement, and responsible business leadership.",
     linkedin: "https://www.linkedin.com/in/amirabdollahi69/",
   },
 ];
