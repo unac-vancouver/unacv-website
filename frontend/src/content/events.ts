@@ -167,9 +167,9 @@ Each year, the ceremony highlights one young person or a small group (up to age 
 
 By featuring the stories and achievements of local youth, the event aims to inspire others to engage with global issues in their schools, communities and workplaces, and to strengthen public awareness of the continuing relevance of the United Nations and its Charter.
 
-Note: The Sustainable Development Goals listed for this event are indicative only and will ultimately reflect the focus of the recipient’s own initiative. Rather than “SDGs addressed” or “contributions to SDGs”, I suggest we describe how the award recipient’s work helps to raise awareness of, and inspire action on, particular SDG themes. I think our role is primarily to highlight and promote the efforts of youth who are advocating for change, not to claim direct progress or formal contributions toward SDG implementation or achievement.`,
-        date: 'October 24 (annual)',
-        dateISO: '2026-10-24',
+Nominations are open until October 6, 2026.`,
+        date: 'October 18, 2026',
+        dateISO: '2026-10-18',
         time: 'TBD',
         location: 'Vancouver, BC',
         venue: 'Unitarian Church of Vancouver - 949 West 49th Avenue, Vancouver, BC',
@@ -180,6 +180,12 @@ Note: The Sustainable Development Goals listed for this event are indicative onl
         promotionalMessage: 'Honouring UN Day by celebrating outstanding Metro Vancouver youth working for peace and a better world.',
         partners: ['Unitarian Church of Vancouver'],
         gallery: [JohnGibbord1, JohnGibbord2, JohnGibbord3, JohnGibbord4, JohnGibbord5, JohnGibbord6],
+        documents: [
+            {
+                label: 'Nomination Form', 
+                url: 'https://docs.google.com/forms/d/e/1FAIpQLSeBFEb1LYwt1-6CX-IVk6pH9xPW89XiyiluTUcYus6YgY_CZQ/viewform'
+            }
+        ],
     },
     {
         id: 4,
